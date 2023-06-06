@@ -13,7 +13,7 @@ public class ImageNameValidator implements ConstraintValidator<ImageNameValid,St
     public boolean isValid(String value, ConstraintValidatorContext context) {
 
         log.info("Message from isValid :{}", value);
-        //logic
+        //logic to create a annotation
         if (value.isBlank()) {
             //false means  property not validate
             return false;

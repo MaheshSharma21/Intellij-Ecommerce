@@ -22,15 +22,15 @@ public class User extends BaseEntity {
     @Column(name = "user_name")
     private String name;
 
-    @Column(name = "user_email", unique = true)
+    @Column(name = "user_email")
     private String email;
 
-    @Column(name = "user_password", length = 15)
+    @Column(name = "user_password")
     private String password;
 
     private String gender;
 
-    @Column(name = "about_user", length = 500)
+    @Column(name = "about_user")
     private String about;
 
     @Column(name = "user_image_name")
