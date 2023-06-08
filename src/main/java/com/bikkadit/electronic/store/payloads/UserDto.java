@@ -19,6 +19,7 @@ public class UserDto extends BaseEntityDto {
     private String name;
 
     @Email(message = " Email Id not according to Standards ......")
+    //use @pattern
     private String email;
 
     @NotBlank
