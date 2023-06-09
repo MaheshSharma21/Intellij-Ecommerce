@@ -3,10 +3,7 @@ package com.bikkadit.electronic.store.entities;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Setter
 @Getter
@@ -36,7 +33,7 @@ public class User extends BaseEntity {
     @Column(name = "user_image_name")
     private String imageName;
 
-
-    transient String State;
+    @Transient
+    private String State;
 
 }
