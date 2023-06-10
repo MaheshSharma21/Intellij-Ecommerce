@@ -45,8 +45,6 @@ public class UserServiceImpl implements UserServiceI {
         user.setUserId(randomId);
 
 
-
-
         User usersaved = this.userRepo.save(user);
         log.info("Request completed  to save the user");
         return this.mapper.map(usersaved, UserDto.class);

@@ -171,7 +171,7 @@ public class UserController {
         UserDto user = userServiceI.getUserById(userId);
 
         user.setImageName(ImageName);
-
+        UserDto userDto = userServiceI.updateUser(user, userId);
         ImageResponse fileUploaded = ImageResponse.builder().imageName(ImageName).message("File uploaded ").success(true).Status(HttpStatus.CREATED).build();
         log.info(" Request completed for fileservice layer to upload image with userId :{}", userId);
         return new ResponseEntity<>(fileUploaded, HttpStatus.CREATED);
