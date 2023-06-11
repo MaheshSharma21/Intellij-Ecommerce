@@ -2,6 +2,7 @@ package com.bikkadit.electronic.store.helper;
 
 public class AppConstant {
 
+    //USER MODULE CONSTANTS
     public static final String EXCEPTION_MSG = "User not found with given id ....";
     public static final String USER_DELETE = "User Deleted Successfully";
     public static final String USER_EMAIL = "User not  found with emailId";
@@ -13,4 +14,10 @@ public class AppConstant {
     public static final String PAGE_SIZE = "pageSize";
     public static final String SORT_BY = "sortBy";
     public static final String SORT_DIR = "sortDir";
+
+    public static final String SORT_DIRECTION ="desc";
+
+    public static final String SORT_DIRECTION1 ="asc";
+    //CATEGORY MODULE CONSTANTS
+    public static final String CATEGORY_ERROR =" category not found with this categoryId";
 }

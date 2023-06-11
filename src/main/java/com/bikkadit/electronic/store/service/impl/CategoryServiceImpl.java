@@ -3,6 +3,7 @@ package com.bikkadit.electronic.store.service.impl;
 import com.bikkadit.electronic.store.entities.Category;
 
 import com.bikkadit.electronic.store.exceptions.ResourceNotFoundException;
+import com.bikkadit.electronic.store.helper.AppConstant;
 import com.bikkadit.electronic.store.helper.General;
 import com.bikkadit.electronic.store.helper.PageableResponse;
 import com.bikkadit.electronic.store.payloads.CategoryDto;
@@ -43,7 +44,7 @@ public class CategoryServiceImpl implements CategoryServiceI {
     @Override
     public CategoryDto updateCategory(CategoryDto categoryDto, String categoryId) {
         log.info("Request starting for dao layer to update category with categoryId :{}", categoryId);
-        Category category = this.categoryRepo.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(" category not found with this categoryId"));
+        Category category = this.categoryRepo.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.CATEGORY_ERROR));
         category.setTitle(categoryDto.getTitle());
         category.setDescription(categoryDto.getDescription());
         Category save = this.categoryRepo.save(category);
@@ -54,7 +55,7 @@ public class CategoryServiceImpl implements CategoryServiceI {
     @Override
     public void deleteCategory(String categoryId) {
         log.info("Request starting for dao layer to delete category with categoryId :{}", categoryId);
-        Category category = this.categoryRepo.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(" category not found with this categoryId"));
+        Category category = this.categoryRepo.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.CATEGORY_ERROR));
         this.categoryRepo.delete(category);
         log.info("Request completed for dao layer to delete category with categoryId :{}", categoryId);
     }
@@ -62,7 +63,7 @@ public class CategoryServiceImpl implements CategoryServiceI {
     @Override
     public CategoryDto getCategorybyId(String categoryId) {
         log.info("Request starting for dao layer to get category with categoryId :{}", categoryId);
-        Category category = this.categoryRepo.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(" category not found with this categoryId"));
+        Category category = this.categoryRepo.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.CATEGORY_ERROR));
         log.info("Request completed for dao layer to get category with categoryId :{}", categoryId);
         return mapper.map(category, CategoryDto.class);
     }
@@ -70,7 +71,7 @@ public class CategoryServiceImpl implements CategoryServiceI {
     @Override
     public PageableResponse<CategoryDto> getAllCategories(int pageNumber, int pageSize, String sortBy, String sortDir) {
         log.info("Request starting for dao layer to get all categories ");
-        Sort sort = (sortDir.equalsIgnoreCase("desc")) ? (Sort.by(sortBy).descending()) : (Sort.by(sortBy).ascending());
+        Sort sort = (sortDir.equalsIgnoreCase(AppConstant.SORT_DIRECTION)) ? (Sort.by(sortBy).descending()) : (Sort.by(sortBy).ascending());
 
         Pageable pageable = PageRequest.of(pageNumber, pageSize, sort);
         Page<Category> categoryPage = this.categoryRepo.findAll(pageable);
