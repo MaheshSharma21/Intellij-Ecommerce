@@ -13,12 +13,19 @@ import lombok.Builder;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -33,6 +40,10 @@ public class UserServiceImpl implements UserServiceI {
 
     @Autowired
     private ModelMapper mapper;
+
+    @Value("${user.profile.image.path}")
+    private String Imagepath;
+
 
     @Override
     public UserDto saveUser(UserDto userDto) {
@@ -100,6 +111,23 @@ public class UserServiceImpl implements UserServiceI {
     public void deleteUser(String userId) {
         log.info("Request Starting  to delete the user by userId : {}", userId);
         User user = this.userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.EXCEPTION_MSG));
+
+        //delete user profile image
+
+        //full path
+        String fullpath = Imagepath + user.getImageName();
+
+        try {
+            Path path = Paths.get(fullpath);
+            Files.delete(path);
+        } catch (NoSuchFileException ex) {
+            log.error("User Image not found in folder :{}", ex.getMessage());
+        } catch (IOException ex) {
+            log.error("unable to found  user Image :{}", ex.getMessage());
+
+        }
+
+        //delete user
         this.userRepo.delete(user);
         log.info("Request completed  to delete the user by userId : {}", userId);
 

@@ -3891,3 +3891,550 @@ Caused by: java.io.IOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tom
 [37m2023-06-10T17:31:51.573+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
 [37m2023-06-10T17:32:21.580+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
 [37m2023-06-10T17:32:21.580+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-10T17:32:51.589+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-10T17:32:51.589+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-10T17:33:21.598+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-10T17:33:21.600+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-10T17:33:51.616+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-10T17:33:51.616+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-10T17:34:21.626+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-10T17:34:21.626+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-10T17:34:51.636+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-10T17:34:51.636+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-10T17:35:21.645+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-10T17:35:21.645+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-10T17:35:51.660+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-10T17:35:51.660+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-10T17:36:21.675+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-10T17:36:21.675+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-10T17:36:51.683+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-10T17:36:51.683+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-10T17:37:21.206+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mSpringApplicationShutdownHook[0;39m] [33mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m::[35m?[0;39m: - Closing JPA EntityManagerFactory for persistence unit 'default'
+[37m2023-06-10T17:37:21.212+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mSpringApplicationShutdownHook[0;39m] [33mc.z.h.HikariDataSource[0;39m::[35m?[0;39m: - HikariPool-1 - Shutdown initiated...
+[37m2023-06-10T17:37:21.212+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mSpringApplicationShutdownHook[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-10T17:37:21.219+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection closer[0;39m] [33mc.z.h.pool.PoolBase[0;39m::[35m?[0;39m: - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@489625f2: (connection evicted)
+[37m2023-06-10T17:37:21.224+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection closer[0;39m] [33mc.z.h.pool.PoolBase[0;39m::[35m?[0;39m: - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4104ca9f: (connection evicted)
+[37m2023-06-10T17:37:21.226+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection closer[0;39m] [33mc.z.h.pool.PoolBase[0;39m::[35m?[0;39m: - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@212b35d0: (connection evicted)
+[37m2023-06-10T17:37:21.228+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection closer[0;39m] [33mc.z.h.pool.PoolBase[0;39m::[35m?[0;39m: - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@795d02be: (connection evicted)
+[37m2023-06-10T17:37:21.231+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection closer[0;39m] [33mc.z.h.pool.PoolBase[0;39m::[35m?[0;39m: - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2565e852: (connection evicted)
+[37m2023-06-10T17:37:21.239+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection closer[0;39m] [33mc.z.h.pool.PoolBase[0;39m::[35m?[0;39m: - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@39661529: (connection evicted)
+[37m2023-06-10T17:37:21.241+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection closer[0;39m] [33mc.z.h.pool.PoolBase[0;39m::[35m?[0;39m: - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@28542e97: (connection evicted)
+[37m2023-06-10T17:37:21.251+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection closer[0;39m] [33mc.z.h.pool.PoolBase[0;39m::[35m?[0;39m: - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@74abf09c: (connection evicted)
+[37m2023-06-10T17:37:21.252+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection closer[0;39m] [33mc.z.h.pool.PoolBase[0;39m::[35m?[0;39m: - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@14bde8bd: (connection evicted)
+[37m2023-06-10T17:37:21.253+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection closer[0;39m] [33mc.z.h.pool.PoolBase[0;39m::[35m?[0;39m: - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@29281763: (connection evicted)
+[37m2023-06-10T17:37:21.259+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mSpringApplicationShutdownHook[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+[37m2023-06-10T17:37:21.259+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mSpringApplicationShutdownHook[0;39m] [33mc.z.h.HikariDataSource[0;39m::[35m?[0;39m: - HikariPool-1 - Shutdown completed.
+[37m2023-06-11T08:42:20.581+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mbackground-preinit[0;39m] [33mo.h.v.i.util.Version[0;39m::[35m?[0;39m: - HV000001: Hibernate Validator 6.2.5.Final
+[37m2023-06-11T08:42:20.592+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.b.e.s.EcommerceAppApplication[0;39m::[35m?[0;39m: - Starting EcommerceAppApplication using Java 17.0.6 on DESKTOP-DT66993 with PID 1524 (C:\EcommerceProject\target\classes started by aa in C:\EcommerceProject)
+[37m2023-06-11T08:42:20.593+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.b.e.s.EcommerceAppApplication[0;39m::[35m?[0;39m: - Running with Spring Boot v2.7.11, Spring v5.3.27
+[37m2023-06-11T08:42:20.593+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.b.e.s.EcommerceAppApplication[0;39m::[35m?[0;39m: - The following 1 profile is active: "dev"
+[37m2023-06-11T08:42:20.829+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor[0;39m::[35m?[0;39m: - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[37m2023-06-11T08:42:20.829+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor[0;39m::[35m?[0;39m: - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[37m2023-06-11T08:42:22.268+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m::[35m?[0;39m: - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[37m2023-06-11T08:42:22.407+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m::[35m?[0;39m: - Finished Spring Data repository scanning in 118 ms. Found 1 JPA repository interfaces.
+[37m2023-06-11T08:42:23.866+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mo.s.b.w.e.t.TomcatWebServer[0;39m::[35m?[0;39m: - Tomcat initialized with port(s): 8888 (http)
+[37m2023-06-11T08:42:23.908+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mo.a.c.h.Http11NioProtocol[0;39m::[35m?[0;39m: - Initializing ProtocolHandler ["http-nio-8888"]
+[37m2023-06-11T08:42:23.909+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mo.a.c.c.StandardService[0;39m::[35m?[0;39m: - Starting service [Tomcat]
+[37m2023-06-11T08:42:23.910+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mo.a.c.c.StandardEngine[0;39m::[35m?[0;39m: - Starting Servlet engine: [Apache Tomcat/9.0.74]
+[37m2023-06-11T08:42:24.083+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mo.a.c.c.C.[.[.[/][0;39m::[35m?[0;39m: - Initializing Spring embedded WebApplicationContext
+[37m2023-06-11T08:42:24.083+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m::[35m?[0;39m: - Root WebApplicationContext: initialization completed in 3252 ms
+[37m2023-06-11T08:42:24.290+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@585cc6a8
+[37m2023-06-11T08:42:24.607+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mo.h.j.i.u.LogHelper[0;39m::[35m?[0;39m: - HHH000204: Processing PersistenceUnitInfo [name: default]
+[37m2023-06-11T08:42:24.725+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mo.hibernate.Version[0;39m::[35m?[0;39m: - HHH000412: Hibernate ORM core version 5.6.15.Final
+[37m2023-06-11T08:42:25.106+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mo.h.a.common.Version[0;39m::[35m?[0;39m: - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[37m2023-06-11T08:42:25.305+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - HikariPool-1 - configuration:
+[37m2023-06-11T08:42:25.334+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - allowPoolSuspension................................false
+[37m2023-06-11T08:42:25.334+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - autoCommit................................true
+[37m2023-06-11T08:42:25.334+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - catalog................................none
+[37m2023-06-11T08:42:25.335+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - connectionInitSql................................none
+[37m2023-06-11T08:42:25.335+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - connectionTestQuery................................none
+[37m2023-06-11T08:42:25.335+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - connectionTimeout................................30000
+[37m2023-06-11T08:42:25.335+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - dataSource................................none
+[37m2023-06-11T08:42:25.335+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - dataSourceClassName................................none
+[37m2023-06-11T08:42:25.335+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - dataSourceJNDI................................none
+[37m2023-06-11T08:42:25.335+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - dataSourceProperties................................{password=<masked>}
+[37m2023-06-11T08:42:25.336+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - driverClassName................................"com.mysql.cj.jdbc.Driver"
+[37m2023-06-11T08:42:25.336+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - exceptionOverrideClassName................................none
+[37m2023-06-11T08:42:25.336+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - healthCheckProperties................................{}
+[37m2023-06-11T08:42:25.336+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - healthCheckRegistry................................none
+[37m2023-06-11T08:42:25.336+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - idleTimeout................................600000
+[37m2023-06-11T08:42:25.336+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - initializationFailTimeout................................1
+[37m2023-06-11T08:42:25.337+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - isolateInternalQueries................................false
+[37m2023-06-11T08:42:25.337+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - jdbcUrl................................jdbc:mysql://localhost:3306/ecommerce_app
+[37m2023-06-11T08:42:25.337+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - keepaliveTime................................0
+[37m2023-06-11T08:42:25.337+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - leakDetectionThreshold................................0
+[37m2023-06-11T08:42:25.337+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - maxLifetime................................1800000
+[37m2023-06-11T08:42:25.337+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - maximumPoolSize................................10
+[37m2023-06-11T08:42:25.337+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - metricRegistry................................none
+[37m2023-06-11T08:42:25.337+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - metricsTrackerFactory................................none
+[37m2023-06-11T08:42:25.337+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - minimumIdle................................10
+[37m2023-06-11T08:42:25.337+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - password................................<masked>
+[37m2023-06-11T08:42:25.338+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - poolName................................"HikariPool-1"
+[37m2023-06-11T08:42:25.338+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - readOnly................................false
+[37m2023-06-11T08:42:25.338+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - registerMbeans................................false
+[37m2023-06-11T08:42:25.338+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - scheduledExecutor................................none
+[37m2023-06-11T08:42:25.338+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - schema................................none
+[37m2023-06-11T08:42:25.338+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - threadFactory................................internal
+[37m2023-06-11T08:42:25.338+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - transactionIsolation................................default
+[37m2023-06-11T08:42:25.338+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - username................................"root"
+[37m2023-06-11T08:42:25.338+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariConfig[0;39m::[35m?[0;39m: - validationTimeout................................5000
+[37m2023-06-11T08:42:25.338+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariDataSource[0;39m::[35m?[0;39m: - HikariPool-1 - Starting...
+[37m2023-06-11T08:42:26.079+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33b8ffe
+[37m2023-06-11T08:42:26.081+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.z.h.HikariDataSource[0;39m::[35m?[0;39m: - HikariPool-1 - Start completed.
+[37m2023-06-11T08:42:26.105+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mo.h.dialect.Dialect[0;39m::[35m?[0;39m: - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[37m2023-06-11T08:42:26.188+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+[37m2023-06-11T08:42:26.290+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection adder[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e7dfd45
+[37m2023-06-11T08:42:26.420+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection adder[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e52020a
+[37m2023-06-11T08:42:26.461+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection adder[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@39229356
+[37m2023-06-11T08:42:26.497+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection adder[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6a1c18e1
+[37m2023-06-11T08:42:26.575+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection adder[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7890ffe
+[37m2023-06-11T08:42:26.608+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection adder[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19bd55dc
+[37m2023-06-11T08:42:26.633+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection adder[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1858060f
+[37m2023-06-11T08:42:26.655+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection adder[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1c41bc45
+[37m2023-06-11T08:42:26.682+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection adder[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1be07ab1
+[37m2023-06-11T08:42:26.683+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection adder[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:42:27.822+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m::[35m?[0;39m: - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[37m2023-06-11T08:42:27.849+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m::[35m?[0;39m: - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[37m2023-06-11T08:42:28.699+0530[0;39m [31mWARN [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration[0;39m::[35m?[0;39m: - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[37m2023-06-11T08:42:29.349+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mo.s.b.d.a.OptionalLiveReloadServer[0;39m::[35m?[0;39m: - LiveReload server is running on port 35729
+[37m2023-06-11T08:42:29.369+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mo.a.c.h.Http11NioProtocol[0;39m::[35m?[0;39m: - Starting ProtocolHandler ["http-nio-8888"]
+[37m2023-06-11T08:42:29.406+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mo.s.b.w.e.t.TomcatWebServer[0;39m::[35m?[0;39m: - Tomcat started on port(s): 8888 (http) with context path ''
+[37m2023-06-11T08:42:29.427+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mrestartedMain[0;39m] [33mc.b.e.s.EcommerceAppApplication[0;39m::[35m?[0;39m: - Started EcommerceAppApplication in 9.471 seconds (JVM running for 10.995)
+[37m2023-06-11T08:42:56.195+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:42:56.195+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:43:26.203+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:43:26.203+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:43:56.211+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:43:56.211+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:44:26.224+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:44:26.227+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:44:56.235+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:44:56.235+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:45:26.243+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:45:26.243+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:45:56.248+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:45:56.249+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:46:26.253+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:46:26.253+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:46:56.255+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:46:56.255+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:47:26.257+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:47:26.257+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:47:56.264+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:47:56.264+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:48:26.267+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:48:26.267+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:48:56.273+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:48:56.273+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:49:26.286+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:49:26.286+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:49:56.296+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:49:56.296+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:50:26.309+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:50:26.310+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:50:56.322+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:50:56.322+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:51:26.329+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:51:26.330+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:51:56.344+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:51:56.346+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:52:26.352+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:52:26.352+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:52:56.357+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:52:56.359+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:53:26.371+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:53:26.373+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:53:48.586+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-1[0;39m] [33mo.a.c.c.C.[.[.[/][0;39m::[35m?[0;39m: - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[37m2023-06-11T08:53:48.586+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-1[0;39m] [33mo.s.w.s.DispatcherServlet[0;39m::[35m?[0;39m: - Initializing Servlet 'dispatcherServlet'
+[37m2023-06-11T08:53:48.592+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-1[0;39m] [33mo.s.w.s.DispatcherServlet[0;39m::[35m?[0;39m: - Completed initialization in 6 ms
+[37m2023-06-11T08:53:48.715+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-1[0;39m] [33mc.b.e.s.c.UserController[0;39m::[35m?[0;39m: -  Request Starting for fileservice layer to upload image with userId :181f711e-1a68-4565-a0a8-4490ef58ace0
+[37m2023-06-11T08:53:48.715+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-1[0;39m] [33mc.b.e.s.s.i.FileServiceImpl[0;39m::[35m?[0;39m: -  Request Starting for  upload image  
+[37m2023-06-11T08:53:48.715+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-1[0;39m] [33mc.b.e.s.s.i.FileServiceImpl[0;39m::[35m?[0;39m: - FileName :logo.png
+[37m2023-06-11T08:53:48.717+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-1[0;39m] [33mc.b.e.s.s.i.FileServiceImpl[0;39m::[35m?[0;39m: -  full image path :images/user/881bc2a9-8fea-438a-9dcc-54882666f954.png
+[37m2023-06-11T08:53:48.717+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-1[0;39m] [33mc.b.e.s.s.i.FileServiceImpl[0;39m::[35m?[0;39m: -  file extension :.png
+[37m2023-06-11T08:53:48.734+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-1[0;39m] [33mc.b.e.s.s.i.UserServiceImpl[0;39m::[35m?[0;39m: - Request Starting  to get the user by userId : 181f711e-1a68-4565-a0a8-4490ef58ace0
+[37m2023-06-11T08:53:48.894+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-1[0;39m] [33mc.b.e.s.s.i.UserServiceImpl[0;39m::[35m?[0;39m: - Request completed to  get the user by userId : 181f711e-1a68-4565-a0a8-4490ef58ace0
+[37m2023-06-11T08:53:48.964+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-1[0;39m] [33mc.b.e.s.s.i.UserServiceImpl[0;39m::[35m?[0;39m: - Request Starting  to update the user by userId : 181f711e-1a68-4565-a0a8-4490ef58ace0
+[37m2023-06-11T08:53:49.087+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-1[0;39m] [33mc.b.e.s.s.i.UserServiceImpl[0;39m::[35m?[0;39m: - Request completed  to update the user by userId : 181f711e-1a68-4565-a0a8-4490ef58ace0
+[37m2023-06-11T08:53:49.097+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-1[0;39m] [33mc.b.e.s.c.UserController[0;39m::[35m?[0;39m: -  Request completed for fileservice layer to upload image with userId :181f711e-1a68-4565-a0a8-4490ef58ace0
+[37m2023-06-11T08:53:56.373+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:53:56.374+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:54:20.846+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-3[0;39m] [33mc.b.e.s.c.UserController[0;39m::[35m?[0;39m: -  Request Starting for fileservice layer to upload image with userId :619d595d-d0bf-44f8-a418-ac1414c896af
+[37m2023-06-11T08:54:20.846+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-3[0;39m] [33mc.b.e.s.s.i.FileServiceImpl[0;39m::[35m?[0;39m: -  Request Starting for  upload image  
+[37m2023-06-11T08:54:20.846+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-3[0;39m] [33mc.b.e.s.s.i.FileServiceImpl[0;39m::[35m?[0;39m: - FileName :utube.png
+[37m2023-06-11T08:54:20.846+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-3[0;39m] [33mc.b.e.s.s.i.FileServiceImpl[0;39m::[35m?[0;39m: -  full image path :images/user/755e47ca-a1f2-4223-b010-a8c91079037c.png
+[37m2023-06-11T08:54:20.846+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-3[0;39m] [33mc.b.e.s.s.i.FileServiceImpl[0;39m::[35m?[0;39m: -  file extension :.png
+[37m2023-06-11T08:54:20.853+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-3[0;39m] [33mc.b.e.s.s.i.UserServiceImpl[0;39m::[35m?[0;39m: - Request Starting  to get the user by userId : 619d595d-d0bf-44f8-a418-ac1414c896af
+[37m2023-06-11T08:54:20.859+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-3[0;39m] [33mc.b.e.s.s.i.UserServiceImpl[0;39m::[35m?[0;39m: - Request completed to  get the user by userId : 619d595d-d0bf-44f8-a418-ac1414c896af
+[37m2023-06-11T08:54:20.860+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-3[0;39m] [33mc.b.e.s.s.i.UserServiceImpl[0;39m::[35m?[0;39m: - Request Starting  to update the user by userId : 619d595d-d0bf-44f8-a418-ac1414c896af
+[37m2023-06-11T08:54:20.873+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-3[0;39m] [33mc.b.e.s.s.i.UserServiceImpl[0;39m::[35m?[0;39m: - Request completed  to update the user by userId : 619d595d-d0bf-44f8-a418-ac1414c896af
+[37m2023-06-11T08:54:20.873+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-3[0;39m] [33mc.b.e.s.c.UserController[0;39m::[35m?[0;39m: -  Request completed for fileservice layer to upload image with userId :619d595d-d0bf-44f8-a418-ac1414c896af
+[37m2023-06-11T08:54:20.879+0530[0;39m [31mWARN [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-3[0;39m] [33mo.s.w.m.s.StandardServletMultipartResolver[0;39m::[35m?[0;39m: - Failed to perform cleanup of multipart items
+java.io.UncheckedIOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000001.tmp
+	at org.apache.tomcat.util.http.fileupload.disk.DiskFileItem.delete(DiskFileItem.java:431)
+	at org.apache.catalina.core.ApplicationPart.delete(ApplicationPart.java:53)
+	at org.springframework.web.multipart.support.StandardServletMultipartResolver.cleanupMultipart(StandardServletMultipartResolver.java:134)
+	at org.springframework.web.servlet.DispatcherServlet.cleanupMultipart(DispatcherServlet.java:1251)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1108)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.io.IOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000001.tmp
+	... 44 common frames omitted
+[37m2023-06-11T08:54:20.880+0530[0;39m [1;31mERROR[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-3[0;39m] [33mo.a.c.h.Http11Processor[0;39m::[35m?[0;39m: - Error processing request
+java.io.UncheckedIOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000001.tmp
+	at org.apache.tomcat.util.http.fileupload.disk.DiskFileItem.delete(DiskFileItem.java:431)
+	at org.apache.catalina.core.ApplicationPart.delete(ApplicationPart.java:53)
+	at org.apache.catalina.connector.Request.recycle(Request.java:474)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:421)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.io.IOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000001.tmp
+	... 13 common frames omitted
+[37m2023-06-11T08:54:20.887+0530[0;39m [1;31mERROR[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-3[0;39m] [33mo.a.c.h.Http11NioProtocol[0;39m::[35m?[0;39m: - Error reading request, ignored
+java.io.UncheckedIOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000001.tmp
+	at org.apache.tomcat.util.http.fileupload.disk.DiskFileItem.delete(DiskFileItem.java:431)
+	at org.apache.catalina.core.ApplicationPart.delete(ApplicationPart.java:53)
+	at org.apache.catalina.connector.Request.recycle(Request.java:474)
+	at org.apache.catalina.connector.CoyoteAdapter.log(CoyoteAdapter.java:494)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:419)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.io.IOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000001.tmp
+	... 13 common frames omitted
+[37m2023-06-11T08:54:20.888+0530[0;39m [1;31mERROR[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-3[0;39m] [33mo.a.t.u.n.NioEndpoint[0;39m::[35m?[0;39m: - Error running socket processor
+java.io.UncheckedIOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000001.tmp
+	at org.apache.tomcat.util.http.fileupload.disk.DiskFileItem.delete(DiskFileItem.java:431)
+	at org.apache.catalina.core.ApplicationPart.delete(ApplicationPart.java:53)
+	at org.apache.catalina.connector.Request.recycle(Request.java:474)
+	at org.apache.catalina.connector.CoyoteAdapter.log(CoyoteAdapter.java:494)
+	at org.apache.catalina.connector.CoyoteAdapter.checkRecycled(CoyoteAdapter.java:517)
+	at org.apache.coyote.http11.Http11Processor.recycle(Http11Processor.java:1415)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.release(AbstractProtocol.java:1129)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1090)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.io.IOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000001.tmp
+	... 14 common frames omitted
+[37m2023-06-11T08:54:26.382+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:54:26.382+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:54:44.889+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-5[0;39m] [33mc.b.e.s.c.UserController[0;39m::[35m?[0;39m: -  Request Starting for fileservice layer to upload image with userId :62226213-e1d8-45b5-8926-7eef290a90e7
+[37m2023-06-11T08:54:44.889+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-5[0;39m] [33mc.b.e.s.s.i.FileServiceImpl[0;39m::[35m?[0;39m: -  Request Starting for  upload image  
+[37m2023-06-11T08:54:44.889+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-5[0;39m] [33mc.b.e.s.s.i.FileServiceImpl[0;39m::[35m?[0;39m: - FileName :pic.png
+[37m2023-06-11T08:54:44.889+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-5[0;39m] [33mc.b.e.s.s.i.FileServiceImpl[0;39m::[35m?[0;39m: -  full image path :images/user/42a836d6-5c83-459e-bdc3-b3dcb7a93ddd.png
+[37m2023-06-11T08:54:44.889+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-5[0;39m] [33mc.b.e.s.s.i.FileServiceImpl[0;39m::[35m?[0;39m: -  file extension :.png
+[37m2023-06-11T08:54:44.892+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-5[0;39m] [33mc.b.e.s.s.i.UserServiceImpl[0;39m::[35m?[0;39m: - Request Starting  to get the user by userId : 62226213-e1d8-45b5-8926-7eef290a90e7
+[37m2023-06-11T08:54:44.902+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-5[0;39m] [33mc.b.e.s.s.i.UserServiceImpl[0;39m::[35m?[0;39m: - Request completed to  get the user by userId : 62226213-e1d8-45b5-8926-7eef290a90e7
+[37m2023-06-11T08:54:44.902+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-5[0;39m] [33mc.b.e.s.s.i.UserServiceImpl[0;39m::[35m?[0;39m: - Request Starting  to update the user by userId : 62226213-e1d8-45b5-8926-7eef290a90e7
+[37m2023-06-11T08:54:44.915+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-5[0;39m] [33mc.b.e.s.s.i.UserServiceImpl[0;39m::[35m?[0;39m: - Request completed  to update the user by userId : 62226213-e1d8-45b5-8926-7eef290a90e7
+[37m2023-06-11T08:54:44.916+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-5[0;39m] [33mc.b.e.s.c.UserController[0;39m::[35m?[0;39m: -  Request completed for fileservice layer to upload image with userId :62226213-e1d8-45b5-8926-7eef290a90e7
+[37m2023-06-11T08:54:44.918+0530[0;39m [31mWARN [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-5[0;39m] [33mo.s.w.m.s.StandardServletMultipartResolver[0;39m::[35m?[0;39m: - Failed to perform cleanup of multipart items
+java.io.UncheckedIOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000002.tmp
+	at org.apache.tomcat.util.http.fileupload.disk.DiskFileItem.delete(DiskFileItem.java:431)
+	at org.apache.catalina.core.ApplicationPart.delete(ApplicationPart.java:53)
+	at org.springframework.web.multipart.support.StandardServletMultipartResolver.cleanupMultipart(StandardServletMultipartResolver.java:134)
+	at org.springframework.web.servlet.DispatcherServlet.cleanupMultipart(DispatcherServlet.java:1251)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1108)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.io.IOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000002.tmp
+	... 44 common frames omitted
+[37m2023-06-11T08:54:44.919+0530[0;39m [1;31mERROR[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-5[0;39m] [33mo.a.c.h.Http11Processor[0;39m::[35m?[0;39m: - Error processing request
+java.io.UncheckedIOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000002.tmp
+	at org.apache.tomcat.util.http.fileupload.disk.DiskFileItem.delete(DiskFileItem.java:431)
+	at org.apache.catalina.core.ApplicationPart.delete(ApplicationPart.java:53)
+	at org.apache.catalina.connector.Request.recycle(Request.java:474)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:421)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.io.IOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000002.tmp
+	... 13 common frames omitted
+[37m2023-06-11T08:54:44.920+0530[0;39m [1;31mERROR[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-5[0;39m] [33mo.a.c.h.Http11NioProtocol[0;39m::[35m?[0;39m: - Error reading request, ignored
+java.io.UncheckedIOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000002.tmp
+	at org.apache.tomcat.util.http.fileupload.disk.DiskFileItem.delete(DiskFileItem.java:431)
+	at org.apache.catalina.core.ApplicationPart.delete(ApplicationPart.java:53)
+	at org.apache.catalina.connector.Request.recycle(Request.java:474)
+	at org.apache.catalina.connector.CoyoteAdapter.log(CoyoteAdapter.java:494)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:419)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.io.IOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000002.tmp
+	... 13 common frames omitted
+[37m2023-06-11T08:54:44.921+0530[0;39m [1;31mERROR[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-5[0;39m] [33mo.a.t.u.n.NioEndpoint[0;39m::[35m?[0;39m: - Error running socket processor
+java.io.UncheckedIOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000002.tmp
+	at org.apache.tomcat.util.http.fileupload.disk.DiskFileItem.delete(DiskFileItem.java:431)
+	at org.apache.catalina.core.ApplicationPart.delete(ApplicationPart.java:53)
+	at org.apache.catalina.connector.Request.recycle(Request.java:474)
+	at org.apache.catalina.connector.CoyoteAdapter.log(CoyoteAdapter.java:494)
+	at org.apache.catalina.connector.CoyoteAdapter.checkRecycled(CoyoteAdapter.java:517)
+	at org.apache.coyote.http11.Http11Processor.recycle(Http11Processor.java:1415)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.release(AbstractProtocol.java:1129)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1090)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.io.IOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000002.tmp
+	... 14 common frames omitted
+[37m2023-06-11T08:54:56.387+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:54:56.387+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:55:03.829+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-7[0;39m] [33mc.b.e.s.c.UserController[0;39m::[35m?[0;39m: -  Request Starting for fileservice layer to upload image with userId :c75b0a20-28d1-4f16-a07b-7cef3ddb981c
+[37m2023-06-11T08:55:03.829+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-7[0;39m] [33mc.b.e.s.s.i.FileServiceImpl[0;39m::[35m?[0;39m: -  Request Starting for  upload image  
+[37m2023-06-11T08:55:03.829+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-7[0;39m] [33mc.b.e.s.s.i.FileServiceImpl[0;39m::[35m?[0;39m: - FileName :pic.png
+[37m2023-06-11T08:55:03.830+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-7[0;39m] [33mc.b.e.s.s.i.FileServiceImpl[0;39m::[35m?[0;39m: -  full image path :images/user/045386ec-6844-435e-8dac-18504b9a0303.png
+[37m2023-06-11T08:55:03.830+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-7[0;39m] [33mc.b.e.s.s.i.FileServiceImpl[0;39m::[35m?[0;39m: -  file extension :.png
+[37m2023-06-11T08:55:03.832+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-7[0;39m] [33mc.b.e.s.s.i.UserServiceImpl[0;39m::[35m?[0;39m: - Request Starting  to get the user by userId : c75b0a20-28d1-4f16-a07b-7cef3ddb981c
+[37m2023-06-11T08:55:03.837+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-7[0;39m] [33mc.b.e.s.s.i.UserServiceImpl[0;39m::[35m?[0;39m: - Request completed to  get the user by userId : c75b0a20-28d1-4f16-a07b-7cef3ddb981c
+[37m2023-06-11T08:55:03.838+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-7[0;39m] [33mc.b.e.s.s.i.UserServiceImpl[0;39m::[35m?[0;39m: - Request Starting  to update the user by userId : c75b0a20-28d1-4f16-a07b-7cef3ddb981c
+[37m2023-06-11T08:55:03.850+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-7[0;39m] [33mc.b.e.s.s.i.UserServiceImpl[0;39m::[35m?[0;39m: - Request completed  to update the user by userId : c75b0a20-28d1-4f16-a07b-7cef3ddb981c
+[37m2023-06-11T08:55:03.851+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-7[0;39m] [33mc.b.e.s.c.UserController[0;39m::[35m?[0;39m: -  Request completed for fileservice layer to upload image with userId :c75b0a20-28d1-4f16-a07b-7cef3ddb981c
+[37m2023-06-11T08:55:03.856+0530[0;39m [31mWARN [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-7[0;39m] [33mo.s.w.m.s.StandardServletMultipartResolver[0;39m::[35m?[0;39m: - Failed to perform cleanup of multipart items
+java.io.UncheckedIOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000003.tmp
+	at org.apache.tomcat.util.http.fileupload.disk.DiskFileItem.delete(DiskFileItem.java:431)
+	at org.apache.catalina.core.ApplicationPart.delete(ApplicationPart.java:53)
+	at org.springframework.web.multipart.support.StandardServletMultipartResolver.cleanupMultipart(StandardServletMultipartResolver.java:134)
+	at org.springframework.web.servlet.DispatcherServlet.cleanupMultipart(DispatcherServlet.java:1251)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1108)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.io.IOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000003.tmp
+	... 44 common frames omitted
+[37m2023-06-11T08:55:03.857+0530[0;39m [1;31mERROR[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-7[0;39m] [33mo.a.c.h.Http11Processor[0;39m::[35m?[0;39m: - Error processing request
+java.io.UncheckedIOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000003.tmp
+	at org.apache.tomcat.util.http.fileupload.disk.DiskFileItem.delete(DiskFileItem.java:431)
+	at org.apache.catalina.core.ApplicationPart.delete(ApplicationPart.java:53)
+	at org.apache.catalina.connector.Request.recycle(Request.java:474)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:421)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.io.IOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000003.tmp
+	... 13 common frames omitted
+[37m2023-06-11T08:55:03.860+0530[0;39m [1;31mERROR[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-7[0;39m] [33mo.a.c.h.Http11NioProtocol[0;39m::[35m?[0;39m: - Error reading request, ignored
+java.io.UncheckedIOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000003.tmp
+	at org.apache.tomcat.util.http.fileupload.disk.DiskFileItem.delete(DiskFileItem.java:431)
+	at org.apache.catalina.core.ApplicationPart.delete(ApplicationPart.java:53)
+	at org.apache.catalina.connector.Request.recycle(Request.java:474)
+	at org.apache.catalina.connector.CoyoteAdapter.log(CoyoteAdapter.java:494)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:419)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.io.IOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000003.tmp
+	... 13 common frames omitted
+[37m2023-06-11T08:55:03.861+0530[0;39m [1;31mERROR[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-7[0;39m] [33mo.a.t.u.n.NioEndpoint[0;39m::[35m?[0;39m: - Error running socket processor
+java.io.UncheckedIOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000003.tmp
+	at org.apache.tomcat.util.http.fileupload.disk.DiskFileItem.delete(DiskFileItem.java:431)
+	at org.apache.catalina.core.ApplicationPart.delete(ApplicationPart.java:53)
+	at org.apache.catalina.connector.Request.recycle(Request.java:474)
+	at org.apache.catalina.connector.CoyoteAdapter.log(CoyoteAdapter.java:494)
+	at org.apache.catalina.connector.CoyoteAdapter.checkRecycled(CoyoteAdapter.java:517)
+	at org.apache.coyote.http11.Http11Processor.recycle(Http11Processor.java:1415)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.release(AbstractProtocol.java:1129)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1090)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.io.IOException: Cannot delete C:\Users\aa\AppData\Local\Temp\tomcat.8888.12522929582284944507\work\Tomcat\localhost\ROOT\upload_8681ab4e_5479_46cc_9c17_3e1bd795ace9_00000003.tmp
+	... 14 common frames omitted
+[37m2023-06-11T08:55:26.399+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:55:26.399+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:55:56.412+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:55:56.412+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:56:08.432+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-9[0;39m] [33mc.b.e.s.c.UserController[0;39m::[35m?[0;39m: -  Request Starting for fileservice layer to serve image with userId :06078d1b-ea3e-46d0-8ef8-74fbe0c28153
+[37m2023-06-11T08:56:08.433+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-9[0;39m] [33mc.b.e.s.s.i.UserServiceImpl[0;39m::[35m?[0;39m: - Request Starting  to get the user by userId : 06078d1b-ea3e-46d0-8ef8-74fbe0c28153
+[37m2023-06-11T08:56:08.437+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-9[0;39m] [33mc.b.e.s.s.i.UserServiceImpl[0;39m::[35m?[0;39m: - Request completed to  get the user by userId : 06078d1b-ea3e-46d0-8ef8-74fbe0c28153
+[37m2023-06-11T08:56:08.438+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-9[0;39m] [33mc.b.e.s.c.UserController[0;39m::[35m?[0;39m: -  user Image Name :dc1dadf5-a9f6-4e98-a5b9-106246911b3f.jpg
+[37m2023-06-11T08:56:08.438+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-9[0;39m] [33mc.b.e.s.s.i.FileServiceImpl[0;39m::[35m?[0;39m: -  Request Starting to serve image 
+[37m2023-06-11T08:56:08.440+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-9[0;39m] [33mc.b.e.s.c.UserController[0;39m::[35m?[0;39m: -  Request completed for fileservice layer to serve image with userId :06078d1b-ea3e-46d0-8ef8-74fbe0c28153
+[37m2023-06-11T08:56:22.522+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-10[0;39m] [33mc.b.e.s.c.UserController[0;39m::[35m?[0;39m: -  Request Starting for fileservice layer to serve image with userId :181f711e-1a68-4565-a0a8-4490ef58ace0
+[37m2023-06-11T08:56:22.522+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-10[0;39m] [33mc.b.e.s.s.i.UserServiceImpl[0;39m::[35m?[0;39m: - Request Starting  to get the user by userId : 181f711e-1a68-4565-a0a8-4490ef58ace0
+[37m2023-06-11T08:56:22.530+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-10[0;39m] [33mc.b.e.s.s.i.UserServiceImpl[0;39m::[35m?[0;39m: - Request completed to  get the user by userId : 181f711e-1a68-4565-a0a8-4490ef58ace0
+[37m2023-06-11T08:56:22.531+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-10[0;39m] [33mc.b.e.s.c.UserController[0;39m::[35m?[0;39m: -  user Image Name :881bc2a9-8fea-438a-9dcc-54882666f954.png
+[37m2023-06-11T08:56:22.531+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-10[0;39m] [33mc.b.e.s.s.i.FileServiceImpl[0;39m::[35m?[0;39m: -  Request Starting to serve image 
+[37m2023-06-11T08:56:22.534+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-10[0;39m] [33mc.b.e.s.c.UserController[0;39m::[35m?[0;39m: -  Request completed for fileservice layer to serve image with userId :181f711e-1a68-4565-a0a8-4490ef58ace0
+[37m2023-06-11T08:56:26.414+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:56:26.414+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:56:56.417+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:56:56.417+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:57:26.423+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:57:26.423+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:57:33.945+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-3[0;39m] [33mc.b.e.s.c.UserController[0;39m::[35m?[0;39m: - Request Starting for service layer to delete the user by userId : c75b0a20-28d1-4f16-a07b-7cef3ddb981c
+[37m2023-06-11T08:57:33.945+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-3[0;39m] [33mc.b.e.s.s.i.UserServiceImpl[0;39m::[35m?[0;39m: - Request Starting  to delete the user by userId : c75b0a20-28d1-4f16-a07b-7cef3ddb981c
+[37m2023-06-11T08:57:33.982+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-3[0;39m] [33mc.b.e.s.s.i.UserServiceImpl[0;39m::[35m?[0;39m: - Request completed  to delete the user by userId : c75b0a20-28d1-4f16-a07b-7cef3ddb981c
+[37m2023-06-11T08:57:33.986+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mhttp-nio-8888-exec-3[0;39m] [33mc.b.e.s.c.UserController[0;39m::[35m?[0;39m: - Request completed for service layer to delete the user by userId : c75b0a20-28d1-4f16-a07b-7cef3ddb981c
+[37m2023-06-11T08:57:56.429+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:57:56.429+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:58:26.439+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:58:26.439+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 housekeeper[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[37m2023-06-11T08:58:33.287+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mSpringApplicationShutdownHook[0;39m] [33mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m::[35m?[0;39m: - Closing JPA EntityManagerFactory for persistence unit 'default'
+[37m2023-06-11T08:58:33.294+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mSpringApplicationShutdownHook[0;39m] [33mc.z.h.HikariDataSource[0;39m::[35m?[0;39m: - HikariPool-1 - Shutdown initiated...
+[37m2023-06-11T08:58:33.294+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mSpringApplicationShutdownHook[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+[37m2023-06-11T08:58:33.302+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection closer[0;39m] [33mc.z.h.pool.PoolBase[0;39m::[35m?[0;39m: - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@33b8ffe: (connection evicted)
+[37m2023-06-11T08:58:33.306+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection closer[0;39m] [33mc.z.h.pool.PoolBase[0;39m::[35m?[0;39m: - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@e7dfd45: (connection evicted)
+[37m2023-06-11T08:58:33.307+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection closer[0;39m] [33mc.z.h.pool.PoolBase[0;39m::[35m?[0;39m: - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6e52020a: (connection evicted)
+[37m2023-06-11T08:58:33.308+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection closer[0;39m] [33mc.z.h.pool.PoolBase[0;39m::[35m?[0;39m: - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@39229356: (connection evicted)
+[37m2023-06-11T08:58:33.309+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection closer[0;39m] [33mc.z.h.pool.PoolBase[0;39m::[35m?[0;39m: - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6a1c18e1: (connection evicted)
+[37m2023-06-11T08:58:33.311+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection closer[0;39m] [33mc.z.h.pool.PoolBase[0;39m::[35m?[0;39m: - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7890ffe: (connection evicted)
+[37m2023-06-11T08:58:33.312+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection closer[0;39m] [33mc.z.h.pool.PoolBase[0;39m::[35m?[0;39m: - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@19bd55dc: (connection evicted)
+[37m2023-06-11T08:58:33.314+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection closer[0;39m] [33mc.z.h.pool.PoolBase[0;39m::[35m?[0;39m: - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1858060f: (connection evicted)
+[37m2023-06-11T08:58:33.315+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection closer[0;39m] [33mc.z.h.pool.PoolBase[0;39m::[35m?[0;39m: - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1c41bc45: (connection evicted)
+[37m2023-06-11T08:58:33.317+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mHikariPool-1 connection closer[0;39m] [33mc.z.h.pool.PoolBase[0;39m::[35m?[0;39m: - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1be07ab1: (connection evicted)
+[37m2023-06-11T08:58:33.320+0530[0;39m [39mDEBUG[0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mSpringApplicationShutdownHook[0;39m] [33mc.z.h.p.HikariPool[0;39m::[35m?[0;39m: - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+[37m2023-06-11T08:58:33.320+0530[0;39m [34mINFO [0;39m [[36mtraceId: [0;39m] [[36msourceIp: [0;39m] [[36muserId: [0;39m] [[32mSpringApplicationShutdownHook[0;39m] [33mc.z.h.HikariDataSource[0;39m::[35m?[0;39m: - HikariPool-1 - Shutdown completed.
