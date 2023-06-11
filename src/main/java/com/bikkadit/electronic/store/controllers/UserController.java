@@ -73,7 +73,7 @@ public class UserController {
      * @author Mahesh Sharma
      * @apiNote This is the api to get All users
      */
-    @GetMapping()
+    @GetMapping
     public ResponseEntity<PageableResponse<UserDto>> getAllUsers(
             @RequestParam(value = AppConstant.PAGE_NUMBER, defaultValue = AppConstant.PAGE_NUMBER_DEFAULT_VALUE, required = false) Integer pageNumber,
             @RequestParam(value = AppConstant.PAGE_SIZE, defaultValue = AppConstant.PAGE_SIZE_DEFAULT_VALUE, required = false) Integer pageSize,
