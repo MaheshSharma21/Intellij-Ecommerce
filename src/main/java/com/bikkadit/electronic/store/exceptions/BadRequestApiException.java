@@ -1,12 +1,12 @@
 package com.bikkadit.electronic.store.exceptions;
 
-public class BadRequestApiException extends  RuntimeException  {
+public class BadRequestApiException extends RuntimeException {
 
-    public BadRequestApiException (){
+    public BadRequestApiException() {
         super(" Bad Request ....");
     }
 
-    public BadRequestApiException(String msg){
+    public BadRequestApiException(String msg) {
         super(msg);
     }
 }

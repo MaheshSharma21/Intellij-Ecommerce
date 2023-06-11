@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class General {
 
-    public static <E,U> PageableResponse<U> getPageableResponse(Page<E> page, Class<U> type ){
+    public static <E, U> PageableResponse<U> getPageableResponse(Page<E> page, Class<U> type) {
 
         //code reuseability
         //this class is for general purpose for every response of type like user,category,cart

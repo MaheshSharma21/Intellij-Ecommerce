@@ -13,6 +13,7 @@ import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 import java.time.LocalDate;
+
 @Setter
 @Getter
 @MappedSuperclass
@@ -20,22 +21,22 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class BaseEntity implements Serializable {
 
-    @Column(name="updated_date" )
+    @Column(name = "updated_date")
     @UpdateTimestamp
     private LocalDate updatedDate;
 
     @LastModifiedBy
-    @Column(name="update_by")
+    @Column(name = "update_by")
     private String updatedBy;
 
-    @Column(name="is_active" )
-    private Boolean isActive=true;
+    @Column(name = "is_active")
+    private Boolean isActive = true;
 
     @CreationTimestamp
-    @Column(name="created_date")
+    @Column(name = "created_date")
     private LocalDate createdDate;
 
-    @Column(name="created_by")
+    @Column(name = "created_by")
     @CreatedBy
     private String createdBy;
 }

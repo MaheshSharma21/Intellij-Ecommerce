@@ -21,7 +21,7 @@ public class BaseEntityDto implements Serializable {
     @NotEmpty
     private String updatedBy;
 
-    private Boolean isActive=true;
+    private Boolean isActive = true;
 
     private LocalDate createdDate;
 

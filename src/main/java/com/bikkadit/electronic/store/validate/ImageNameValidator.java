@@ -6,7 +6,7 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 @Slf4j
-public class ImageNameValidator implements ConstraintValidator<ImageNameValid,String> {
+public class ImageNameValidator implements ConstraintValidator<ImageNameValid, String> {
 
 
     @Override

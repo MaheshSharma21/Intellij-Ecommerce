@@ -18,7 +18,7 @@ public class DataMaskingPatternLayout extends PatternLayout {
 
     public void addMaskPattern(String maskPattern) {
         maskPatterns.add(maskPattern);
-        aplpliedPattern = Pattern.compile( maskPatterns.stream()
+        aplpliedPattern = Pattern.compile(maskPatterns.stream()
                 .collect(Collectors.joining("|")), Pattern.MULTILINE);
     }
 
@@ -34,7 +34,7 @@ public class DataMaskingPatternLayout extends PatternLayout {
         }
         StringBuilder sb = new StringBuilder(message);
         Matcher matcher = aplpliedPattern.matcher(sb);
-        if(message.contains("disputeImage") ||message.contains("feedbackImage")){
+        if (message.contains("disputeImage") || message.contains("feedbackImage")) {
             while (matcher.find()) {
                 IntStream.rangeClosed(1, matcher.groupCount()).forEach(group -> {
                     if (matcher.group(group) != null) {

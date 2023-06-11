@@ -18,12 +18,11 @@ public class UserDto extends BaseEntityDto {
     @NotBlank
     private String name;
 
-    @Email(message = " Email Id not according to Standards ......")
-    //use @pattern
+    @Pattern(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$", message = " Please enter valid Email format ")
     private String email;
 
     @NotBlank
-    @Pattern(regexp = "^[a-z5-9]{6}")
+    @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[^\\s]{8,20}$", message = "Password must be at least 8 characters, not greater than 20 characters ,contains atleast one ")
     private String password;
 
     @NotBlank(message = "Please Specify  valid gender .....")
@@ -38,3 +37,25 @@ public class UserDto extends BaseEntityDto {
     private String imageName;
 
 }
+
+
+//email pattern validation
+//@Pattern(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")
+//^ asserts the start of the string.
+//[a-zA-Z0-9._%+-]+ matches one or more alphanumeric characters, dots, underscores, percentage signs, plus signs, or hyphens, which are valid characters for the username part of the email address.
+//@ matches the "@" symbol.
+//[a-zA-Z0-9.-]+ matches one or more alphanumeric characters, dots, or hyphens, which are valid characters for the domain part of the email address.
+// \. matches the dot (.) symbol.
+//[a-zA-Z]{2,} matches two or more consecutive alphabetical characters, representing the top-level domain (TLD) such as .com, .org, .net, etc.
+//$ asserts the end of the string.
+
+
+//password pattern
+//@Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[^\\s]{8,20}$")
+//^ asserts the start of the string.
+//        (?=.*[a-z]) is a positive lookahead to ensure the presence of at least one lowercase letter.
+//        (?=.*[A-Z]) is a positive lookahead to ensure the presence of at least one uppercase letter.
+//        (?=.*\d) is a positive lookahead to ensure the presence of at least one digit.
+//        [^\s] matches any character that is not a whitespace character.
+//        {8,20} specifies that the previous character class should occur between 8 and 20 times.
+//        $ asserts the end of the string.

@@ -30,12 +30,12 @@ public class FileServiceImpl implements FileServiceI {
         String fileNamewithExtension = randomFileName + extension;
 
         //full path
-        String fullPathwithfileName = path  + fileNamewithExtension;
+        String fullPathwithfileName = path + fileNamewithExtension;
 
-        log.info(" full image path :{}",fullPathwithfileName);
+        log.info(" full image path :{}", fullPathwithfileName);
         if (extension.equalsIgnoreCase(".png") || extension.equalsIgnoreCase(".jpg") || extension.equalsIgnoreCase(".jpeg")) {
 
-            log.info(" file extension :{}",extension);
+            log.info(" file extension :{}", extension);
             //file Save
 
             File f = new File(path);
