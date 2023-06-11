@@ -1,25 +1,26 @@
 package com.bikkadit.electronic.store.service.impl;
 
 import com.bikkadit.electronic.store.entities.Category;
+
 import com.bikkadit.electronic.store.exceptions.ResourceNotFoundException;
 import com.bikkadit.electronic.store.helper.General;
 import com.bikkadit.electronic.store.helper.PageableResponse;
 import com.bikkadit.electronic.store.payloads.CategoryDto;
 import com.bikkadit.electronic.store.repositories.CategoryRepository;
-import com.bikkadit.electronic.store.service.CategoryServiceI;
 
+
+import com.bikkadit.electronic.store.service.CategoryServiceI;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Service
+
 public class CategoryServiceImpl implements CategoryServiceI {
     @Autowired
     private CategoryRepository categoryRepo;
