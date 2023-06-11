@@ -10,17 +10,20 @@ import com.bikkadit.electronic.store.repositories.CategoryRepository;
 
 
 import com.bikkadit.electronic.store.service.CategoryServiceI;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-
+@Service
+@Slf4j
 public class CategoryServiceImpl implements CategoryServiceI {
     @Autowired
     private CategoryRepository categoryRepo;
@@ -30,53 +33,59 @@ public class CategoryServiceImpl implements CategoryServiceI {
 
     @Override
     public CategoryDto createCategory(CategoryDto categoryDto) {
-
+        log.info("Request starting for dao layer to create category ");
         Category category = this.mapper.map(categoryDto, Category.class);
         Category save = this.categoryRepo.save(category);
+        log.info("Request completed for dao layer to create category ");
         return mapper.map(save, CategoryDto.class);
     }
 
     @Override
     public CategoryDto updateCategory(CategoryDto categoryDto, String categoryId) {
+        log.info("Request starting for dao layer to update category with categoryId :{}", categoryId);
         Category category = this.categoryRepo.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(" category not found with this categoryId"));
-
         category.setTitle(categoryDto.getTitle());
         category.setDescription(categoryDto.getDescription());
         Category save = this.categoryRepo.save(category);
+        log.info("Request completed for dao layer to update category with categoryId :{}", categoryId);
         return mapper.map(save, CategoryDto.class);
     }
 
     @Override
     public void deleteCategory(String categoryId) {
+        log.info("Request starting for dao layer to delete category with categoryId :{}", categoryId);
         Category category = this.categoryRepo.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(" category not found with this categoryId"));
         this.categoryRepo.delete(category);
+        log.info("Request completed for dao layer to delete category with categoryId :{}", categoryId);
     }
 
     @Override
     public CategoryDto getCategorybyId(String categoryId) {
+        log.info("Request starting for dao layer to get category with categoryId :{}", categoryId);
         Category category = this.categoryRepo.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(" category not found with this categoryId"));
-
-        return mapper.map(category,CategoryDto.class);
+        log.info("Request completed for dao layer to get category with categoryId :{}", categoryId);
+        return mapper.map(category, CategoryDto.class);
     }
 
     @Override
     public PageableResponse<CategoryDto> getAllCategories(int pageNumber, int pageSize, String sortBy, String sortDir) {
-
-       Sort sort =(sortDir.equalsIgnoreCase("desc")) ? (Sort.by(sortBy).descending()) :(Sort.by(sortBy).ascending());
+        log.info("Request starting for dao layer to get all categories ");
+        Sort sort = (sortDir.equalsIgnoreCase("desc")) ? (Sort.by(sortBy).descending()) : (Sort.by(sortBy).ascending());
 
         Pageable pageable = PageRequest.of(pageNumber, pageSize, sort);
-
         Page<Category> categoryPage = this.categoryRepo.findAll(pageable);
 
         PageableResponse<CategoryDto> pageableResponse = General.getPageableResponse(categoryPage, CategoryDto.class);
-
+        log.info("Request completed for dao layer to get All categories ");
         return pageableResponse;
     }
 
     @Override
     public List<CategoryDto> searchCategorybytitle(String keyword) {
+        log.info("Request starting for dao layer to update category with keyword :{}", keyword);
         List<Category> containing = categoryRepo.findByTitleContaining(keyword);
         List<CategoryDto> collect = containing.stream().map(data -> this.mapper.map(data, CategoryDto.class)).collect(Collectors.toList());
+        log.info("Request completed for dao layer to search category with keyword :{}", keyword);
         return collect;
     }
 }
