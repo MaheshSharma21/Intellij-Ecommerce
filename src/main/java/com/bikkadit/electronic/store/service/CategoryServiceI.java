@@ -14,10 +14,10 @@ public interface CategoryServiceI {
 
     void deleteCategory(String categoryId);
 
-    CategoryDto getCategorybyId (String categoryId);
+    CategoryDto getCategoryById (String categoryId);
 
     PageableResponse<CategoryDto> getAllCategories(int pageNumber , int pageSize , String sortBy , String sortDir);
 
-    List<CategoryDto> searchCategorybytitle(String keyword);
+    List<CategoryDto> searchCategoryByTitle(String keyword);
 
 }

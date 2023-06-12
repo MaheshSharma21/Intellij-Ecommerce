@@ -26,11 +26,11 @@ public class GlobalExceptionHandling {
     public ResponseEntity<ApiResponse> resourceNotFoundExceptionHandling(ResourceNotFoundException ex) {
         log.info("Request Starting for Handle  ResourceNotFoundException ");
 
-        ApiResponse responce = ApiResponse
+        ApiResponse response = ApiResponse
                 .builder()
                 .message(ex.getMessage())
                 .success(true).build();
-        return new ResponseEntity<>(responce, HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
 
 
@@ -51,13 +51,13 @@ public class GlobalExceptionHandling {
 
     //handle bad request api exception
     @ExceptionHandler(BadRequestApiException.class)
-    public ResponseEntity<ApiResponse> badrequestApiExceptionHandling(BadRequestApiException ex) {
+    public ResponseEntity<ApiResponse> badRequestApiExceptionHandling(BadRequestApiException ex) {
         log.info("Request Starting for Handle  BadRequestApiException ");
 
-        ApiResponse responce = ApiResponse
+        ApiResponse response = ApiResponse
                 .builder()
                 .message(ex.getMessage())
                 .success(false).build();
-        return new ResponseEntity<>(responce, HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
 }

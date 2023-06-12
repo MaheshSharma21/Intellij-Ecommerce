@@ -41,7 +41,7 @@ public class UserServiceImpl implements UserServiceI {
     private ModelMapper mapper;
 
     @Value("${user.profile.image.path}")
-    private String Imagepath;
+    private String ImagePath;
 
 
     @Override
@@ -55,9 +55,9 @@ public class UserServiceImpl implements UserServiceI {
         user.setUserId(randomId);
 
 
-        User usersaved = this.userRepo.save(user);
+        User userSaved = this.userRepo.save(user);
         log.info("Request completed  to save the user");
-        return this.mapper.map(usersaved, UserDto.class);
+        return this.mapper.map(userSaved, UserDto.class);
     }
 
 
@@ -114,10 +114,10 @@ public class UserServiceImpl implements UserServiceI {
         //delete user profile image
 
         //full path
-        String fullpath = Imagepath + user.getImageName();
+        String fullPath = ImagePath + user.getImageName();
 
         try {
-            Path path = Paths.get(fullpath);
+            Path path = Paths.get(fullPath);
             Files.delete(path);
         } catch (NoSuchFileException ex) {
             log.error("User Image not found in folder :{}", ex.getMessage());
@@ -134,7 +134,7 @@ public class UserServiceImpl implements UserServiceI {
 
 
     @Override
-    public UserDto getuserbyEmail(String email) {
+    public UserDto getUserByEmail(String email) {
         log.info("Request Starting  to get the user by email ;{}", email);
         User user = this.userRepo.findByEmail(email).orElseThrow(() -> new ResourceNotFoundException(AppConstant.USER_EMAIL));
         log.info("Request completed  to get the user by email ;{}", email);

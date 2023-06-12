@@ -3,6 +3,7 @@ package com.bikkadit.electronic.store.entities;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "categories")
@@ -22,5 +23,6 @@ public class Category extends BaseEntity {
     @Column(name = "category_description")
     private String description;
 
+    @Column(name="category_cover_image")
     private String coverImage;
 }

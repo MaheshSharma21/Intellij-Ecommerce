@@ -30,7 +30,7 @@ public class CategoryController {
      * @author Mahesh Sharma
      */
     @PostMapping("/category")
-    public ResponseEntity<CategoryDto> createcategory(@Valid  @RequestBody CategoryDto categoryDto) {
+    public ResponseEntity<CategoryDto> createCategory(@Valid  @RequestBody CategoryDto categoryDto) {
         log.info("Request starting for service layer to create category");
         CategoryDto category = this.categoryServiceI.createCategory(categoryDto);
         log.info("Request completed for service layer to create category");
@@ -59,7 +59,7 @@ public class CategoryController {
      * @author Mahesh Sharma
      */
     @DeleteMapping("/category/{categoryId}")
-    public ResponseEntity<ApiResponse> deletecategory(@PathVariable String categoryId) {
+    public ResponseEntity<ApiResponse> deleteCategory(@PathVariable String categoryId) {
         log.info("Request starting for service layer to delete category with categoryId :{}", categoryId);
         this.categoryServiceI.deleteCategory(categoryId);
         ApiResponse apiResponse = ApiResponse.builder().message(" category deleted successfully ").success(true).Status(HttpStatus.OK).build();
@@ -74,11 +74,11 @@ public class CategoryController {
      * @apiNote This api is used to get category by categoryId
      */
     @GetMapping("/category/{categoryId}")
-    public ResponseEntity<CategoryDto> getcategorybyId(@PathVariable String categoryId) {
+    public ResponseEntity<CategoryDto> getCategoryById(@PathVariable String categoryId) {
         log.info("Request starting for service layer to get category with categoryId :{}", categoryId);
-        CategoryDto categorybyId = this.categoryServiceI.getCategorybyId(categoryId);
+        CategoryDto categoryById = this.categoryServiceI.getCategoryById(categoryId);
         log.info("Request completed for service layer to get category with categoryId :{}", categoryId);
-        return new ResponseEntity<>(categorybyId, HttpStatus.FOUND);
+        return new ResponseEntity<>(categoryById, HttpStatus.FOUND);
     }
 
     /**
@@ -109,10 +109,10 @@ public class CategoryController {
      * @apiNote This api is used to search category with some keyword
      */
     @GetMapping("/category/search/{keyword}")
-    public ResponseEntity<List<CategoryDto>> searchCategorybytitle(@PathVariable String keyword) {
+    public ResponseEntity<List<CategoryDto>> searchCategoryByTitle(@PathVariable String keyword) {
         log.info("Request starting for service layer to search category with keyword :{}", keyword);
-        List<CategoryDto> categoryDtos = this.categoryServiceI.searchCategorybytitle(keyword);
+        List<CategoryDto> categoryDto= this.categoryServiceI.searchCategoryByTitle(keyword);
         log.info("Request completed for service layer to search category with keyword :{}", keyword);
-        return new ResponseEntity<>(categoryDtos, HttpStatus.FOUND);
+        return new ResponseEntity<>(categoryDto, HttpStatus.FOUND);
     }
 }

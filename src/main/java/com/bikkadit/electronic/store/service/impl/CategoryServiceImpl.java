@@ -69,7 +69,7 @@ public class CategoryServiceImpl implements CategoryServiceI {
     }
 
     @Override
-    public CategoryDto getCategorybyId(String categoryId) {
+    public CategoryDto getCategoryById(String categoryId) {
         log.info("Request starting for dao layer to get category with categoryId :{}", categoryId);
         Category category = this.categoryRepo.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.CATEGORY_ERROR));
         log.info("Request completed for dao layer to get category with categoryId :{}", categoryId);
@@ -90,7 +90,7 @@ public class CategoryServiceImpl implements CategoryServiceI {
     }
 
     @Override
-    public List<CategoryDto> searchCategorybytitle(String keyword) {
+    public List<CategoryDto> searchCategoryByTitle(String keyword) {
         log.info("Request starting for dao layer to update category with keyword :{}", keyword);
         List<Category> containing = categoryRepo.findByTitleContaining(keyword);
         List<CategoryDto> collect = containing.stream().map(data -> this.mapper.map(data, CategoryDto.class)).collect(Collectors.toList());

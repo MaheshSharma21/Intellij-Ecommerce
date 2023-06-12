@@ -27,12 +27,12 @@ public class FileServiceImpl implements FileServiceI {
         String randomFileName = UUID.randomUUID().toString();
 
         String extension = originalFilename.substring(originalFilename.lastIndexOf("."));
-        String fileNamewithExtension = randomFileName + extension;
+        String fileNameWithExtension = randomFileName + extension;
 
         //full path
-        String fullPathwithfileName = path + fileNamewithExtension;
+        String fullPathWithFileName = path + fileNameWithExtension;
 
-        log.info(" full image path :{}", fullPathwithfileName);
+        log.info(" full image path :{}", fullPathWithFileName);
         if (extension.equalsIgnoreCase(".png") || extension.equalsIgnoreCase(".jpg") || extension.equalsIgnoreCase(".jpeg")) {
 
             log.info(" file extension :{}", extension);
@@ -41,13 +41,13 @@ public class FileServiceImpl implements FileServiceI {
             File f = new File(path);
 
             if (!f.exists()) {
-                //folder creation upto multiple level
+                //folder creation up to multiple level
                 f.mkdirs();
             }
             //upload Image
-            Files.copy(file.getInputStream(), Paths.get(fullPathwithfileName));
+            Files.copy(file.getInputStream(), Paths.get(fullPathWithFileName));
 
-            return fileNamewithExtension;
+            return fileNameWithExtension;
         } else {
             throw new BadRequestApiException(" File with this " + extension + " not allowed ...");
         }
@@ -58,8 +58,8 @@ public class FileServiceImpl implements FileServiceI {
     @Override
     public InputStream getResource(String path, String name) throws FileNotFoundException {
         log.info(" Request Starting to serve image ");
-        String fullpath = path + File.separator + name;
-        InputStream inputStream = new FileInputStream(fullpath);
+        String fullPath = path + File.separator + name;
+        InputStream inputStream = new FileInputStream(fullPath);
         return inputStream;
     }
 }

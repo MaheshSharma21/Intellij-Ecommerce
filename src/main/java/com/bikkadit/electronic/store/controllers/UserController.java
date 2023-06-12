@@ -36,7 +36,7 @@ public class UserController {
     private FileServiceI fileServiceI;
 
     @Value("${user.profile.image.path}")
-    private String uploadImagepath;
+    private String uploadImagePath;
 
     /**
      * @param userDto
@@ -131,9 +131,9 @@ public class UserController {
      * @apiNote Note This api is used to get user by  user email
      */
     @GetMapping("/user/email/{email}")
-    public ResponseEntity<UserDto> getuserbyEmail(@PathVariable String email) {
+    public ResponseEntity<UserDto> getUserByEmail(@PathVariable String email) {
         log.info("Request Starting for service layer to get the user by email ;{}", email);
-        UserDto userdto = this.userServiceI.getuserbyEmail(email);
+        UserDto userdto = this.userServiceI.getUserByEmail(email);
         log.info("Request completed for service layer to get the user by email ;{}", email);
         return new ResponseEntity<>(userdto, HttpStatus.OK);
 
@@ -148,9 +148,9 @@ public class UserController {
     @GetMapping("/user/search/{keyword}")
     public ResponseEntity<List<UserDto>> searchUser(@PathVariable String keyword) {
         log.info("Request Starting for service layer to search the user with keyword :{}", keyword);
-        List<UserDto> userdto = this.userServiceI.searchUser(keyword);
+        List<UserDto> userDto = this.userServiceI.searchUser(keyword);
         log.info("Request completed for service layer to search the user with keyword :{}", keyword);
-        return new ResponseEntity<>(userdto, HttpStatus.FOUND);
+        return new ResponseEntity<>(userDto, HttpStatus.FOUND);
 
     }
 
@@ -164,15 +164,15 @@ public class UserController {
      */
     @PostMapping("/user/image/{userId}")
     public ResponseEntity<ImageResponse> uploadImage(@RequestParam("userImage") MultipartFile file, @PathVariable String userId) throws IOException {
-        log.info(" Request Starting for fileservice layer to upload image with userId :{}", userId);
-        String ImageName = fileServiceI.uploadImage(file, uploadImagepath);
+        log.info(" Request Starting for fileService layer to upload image with userId :{}", userId);
+        String ImageName = fileServiceI.uploadImage(file, uploadImagePath);
 
         UserDto user = userServiceI.getUserById(userId);
 
         user.setImageName(ImageName);
         UserDto userDto = userServiceI.updateUser(user, userId);
         ImageResponse fileUploaded = ImageResponse.builder().imageName(ImageName).message("File uploaded ").success(true).Status(HttpStatus.CREATED).build();
-        log.info(" Request completed for fileservice layer to upload image with userId :{}", userId);
+        log.info(" Request completed for fileService layer to upload image with userId :{}", userId);
         return new ResponseEntity<>(fileUploaded, HttpStatus.CREATED);
     }
 
@@ -185,13 +185,13 @@ public class UserController {
      */
     @GetMapping("user/image/{userId}")
     public void serverImage(@PathVariable String userId, HttpServletResponse response) throws IOException {
-        log.info(" Request Starting for fileservice layer to serve image with userId :{}", userId);
+        log.info(" Request Starting for fileService layer to serve image with userId :{}", userId);
         UserDto user = userServiceI.getUserById(userId);
         log.info(" user Image Name :{}", user.getImageName());
-        InputStream resource = fileServiceI.getResource(uploadImagepath, user.getImageName());
+        InputStream resource = fileServiceI.getResource(uploadImagePath, user.getImageName());
 
         response.setContentType(MediaType.IMAGE_JPEG_VALUE);
         StreamUtils.copy(resource, response.getOutputStream());
-        log.info(" Request completed for fileservice layer to serve image with userId :{}", userId);
+        log.info(" Request completed for fileService layer to serve image with userId :{}", userId);
     }
 }

@@ -20,5 +20,5 @@ public interface UserServiceI {
 
     List<UserDto> searchUser(String keyword);
 
-    UserDto getuserbyEmail(String email);
+    UserDto getUserByEmail(String email);
 }

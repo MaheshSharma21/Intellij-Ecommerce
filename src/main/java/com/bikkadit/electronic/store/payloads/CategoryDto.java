@@ -23,6 +23,6 @@ public class CategoryDto extends BaseEntityDto {
     @NotNull
     private String description;
 
-
+    @NotBlank(message = "cover Image is mandatory ....")
     private String coverImage;
 }
