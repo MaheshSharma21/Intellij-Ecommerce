@@ -21,6 +21,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
@@ -36,6 +37,11 @@ public class CategoryServiceImpl implements CategoryServiceI {
     public CategoryDto createCategory(CategoryDto categoryDto) {
         log.info("Request starting for dao layer to create category ");
         Category category = this.mapper.map(categoryDto, Category.class);
+
+        //for every time random Id will be stored
+        String randomId = UUID.randomUUID().toString();
+        category.setCategoryId(randomId);
+
         Category save = this.categoryRepo.save(category);
         log.info("Request completed for dao layer to create category ");
         return mapper.map(save, CategoryDto.class);
@@ -47,6 +53,8 @@ public class CategoryServiceImpl implements CategoryServiceI {
         Category category = this.categoryRepo.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.CATEGORY_ERROR));
         category.setTitle(categoryDto.getTitle());
         category.setDescription(categoryDto.getDescription());
+        category.setUpdatedBy(categoryDto.getUpdatedBy());
+        category.setCreatedBy(categoryDto.getCreatedBy());
         Category save = this.categoryRepo.save(category);
         log.info("Request completed for dao layer to update category with categoryId :{}", categoryId);
         return mapper.map(save, CategoryDto.class);

@@ -44,7 +44,7 @@ public class UserController {
      * @author Mahesh Sharma
      * @apiNote this is the api related to save the User
      */
-    @PostMapping
+    @PostMapping("/user")
     public ResponseEntity<UserDto> saveUser(@Valid @RequestBody UserDto userDto) {
         log.info("Request Starting for service layer to save the user");
         UserDto userdto = this.userServiceI.saveUser(userDto);
@@ -59,7 +59,7 @@ public class UserController {
      * @author Mahesh Sharma
      * @apiNote This api is used to get the user by userId
      */
-    @GetMapping("/{userId}")
+    @GetMapping("/user/{userId}")
     public ResponseEntity<UserDto> getUserById(@PathVariable String userId) {
         log.info("Request Starting for service layer to get the user by userId : {}", userId);
         UserDto userdto = this.userServiceI.getUserById(userId);
@@ -73,7 +73,7 @@ public class UserController {
      * @author Mahesh Sharma
      * @apiNote This is the api to get All users
      */
-    @GetMapping
+    @GetMapping("/users")
     public ResponseEntity<PageableResponse<UserDto>> getAllUsers(
             @RequestParam(value = AppConstant.PAGE_NUMBER, defaultValue = AppConstant.PAGE_NUMBER_DEFAULT_VALUE, required = false) Integer pageNumber,
             @RequestParam(value = AppConstant.PAGE_SIZE, defaultValue = AppConstant.PAGE_SIZE_DEFAULT_VALUE, required = false) Integer pageSize,
@@ -94,7 +94,7 @@ public class UserController {
      * @author Mahesh Sharma
      * @apiNote This is the api to update the user by userId
      */
-    @PutMapping("/{userId}")
+    @PutMapping("user/{userId}")
     public ResponseEntity<UserDto> updateUser(@Valid @RequestBody UserDto userDto, @PathVariable String userId) {
         log.info("Request Starting for service layer to update the user by userId : {}", userId);
         UserDto userdto = this.userServiceI.updateUser(userDto, userId);
@@ -109,7 +109,7 @@ public class UserController {
      * @author Mahesh Sharma
      * @apiNote This api is used to delete the user by userId
      */
-    @DeleteMapping("/{userId}")
+    @DeleteMapping("/user/{userId}")
     public ResponseEntity<ApiResponse> deleteUser(@PathVariable String userId) {
         log.info("Request Starting for service layer to delete the user by userId : {}", userId);
         this.userServiceI.deleteUser(userId);
@@ -130,7 +130,7 @@ public class UserController {
      * @author Mahesh Sharma
      * @apiNote Note This api is used to get user by  user email
      */
-    @GetMapping("/email/{email}")
+    @GetMapping("/user/email/{email}")
     public ResponseEntity<UserDto> getuserbyEmail(@PathVariable String email) {
         log.info("Request Starting for service layer to get the user by email ;{}", email);
         UserDto userdto = this.userServiceI.getuserbyEmail(email);
@@ -145,7 +145,7 @@ public class UserController {
      * @author Mahesh Sharma
      * @apiNote this api is used to search User by some keyword
      */
-    @GetMapping("/search/{keyword}")
+    @GetMapping("/user/search/{keyword}")
     public ResponseEntity<List<UserDto>> searchUser(@PathVariable String keyword) {
         log.info("Request Starting for service layer to search the user with keyword :{}", keyword);
         List<UserDto> userdto = this.userServiceI.searchUser(keyword);
@@ -162,7 +162,7 @@ public class UserController {
      * @author Mahesh Sharma
      * @apiNote This api is used to upload Image
      */
-    @PostMapping("/image/{userId}")
+    @PostMapping("/user/image/{userId}")
     public ResponseEntity<ImageResponse> uploadImage(@RequestParam("userImage") MultipartFile file, @PathVariable String userId) throws IOException {
         log.info(" Request Starting for fileservice layer to upload image with userId :{}", userId);
         String ImageName = fileServiceI.uploadImage(file, uploadImagepath);
@@ -183,7 +183,7 @@ public class UserController {
      * @author Mahesh Sharma
      * @apiNote This api is used to server Image
      */
-    @GetMapping("/image/{userId}")
+    @GetMapping("user/image/{userId}")
     public void serverImage(@PathVariable String userId, HttpServletResponse response) throws IOException {
         log.info(" Request Starting for fileservice layer to serve image with userId :{}", userId);
         UserDto user = userServiceI.getUserById(userId);

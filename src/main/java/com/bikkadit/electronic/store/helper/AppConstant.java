@@ -20,4 +20,6 @@ public class AppConstant {
     public static final String SORT_DIRECTION1 ="asc";
     //CATEGORY MODULE CONSTANTS
     public static final String CATEGORY_ERROR =" category not found with this categoryId";
+
+    public static final String SORT_BY_DEFAULT_VALUE_CATEGORY = "title";
 }

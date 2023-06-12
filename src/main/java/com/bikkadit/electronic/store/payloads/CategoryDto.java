@@ -19,7 +19,7 @@ public class CategoryDto extends BaseEntityDto {
     private String title;
 
     @NotBlank
-    @Max(value = 50, message = "description length must be under 50 length")
+    @Size(max = 40, message = "description length must be under 40 length")
     @NotNull
     private String description;
 
