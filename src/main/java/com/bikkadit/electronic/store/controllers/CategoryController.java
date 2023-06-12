@@ -26,7 +26,7 @@ public class CategoryController {
      * @apiNote This api is used to create category
      * @author Mahesh Sharma
      */
-    @PostMapping
+    @PostMapping("/category")
     public ResponseEntity<CategoryDto> createcategory(@RequestBody CategoryDto categoryDto) {
         log.info("Request starting for service layer to create category");
         CategoryDto category = this.categoryServiceI.createCategory(categoryDto);
@@ -87,7 +87,7 @@ public class CategoryController {
      * @author Mahesh Sharma
      * @apiNote This api is used to get All categories
      */
-    @GetMapping
+    @GetMapping("/categories")
     public ResponseEntity<PageableResponse<CategoryDto>> getAllCategories(
             @RequestParam(value = AppConstant.PAGE_NUMBER, defaultValue = AppConstant.PAGE_NUMBER_DEFAULT_VALUE, required = false) int pageNumber,
             @RequestParam(value = AppConstant.PAGE_SIZE, defaultValue = AppConstant.PAGE_SIZE_DEFAULT_VALUE, required = false) int pageSize,
