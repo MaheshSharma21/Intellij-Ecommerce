@@ -14,12 +14,18 @@ import com.bikkadit.electronic.store.service.CategoryServiceI;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -32,6 +38,10 @@ public class CategoryServiceImpl implements CategoryServiceI {
 
     @Autowired
     private ModelMapper mapper;
+
+
+    @Value("${category.profile.image.path}")
+    private String uploadCoverImagePath;
 
     @Override
     public CategoryDto createCategory(CategoryDto categoryDto) {
@@ -64,6 +74,23 @@ public class CategoryServiceImpl implements CategoryServiceI {
     public void deleteCategory(String categoryId) {
         log.info("Request starting for dao layer to delete category with categoryId :{}", categoryId);
         Category category = this.categoryRepo.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.CATEGORY_ERROR));
+
+        //delete category profile coverImage
+
+        //full path
+        String fullPath = uploadCoverImagePath + category.getCoverImage();
+
+        try {
+            Path path = Paths.get(fullPath);
+            Files.delete(path);
+        } catch (NoSuchFileException ex) {
+            log.error("category coverImage not found in folder :{}", ex.getMessage());
+        } catch (IOException ex) {
+            log.error("unable to found  category coverImage :{}", ex.getMessage());
+
+        }
+
+        //delete category
         this.categoryRepo.delete(category);
         log.info("Request completed for dao layer to delete category with categoryId :{}", categoryId);
     }
