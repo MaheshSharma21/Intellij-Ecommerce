@@ -66,6 +66,7 @@ public class CategoryServiceImpl implements CategoryServiceI {
         category.setUpdatedBy(categoryDto.getUpdatedBy());
         category.setCreatedBy(categoryDto.getCreatedBy());
         Category save = this.categoryRepo.save(category);
+        category.setCoverImage(categoryDto.getCoverImage());
         log.info("Request completed for dao layer to update category with categoryId :{}", categoryId);
         return mapper.map(save, CategoryDto.class);
     }

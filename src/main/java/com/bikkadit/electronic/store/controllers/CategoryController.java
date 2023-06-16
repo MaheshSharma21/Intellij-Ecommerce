@@ -143,14 +143,14 @@ public class CategoryController {
      * @author Mahesh Sharma
      * @apiNote This api is used to upload coverImage for category
      */
-    @PostMapping("/category/image/{categoryId}")
+    @PatchMapping("/category/image/{categoryId}")
     public ResponseEntity<ImageResponse> uploadCoverImage(@RequestParam("categoryImage") MultipartFile file, @PathVariable String categoryId) throws IOException {
         log.info(" Request Starting for fileService layer to upload coverImage with categoryId :{}", categoryId);
         String ImageName = fileServiceI.uploadcoverImage(file, uploadCoverImagePath);
 
         CategoryDto category = categoryServiceI.getCategoryById(categoryId);
 
-        category.setCoverImage(ImageName);
+        category.setCategoryId(ImageName);
         CategoryDto userDto = categoryServiceI.updateCategory(category, categoryId);
         ImageResponse fileUploaded = ImageResponse.builder().imageName(ImageName).message("File uploaded ").success(true).Status(HttpStatus.CREATED).build();
         log.info(" Request completed for fileService layer to upload coverImage with categoryId :{}", categoryId);
