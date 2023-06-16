@@ -34,6 +34,16 @@ public class ProductDto {
     @Size(max = 10 ,message = " colours name above 10 characters  are not acceptable ")
     private String colour;
 
+    @NotBlank(message = "  please enter valid Material used for product  ")
+    @Size(max = 10 ,message = " material name above 10 characters  is required  ")
+    private String materialUsed;
+
+
+
+    @NotBlank(message = " valid materials are required !! ")
+    @Size(max = 15 ,message = " materials name  above 15 characters  cannot use ")
+    private String materialUsed;
+
     private Date addedDate;
 
     @NotBlank(message = " product live field is mandatory to fill ....")
