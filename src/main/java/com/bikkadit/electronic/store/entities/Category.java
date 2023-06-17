@@ -4,6 +4,8 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "categories")
@@ -25,4 +27,7 @@ public class Category extends BaseEntity {
 
     @Column(name="category_cover_image")
     private String coverImage;
+
+    @OneToMany(mappedBy = "category",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    private List<Product> product =new ArrayList<>();
 }

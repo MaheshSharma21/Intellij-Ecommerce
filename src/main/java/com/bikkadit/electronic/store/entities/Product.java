@@ -2,10 +2,7 @@ package com.bikkadit.electronic.store.entities;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Setter
@@ -44,4 +41,8 @@ public class Product {
 
     @Column(name="product_imageName")
     private String imageName;
+
+    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @JoinColumn(name="category_product")
+    private Category category;
 }

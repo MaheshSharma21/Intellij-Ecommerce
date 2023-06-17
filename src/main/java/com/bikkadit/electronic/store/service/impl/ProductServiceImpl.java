@@ -1,10 +1,13 @@
 package com.bikkadit.electronic.store.service.impl;
 
+import com.bikkadit.electronic.store.entities.Category;
 import com.bikkadit.electronic.store.entities.Product;
 import com.bikkadit.electronic.store.exceptions.ResourceNotFoundException;
+import com.bikkadit.electronic.store.helper.AppConstant;
 import com.bikkadit.electronic.store.helper.General;
 import com.bikkadit.electronic.store.helper.PageableResponse;
 import com.bikkadit.electronic.store.payloads.ProductDto;
+import com.bikkadit.electronic.store.repositories.CategoryRepository;
 import com.bikkadit.electronic.store.repositories.ProductRepository;
 import com.bikkadit.electronic.store.service.ProductServiceI;
 import lombok.extern.slf4j.Slf4j;
@@ -22,6 +25,7 @@ import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Date;
 import java.util.UUID;
 
 @Slf4j
@@ -38,6 +42,9 @@ public class ProductServiceImpl implements ProductServiceI {
     @Value("${product.image.path}")
     private String uploadProductImagePath;
 
+    @Autowired
+    private CategoryRepository categoryRepo;
+
     @Override
     public ProductDto createProduct(ProductDto productDto) {
 
@@ -46,7 +53,7 @@ public class ProductServiceImpl implements ProductServiceI {
         //for every time random Id will be stored
         String randomId = UUID.randomUUID().toString();
         prod.setProductId(randomId);
-
+        prod.setAddedDate(new Date());
         Product save = this.productRepo.save(prod);
         return this.model.map(save, ProductDto.class);
     }
@@ -65,7 +72,7 @@ public class ProductServiceImpl implements ProductServiceI {
         prod.setQuantity(productDto.getQuantity());
         prod.setStock(productDto.isStock());
         prod.setMaterialUsed(productDto.getMaterialUsed());
-prod.setImageName(productDto.getImageName());
+        prod.setImageName(productDto.getImageName());
         Product save = this.productRepo.save(prod);
         return this.model.map(save, ProductDto.class);
     }
@@ -89,54 +96,83 @@ prod.setImageName(productDto.getImageName());
         return pageableResponse;
     }
 
-   @Override
-        public PageableResponse<ProductDto> getAllLiveProducts(Integer pageNumber, Integer pageSize, String sortBy, String sortDir) {
-            Sort sort = (sortDir.equalsIgnoreCase("desc")) ? (Sort.by(sortBy).descending()) : (Sort.by(sortBy).ascending());
+    @Override
+    public PageableResponse<ProductDto> getAllLiveProducts(Integer pageNumber, Integer pageSize, String sortBy, String sortDir) {
+        Sort sort = (sortDir.equalsIgnoreCase("desc")) ? (Sort.by(sortBy).descending()) : (Sort.by(sortBy).ascending());
 
-            Pageable pageable = PageRequest.of(pageNumber, pageSize, sort);
-       Page<Product> page = this.productRepo.findByLiveTrue(pageable);
+        Pageable pageable = PageRequest.of(pageNumber, pageSize, sort);
+        Page<Product> page = this.productRepo.findByLiveTrue(pageable);
 
-       PageableResponse<ProductDto> pageableResponse = General.getPageableResponse(page, ProductDto.class);
+        PageableResponse<ProductDto> pageableResponse = General.getPageableResponse(page, ProductDto.class);
 
-            return pageableResponse;
+        return pageableResponse;
+    }
+
+    @Override
+    public void deleteProduct(String productId) {
+
+        Product prod = this.productRepo.findById(productId).orElseThrow(() -> new ResourceNotFoundException(" product not found with this productId " + productId));
+
+
+        //delete product productImage
+
+        //full path
+        String fullPath = uploadProductImagePath + prod.getImageName();
+
+        try {
+            Path path = Paths.get(fullPath);
+            Files.delete(path);
+        } catch (NoSuchFileException ex) {
+            log.error("product Image not found in folder :{}", ex.getMessage());
+        } catch (IOException ex) {
+            log.error("unable to found  product Image :{}", ex.getMessage());
+
         }
 
-        @Override
-        public void deleteProduct(String productId) {
+        //delete product
+        this.productRepo.delete(prod);
+    }
 
-            Product prod = this.productRepo.findById(productId).orElseThrow(() -> new ResourceNotFoundException(" product not found with this productId " + productId));
-
-
-            //delete product productImage
-
-            //full path
-            String fullPath = uploadProductImagePath + prod.getImageName();
-
-            try {
-                Path path = Paths.get(fullPath);
-                Files.delete(path);
-            } catch (NoSuchFileException ex) {
-                log.error("product Image not found in folder :{}", ex.getMessage());
-            } catch (IOException ex) {
-                log.error("unable to found  product Image :{}", ex.getMessage());
-
-            }
-
-            //delete product
-            this.productRepo.delete(prod);
-        }
-
-        @Override
-        public PageableResponse<ProductDto> searchProductByTitle(String subtitle, Integer pageNumber, Integer pageSize, String sortBy, String sortDir) {
+    @Override
+    public PageableResponse<ProductDto> searchProductByTitle(String subtitle, Integer pageNumber, Integer pageSize, String sortBy, String sortDir) {
 
 
-            Sort sort = (sortDir.equalsIgnoreCase("desc")) ? (Sort.by(sortBy).descending()) : (Sort.by(sortBy).ascending());
+        Sort sort = (sortDir.equalsIgnoreCase("desc")) ? (Sort.by(sortBy).descending()) : (Sort.by(sortBy).ascending());
 
-            Pageable pageable= PageRequest.of(pageNumber, pageSize, sort);
-            Page<Product> page = this.productRepo.findByTitleContaining(subtitle, pageable);
+        Pageable pageable = PageRequest.of(pageNumber, pageSize, sort);
+        Page<Product> page = this.productRepo.findByTitleContaining(subtitle, pageable);
 
-            PageableResponse<ProductDto> pageableResponse = General.getPageableResponse(page, ProductDto.class);
+        PageableResponse<ProductDto> pageableResponse = General.getPageableResponse(page, ProductDto.class);
 
-            return pageableResponse;
-        }
+        return pageableResponse;
+    }
+
+    @Override
+    public ProductDto createProductWithCategory(ProductDto productDto, String categoryId) {
+
+        Category category = this.categoryRepo.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.CATEGORY_ERROR));
+
+        Product prod = this.model.map(productDto, Product.class);
+
+        //for every time random id will be stored
+        String randomId = UUID.randomUUID().toString();
+        prod.setProductId(randomId);
+        prod.setAddedDate(new Date());
+
+        prod.setCategory(category);
+        Product save = this.productRepo.save(prod);
+        return this.model.map(save, ProductDto.class);
+
+    }
+
+    @Override
+    public ProductDto updateProductWithCategory(String productId, String categoryId) {
+        Category category = this.categoryRepo.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.CATEGORY_ERROR));
+
+        Product prod = this.productRepo.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(" Product not found with given productId" + productId));
+
+        prod.setCategory(category);
+        Product save = this.productRepo.save(prod);
+        return this.model.map(save, ProductDto.class);
+    }
 }

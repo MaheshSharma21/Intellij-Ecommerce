@@ -1,6 +1,8 @@
 package com.bikkadit.electronic.store.payloads;
 
+import com.bikkadit.electronic.store.entities.Category;
 import lombok.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 
 import javax.validation.constraints.*;
@@ -56,5 +58,8 @@ public class ProductDto {
 
     @NotBlank(message = "ImageName is required everytime...")
     private String imageName;
+
+
+    private CategoryDto category;
 
 }
