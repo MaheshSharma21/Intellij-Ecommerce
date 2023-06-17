@@ -1,41 +1,31 @@
 package com.bikkadit.electronic.store.controllers;
 
+
 import com.bikkadit.electronic.store.helper.ApiResponse;
 import com.bikkadit.electronic.store.helper.AppConstant;
-import com.bikkadit.electronic.store.helper.ImageResponse;
 import com.bikkadit.electronic.store.helper.PageableResponse;
-import com.bikkadit.electronic.store.payloads.CategoryDto;
 import com.bikkadit.electronic.store.payloads.ProductDto;
-import com.bikkadit.electronic.store.service.FileServiceI;
 import com.bikkadit.electronic.store.service.ProductServiceI;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
-import java.io.IOException;
-import java.io.InputStream;
 
-@Slf4j
+import com.bikkadit.electronic.store.payloads.ProductDto;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
 @RestController
 @RequestMapping("/api")
 public class ProductController {
 
+
     @Autowired
     private ProductServiceI productServiceI;
-
-    @Autowired
-    private FileServiceI fileServiceI;
-
-    @Value("${product.image.path}")
-    private String uploadProductImagePath;
 
     @PostMapping("product")
     public ResponseEntity<ProductDto> createProduct(@Valid @RequestBody ProductDto productDto) {
@@ -105,32 +95,8 @@ public class ProductController {
     }
 
 
-
-    @PatchMapping("/product/image/{productId}")
-    public ResponseEntity<ImageResponse> uploadProductImage(@RequestParam("productImage") MultipartFile file, @PathVariable String productId) throws IOException {
-        log.info(" Request Starting for fileService layer to upload productImage with productId :{}", productId);
-        String imageName = fileServiceI.uploadProductImage(file, uploadProductImagePath);
-
-        ProductDto product = productServiceI.getProductById(productId);
-
-        product.setImageName(imageName);
-        ProductDto userDto = productServiceI.updateProduct(product, productId);
-        ImageResponse fileUploaded = ImageResponse.builder().imageName(imageName).message("File uploaded ").success(true).Status(HttpStatus.CREATED).build();
-        log.info(" Request completed for fileService layer to upload productImage with categoryId :{}", productId);
-        return new ResponseEntity<>(fileUploaded, HttpStatus.CREATED);
-    }
-
-
-    @GetMapping("product/image/{productId}")
-    public void getProductImage(@PathVariable String productId, HttpServletResponse response) throws IOException {
-        log.info(" Request Starting for fileService layer to serve productImage with productId :{}", productId);
-        ProductDto product = productServiceI.getProductById(productId);
-        log.info(" product Image Name :{}", product.getImageName());
-        InputStream resource = fileServiceI.getProductImage(uploadProductImagePath, product.getImageName());
-
-        response.setContentType(MediaType.IMAGE_JPEG_VALUE);
-        StreamUtils.copy(resource, response.getOutputStream());
-        log.info(" Request completed for fileService layer to serve productImage with productId :{}", productId);
-    }
-
 }
+
+
+
+
