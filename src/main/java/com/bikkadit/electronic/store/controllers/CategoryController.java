@@ -78,7 +78,7 @@ public class CategoryController {
     public ResponseEntity<ApiResponse> deleteCategory(@PathVariable String categoryId) {
         log.info("Request starting for service layer to delete category with categoryId :{}", categoryId);
         this.categoryServiceI.deleteCategory(categoryId);
-        ApiResponse apiResponse = ApiResponse.builder().message(" category deleted successfully ").success(true).Status(HttpStatus.OK).build();
+        ApiResponse apiResponse = ApiResponse.builder().message(AppConstant.CATEGORY_DELETE).success(true).Status(HttpStatus.OK).build();
         log.info("Request completed for service layer to delete category with categoryId :{}", categoryId);
         return new ResponseEntity<>(apiResponse, HttpStatus.OK);
     }
@@ -144,7 +144,7 @@ public class CategoryController {
      * @apiNote This api is used to upload coverImage for category
      */
     @PatchMapping("/category/image/{categoryId}")
-    public ResponseEntity<ImageResponse> uploadCoverImage(@RequestParam("categoryImage") MultipartFile file, @PathVariable String categoryId) throws IOException {
+    public ResponseEntity<ImageResponse> uploadCoverImage(@RequestParam(AppConstant.CATEGORY_IMAGE) MultipartFile file, @PathVariable String categoryId) throws IOException {
         log.info(" Request Starting for fileService layer to upload coverImage with categoryId :{}", categoryId);
         String ImageName = fileServiceI.uploadCoverImage(file, uploadCoverImagePath);
 
@@ -152,7 +152,7 @@ public class CategoryController {
 
         category.setCoverImage(ImageName);
         CategoryDto userDto = categoryServiceI.updateCategory(category, categoryId);
-        ImageResponse fileUploaded = ImageResponse.builder().imageName(ImageName).message("File uploaded ").success(true).Status(HttpStatus.CREATED).build();
+        ImageResponse fileUploaded = ImageResponse.builder().imageName(ImageName).message(AppConstant.FILE_UPLOAD).success(true).Status(HttpStatus.CREATED).build();
         log.info(" Request completed for fileService layer to upload coverImage with categoryId :{}", categoryId);
         return new ResponseEntity<>(fileUploaded, HttpStatus.CREATED);
     }

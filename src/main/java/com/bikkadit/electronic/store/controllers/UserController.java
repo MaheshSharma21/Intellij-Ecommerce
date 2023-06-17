@@ -163,7 +163,7 @@ public class UserController {
      * @apiNote This api is used to upload Image
      */
     @PostMapping("/user/image/{userId}")
-    public ResponseEntity<ImageResponse> uploadImage(@RequestParam("userImage") MultipartFile file, @PathVariable String userId) throws IOException {
+    public ResponseEntity<ImageResponse> uploadImage(@RequestParam(AppConstant.USER_IMAGE) MultipartFile file, @PathVariable String userId) throws IOException {
         log.info(" Request Starting for fileService layer to upload image with userId :{}", userId);
         String ImageName = fileServiceI.uploadImage(file, uploadImagePath);
 
@@ -171,7 +171,7 @@ public class UserController {
 
         user.setImageName(ImageName);
         UserDto userDto = userServiceI.updateUser(user, userId);
-        ImageResponse fileUploaded = ImageResponse.builder().imageName(ImageName).message("File uploaded ").success(true).Status(HttpStatus.CREATED).build();
+        ImageResponse fileUploaded = ImageResponse.builder().imageName(ImageName).message(AppConstant.FILE_UPLOAD).success(true).Status(HttpStatus.CREATED).build();
         log.info(" Request completed for fileService layer to upload image with userId :{}", userId);
         return new ResponseEntity<>(fileUploaded, HttpStatus.CREATED);
     }

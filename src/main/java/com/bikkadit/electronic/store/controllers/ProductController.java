@@ -101,7 +101,7 @@ public class ProductController {
     public ResponseEntity<ApiResponse> deleteProduct(@PathVariable String productId) {
         log.info("Request starting for service layer to get product with productId :{}", productId);
         this.productServiceI.deleteProduct(productId);
-        ApiResponse response = ApiResponse.builder().message(" Product deleted Successfully ").success(true).build();
+        ApiResponse response = ApiResponse.builder().message(AppConstant.PRODUCT_DELETE).success(true).build();
         log.info("Request completed for service layer to get product with productId :{}", productId);
         return new ResponseEntity<>(response, HttpStatus.OK);
 
@@ -120,7 +120,7 @@ public class ProductController {
     public ResponseEntity<PageableResponse<ProductDto>> getAllProducts(
             @RequestParam(value = AppConstant.PAGE_NUMBER, defaultValue = AppConstant.PAGE_NUMBER_DEFAULT_VALUE, required = false) int pageNumber,
             @RequestParam(value = AppConstant.PAGE_SIZE, defaultValue = AppConstant.PAGE_SIZE_DEFAULT_VALUE, required = false) int pageSize,
-            @RequestParam(value = AppConstant.SORT_BY, defaultValue = AppConstant.SORT_BY_DEFAULT_VALUE_CATEGORY, required = false) String sortBy,
+            @RequestParam(value = AppConstant.SORT_BY, defaultValue = AppConstant.SORT_BY_DEFAULT_VALUE_PRODUCT, required = false) String sortBy,
             @RequestParam(value = AppConstant.SORT_DIR, defaultValue = AppConstant.SORT_DIR_DEFAULT_VALUE, required = false) String sortDir
     ) {
         log.info("Request starting for service layer to get ALl products ");
@@ -191,7 +191,7 @@ public class ProductController {
      */
 
     @PatchMapping("/product/image/{productId}")
-    public ResponseEntity<ImageResponse> uploadProductImage(@RequestParam("ProductImage") MultipartFile file, @PathVariable String productId) throws IOException {
+    public ResponseEntity<ImageResponse> uploadProductImage(@RequestParam(AppConstant.PRODUCT_IMAGE) MultipartFile file, @PathVariable String productId) throws IOException {
         log.info(" Request Starting for fileService layer to upload ProductImage with productId :{}", productId);
         String ImageName = fileServiceI.uploadProductImage(file, uploadProductImagePath);
 
@@ -226,7 +226,7 @@ public class ProductController {
 
 
     /**
-     * @param  productDto
+     * @param productDto
      * @param categoryId
      * @return
      * @author Mahesh Sharma
@@ -258,7 +258,3 @@ public class ProductController {
     }
 
 }
-
-
-
-
