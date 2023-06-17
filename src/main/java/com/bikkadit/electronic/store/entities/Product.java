@@ -24,7 +24,7 @@ public class Product {
     @Column(name="product_description")
     private String description;
     @Column(name="product_price")
-    private Integer price;
+    private Double price;
     @Column(name="product_quantity")
     private Integer quantity;
     @Column(name="product_weight")
@@ -38,7 +38,8 @@ public class Product {
     @Column(name="product_isLive")
     private boolean live;
     @Column(name="product_isAvailable")
-    private boolean stock;
-
+    private boolean stock=true;
+    @Column(name="product_discountPrice")
+    private Double discountPrice;
 
 }

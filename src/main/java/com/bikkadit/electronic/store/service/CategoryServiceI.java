@@ -20,4 +20,8 @@ public interface CategoryServiceI {
 
     List<CategoryDto> searchCategoryByTitle(String keyword);
 
+    class ProductServiceI {
+
+
+    }
 }

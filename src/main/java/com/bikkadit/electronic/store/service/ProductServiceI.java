@@ -16,7 +16,11 @@ public interface ProductServiceI {
      PageableResponse<ProductDto>  getAllProducts(Integer pageNumber, Integer pageSize, String sortBy, String sortDir);
 
 
+
+    PageableResponse<ProductDto> getAllLiveProducts(Integer pageNumber, Integer pageSize, String sortBy, String sortDir);
+
      List<ProductDto> getAllLiveProducts();
+
      void deleteProduct(String productId);
 
      PageableResponse<ProductDto> searchProductByTitle(String subtitle,Integer pageNumber, Integer pageSize, String sortBy, String sortDir);
