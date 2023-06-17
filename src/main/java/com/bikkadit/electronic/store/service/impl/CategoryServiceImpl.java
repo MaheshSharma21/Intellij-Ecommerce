@@ -40,7 +40,7 @@ public class CategoryServiceImpl implements CategoryServiceI {
     private ModelMapper mapper;
 
 
-    @Value("${category.profile.image.path}")
+    @Value("${category.image.path}")
     private String uploadCoverImagePath;
 
     @Override
