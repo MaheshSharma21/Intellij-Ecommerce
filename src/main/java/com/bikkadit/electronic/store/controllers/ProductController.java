@@ -101,7 +101,7 @@ public class ProductController {
     public ResponseEntity<ApiResponse> deleteProduct(@PathVariable String productId) {
         log.info("Request starting for service layer to get product with productId :{}", productId);
         this.productServiceI.deleteProduct(productId);
-        ApiResponse response = ApiResponse.builder().message(AppConstant.PRODUCT_DELETE).success(true).build();
+        ApiResponse response = ApiResponse.builder().message(AppConstant.PRODUCT_DELETE).success(true).Status(HttpStatus.OK).build();
         log.info("Request completed for service layer to get product with productId :{}", productId);
         return new ResponseEntity<>(response, HttpStatus.OK);
 

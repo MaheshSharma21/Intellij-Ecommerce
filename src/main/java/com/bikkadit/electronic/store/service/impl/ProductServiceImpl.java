@@ -63,7 +63,7 @@ public class ProductServiceImpl implements ProductServiceI {
     public ProductDto updateProduct(ProductDto productDto, String productId) {
 
         log.info("Request starting for dao layer to update product  with productId :{}", productId);
-        Product prod = this.productRepo.findById(productId).orElseThrow(() -> new ResourceNotFoundException(" Product not found with given productId" + productId));
+        Product prod = this.productRepo.findById(productId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.PRODUCT_ERROR + productId));
         Product map = this.model.map(productDto, Product.class);
 
         prod.setTitle(productDto.getTitle());
@@ -84,7 +84,7 @@ public class ProductServiceImpl implements ProductServiceI {
     @Override
     public ProductDto getProductById(String productId) {
         log.info("Request Started for dao layer to get product  with productId :{}", productId);
-        Product prod = this.productRepo.findById(productId).orElseThrow(() -> new ResourceNotFoundException(" product not found with this productId " + productId));
+        Product prod = this.productRepo.findById(productId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.PRODUCT_ERROR + productId));
         log.info("Request completed for dao layer to get product  with productId :{}", productId);
         return this.model.map(prod, ProductDto.class);
 
@@ -119,7 +119,7 @@ public class ProductServiceImpl implements ProductServiceI {
     @Override
     public void deleteProduct(String productId) {
         log.info("Request started for dao layer to delete product  with productId :{}", productId);
-        Product prod = this.productRepo.findById(productId).orElseThrow(() -> new ResourceNotFoundException(" product not found with this productId " + productId));
+        Product prod = this.productRepo.findById(productId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.PRODUCT_ERROR + productId));
 
 
         //delete product productImage
@@ -180,7 +180,7 @@ public class ProductServiceImpl implements ProductServiceI {
         log.info("Request started for dao layer to  update product with categoryId :{}", categoryId);
         Category category = this.categoryRepo.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.CATEGORY_ERROR));
 
-        Product prod = this.productRepo.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(" Product not found with given productId" + productId));
+        Product prod = this.productRepo.findById(productId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.PRODUCT_ERROR+ productId));
 
         prod.setCategory(category);
         Product save = this.productRepo.save(prod);
