@@ -49,5 +49,7 @@ public class ProductDto {
     @NotNull(message = " enter some rela vent discount price")
     private Double discountPrice;
 
+    @NotBlank(message = "ImageName is required everytime...")
+    private String imageName;
 
 }

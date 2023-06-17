@@ -36,7 +36,7 @@ public class CategoryController {
     @Autowired
     private FileServiceI fileServiceI;
 
-    @Value("${category.profile.image.path}")
+    @Value("${category.image.path}")
     private String uploadCoverImagePath;
 
     /**
@@ -146,11 +146,11 @@ public class CategoryController {
     @PatchMapping("/category/image/{categoryId}")
     public ResponseEntity<ImageResponse> uploadCoverImage(@RequestParam("categoryImage") MultipartFile file, @PathVariable String categoryId) throws IOException {
         log.info(" Request Starting for fileService layer to upload coverImage with categoryId :{}", categoryId);
-        String ImageName = fileServiceI.uploadcoverImage(file, uploadCoverImagePath);
+        String ImageName = fileServiceI.uploadCoverImage(file, uploadCoverImagePath);
 
         CategoryDto category = categoryServiceI.getCategoryById(categoryId);
 
-        category.setCategoryId(ImageName);
+        category.setCoverImage(ImageName);
         CategoryDto userDto = categoryServiceI.updateCategory(category, categoryId);
         ImageResponse fileUploaded = ImageResponse.builder().imageName(ImageName).message("File uploaded ").success(true).Status(HttpStatus.CREATED).build();
         log.info(" Request completed for fileService layer to upload coverImage with categoryId :{}", categoryId);
@@ -169,7 +169,7 @@ public class CategoryController {
         log.info(" Request Starting for fileService layer to serve coverImage with categoryId :{}", categoryId);
         CategoryDto category = categoryServiceI.getCategoryById(categoryId);
         log.info(" category coverImage Name :{}", category.getCoverImage());
-        InputStream resource = fileServiceI.getcoverImage(uploadCoverImagePath, category.getCoverImage());
+        InputStream resource = fileServiceI.getCoverImage(uploadCoverImagePath, category.getCoverImage());
 
         response.setContentType(MediaType.IMAGE_JPEG_VALUE);
         StreamUtils.copy(resource, response.getOutputStream());

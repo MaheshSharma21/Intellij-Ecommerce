@@ -8,11 +8,19 @@ import java.io.InputStream;
 
 public interface FileServiceI {
 
+    //user Image
     String uploadImage(MultipartFile file, String path) throws IOException;
 
     InputStream getResource(String path, String name) throws FileNotFoundException;
 
-    String uploadcoverImage(MultipartFile file ,String path) throws IOException;
+    //category Image
+    String uploadCoverImage(MultipartFile file ,String path) throws IOException;
 
-    InputStream getcoverImage(String path ,String name) throws FileNotFoundException;
+    InputStream getCoverImage(String path ,String name) throws FileNotFoundException;
+
+    //Product Image
+
+    String uploadProductImage(MultipartFile file ,String path) throws IOException;
+
+    InputStream getProductImage(String path ,String name) throws FileNotFoundException;
 }

@@ -42,4 +42,6 @@ public class Product {
     @Column(name="product_discountPrice")
     private Double discountPrice;
 
+    @Column(name="product_imageName")
+    private String imageName;
 }

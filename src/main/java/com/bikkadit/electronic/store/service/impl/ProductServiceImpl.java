@@ -54,7 +54,7 @@ public class ProductServiceImpl implements ProductServiceI {
         prod.setQuantity(productDto.getQuantity());
         prod.setStock(productDto.isStock());
         prod.setMaterialUsed(productDto.getMaterialUsed());
-
+prod.setImageName(productDto.getImageName());
         Product save = this.productRepo.save(prod);
         return this.model.map(save, ProductDto.class);
     }
