@@ -175,4 +175,5 @@ public class CategoryController {
         StreamUtils.copy(resource, response.getOutputStream());
         log.info(" Request completed for fileService layer to serve coverImage with categoryId :{}", categoryId);
     }
+
 }

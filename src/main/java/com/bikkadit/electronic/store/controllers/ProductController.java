@@ -143,6 +143,20 @@ public class ProductController {
     }
 
 
+    @PostMapping("/category/{categoryId}/product")
+    public ResponseEntity<ProductDto> createProductWithCategoryId(@Valid  @RequestBody ProductDto productDto,@PathVariable String categoryId) {
+        ProductDto product = this.productServiceI.createProductWithCategory(productDto, categoryId);
+        return new ResponseEntity<>(product, HttpStatus.CREATED);
+
+    }
+
+    @PatchMapping("/category/{categoryId}/product/{productId}")
+    public ResponseEntity<ProductDto> updateProductWithCategoryId( @PathVariable String categoryId,@PathVariable String productId) {
+        ProductDto productDto = this.productServiceI.updateProductWithCategory(categoryId, categoryId);
+        return new ResponseEntity<>(productDto, HttpStatus.OK);
+
+    }
+
 }
 
 
