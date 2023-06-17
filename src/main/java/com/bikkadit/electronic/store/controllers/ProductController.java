@@ -46,67 +46,75 @@ public class ProductController {
 
 
     /**
-     * @author Mahesh Sharma
-     * @apiNote  this api is to create product
      * @param productDto
      * @return
+     * @author Mahesh Sharma
+     * @apiNote this api is to create product
      */
     @PostMapping("product")
     public ResponseEntity<ProductDto> createProduct(@Valid @RequestBody ProductDto productDto) {
+        log.info("Request starting for service layer to create product ");
         ProductDto product = this.productServiceI.createProduct(productDto);
+        log.info("Request completed for service layer to create product  ");
         return new ResponseEntity<>(product, HttpStatus.CREATED);
 
     }
 
     /**
-     * @auhtor Mahesh Sharma
-     * @apiNote  This api is used to update product
      * @param productDto
      * @param productId
      * @return
+     * @auhtor Mahesh Sharma
+     * @apiNote This api is used to update product
      */
     @PutMapping("product/{productId}")
     public ResponseEntity<ProductDto> updateProduct(@Valid @RequestBody ProductDto productDto, @PathVariable String productId) {
+        log.info("Request starting for service layer to update product with productId :{}", productId);
         ProductDto product = this.productServiceI.updateProduct(productDto, productId);
+        log.info("Request completed for service layer to update product with productId :{}", productId);
         return new ResponseEntity<>(product, HttpStatus.OK);
 
     }
 
     /**
-     * @author Mahesh Sharma
-     * @apiNote  This api is for getting product by productId
      * @param productId
      * @return
+     * @author Mahesh Sharma
+     * @apiNote This api is for getting product by productId
      */
     @GetMapping("product/{productId}")
     public ResponseEntity<ProductDto> getProductById(@PathVariable String productId) {
+        log.info("Request starting for service layer to get product with productId :{}", productId);
         ProductDto product = this.productServiceI.getProductById(productId);
+        log.info("Request complete for service layer to get product with productId :{}", productId);
         return new ResponseEntity<>(product, HttpStatus.OK);
 
     }
 
     /**
-     * @author Mahesh Sharma
-     * @apiNote This api is to delete product by productId
      * @param productId
      * @return
+     * @author Mahesh Sharma
+     * @apiNote This api is to delete product by productId
      */
     @DeleteMapping("/product/{productId}")
     public ResponseEntity<ApiResponse> deleteProduct(@PathVariable String productId) {
+        log.info("Request starting for service layer to get product with productId :{}", productId);
         this.productServiceI.deleteProduct(productId);
         ApiResponse response = ApiResponse.builder().message(" Product deleted Successfully ").success(true).build();
+        log.info("Request completed for service layer to get product with productId :{}", productId);
         return new ResponseEntity<>(response, HttpStatus.OK);
 
     }
 
     /**
-     * @author Mahesh Sharma
-     * @apiNote This api is to get all products
      * @param pageNumber
      * @param pageSize
      * @param sortBy
      * @param sortDir
      * @return
+     * @author Mahesh Sharma
+     * @apiNote This api is to get all products
      */
     @GetMapping("/products")
     public ResponseEntity<PageableResponse<ProductDto>> getAllProducts(
@@ -115,20 +123,22 @@ public class ProductController {
             @RequestParam(value = AppConstant.SORT_BY, defaultValue = AppConstant.SORT_BY_DEFAULT_VALUE_CATEGORY, required = false) String sortBy,
             @RequestParam(value = AppConstant.SORT_DIR, defaultValue = AppConstant.SORT_DIR_DEFAULT_VALUE, required = false) String sortDir
     ) {
+        log.info("Request starting for service layer to get ALl products ");
 
         PageableResponse<ProductDto> response = this.productServiceI.getAllProducts(pageNumber, pageSize, sortBy, sortDir);
+        log.info("Request completed for service layer to get  All products ");
         return new ResponseEntity<>(response, HttpStatus.OK);
 
     }
 
     /**
-     * @author Mahesh Sharma
-     * @apiNote This api is used to get all live products
      * @param pageNumber
      * @param pageSize
      * @param sortBy
      * @param sortDir
      * @return
+     * @author Mahesh Sharma
+     * @apiNote This api is used to get all live products
      */
     @GetMapping("/products/live")
     public ResponseEntity<PageableResponse<ProductDto>> getAllLiveProducts(
@@ -137,20 +147,22 @@ public class ProductController {
             @RequestParam(value = AppConstant.SORT_BY, defaultValue = AppConstant.SORT_BY_DEFAULT_VALUE_CATEGORY, required = false) String sortBy,
             @RequestParam(value = AppConstant.SORT_DIR, defaultValue = AppConstant.SORT_DIR_DEFAULT_VALUE, required = false) String sortDir
     ) {
+        log.info("Request starting for service layer to get ALl live products ");
         PageableResponse<ProductDto> products = this.productServiceI.getAllLiveProducts(pageNumber, pageSize, sortBy, sortDir);
+        log.info("Request completed for service layer to get ALl Live products ");
         return new ResponseEntity<>(products, HttpStatus.OK);
 
     }
 
     /**
-     * @author Mahesh Sharma
-     * @apiNote This api is used to search products by title
      * @param subTitle
      * @param pageNumber
      * @param pageSize
      * @param sortBy
      * @param sortDir
      * @return
+     * @author Mahesh Sharma
+     * @apiNote This api is used to search products by title
      */
 
     @GetMapping("/product/search/{subtitle}")
@@ -161,19 +173,21 @@ public class ProductController {
             @RequestParam(value = AppConstant.SORT_BY, defaultValue = AppConstant.SORT_BY_DEFAULT_VALUE_CATEGORY, required = false) String sortBy,
             @RequestParam(value = AppConstant.SORT_DIR, defaultValue = AppConstant.SORT_DIR_DEFAULT_VALUE, required = false) String sortDir
     ) {
+        log.info("Request starting for service layer to search product with subTitle :{}", subTitle);
         PageableResponse<ProductDto> response = this.productServiceI.searchProductByTitle(subTitle, pageNumber, pageSize, sortBy, sortDir);
+        log.info("Request completed for service layer to search product with subTitle :{}", subTitle);
         return new ResponseEntity<>(response, HttpStatus.OK);
 
     }
 
 
     /**
-     * @author Mahesh Sharma
-     * @apiNote This api is for uploading productImage
      * @param file
      * @param productId
      * @return
      * @throws IOException
+     * @author Mahesh Sharma
+     * @apiNote This api is for uploading productImage
      */
 
     @PatchMapping("/product/image/{productId}")
@@ -192,11 +206,11 @@ public class ProductController {
 
 
     /**
-     * @author Mahesh Sharma
-     * @apiNote  This api is used to serve productImage
      * @param productId
      * @param response
      * @throws IOException
+     * @author Mahesh Sharma
+     * @apiNote This api is used to serve productImage
      */
     @GetMapping("product/image/{productId}")
     public void serverImage(@PathVariable String productId, HttpServletResponse response) throws IOException {
@@ -212,29 +226,33 @@ public class ProductController {
 
 
     /**
-     * @author Mahesh Sharma
-     * @apiNote This api is to create product with category id
-     * @param productDto
+     * @param  productDto
      * @param categoryId
      * @return
+     * @author Mahesh Sharma
+     * @apiNote This api is to create product with category id
      */
     @PostMapping("/category/{categoryId}/product")
-    public ResponseEntity<ProductDto> createProductWithCategoryId(@Valid  @RequestBody ProductDto productDto,@PathVariable String categoryId) {
+    public ResponseEntity<ProductDto> createProductWithCategoryId(@Valid @RequestBody ProductDto productDto, @PathVariable String categoryId) {
+        log.info("Request started for service layer to create product with categoryId :{}", categoryId);
         ProductDto product = this.productServiceI.createProductWithCategory(productDto, categoryId);
+        log.info("Request completed for service layer to create product with categoryId :{}", categoryId);
         return new ResponseEntity<>(product, HttpStatus.CREATED);
 
     }
 
     /**
-     * @author Mahesh Sharma
-     * @apiNote This api is used to update product with categoryId
      * @param categoryId
      * @param productId
      * @return
+     * @author Mahesh Sharma
+     * @apiNote This api is used to update product with categoryId
      */
     @PatchMapping("/category/{categoryId}/product/{productId}")
-    public ResponseEntity<ProductDto> updateProductWithCategoryId( @PathVariable String categoryId,@PathVariable String productId) {
+    public ResponseEntity<ProductDto> updateProductWithCategoryId(@PathVariable String categoryId, @PathVariable String productId) {
+        log.info("Request started for service layer to update product with categoryId :{}", categoryId + " and with productId :{}" + productId);
         ProductDto productDto = this.productServiceI.updateProductWithCategory(categoryId, categoryId);
+        log.info("Request completed for service layer to update product with categoryId :{}", categoryId + " and with productId :{}" + productId);
         return new ResponseEntity<>(productDto, HttpStatus.OK);
 
     }
