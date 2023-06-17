@@ -47,7 +47,7 @@ public class ProductServiceImpl implements ProductServiceI {
 
     @Override
     public ProductDto createProduct(ProductDto productDto) {
-
+        log.info("Request starting for dao layer to create product ");
         Product prod = this.model.map(productDto, Product.class);
 
         //for every time random Id will be stored
@@ -55,11 +55,14 @@ public class ProductServiceImpl implements ProductServiceI {
         prod.setProductId(randomId);
         prod.setAddedDate(new Date());
         Product save = this.productRepo.save(prod);
+        log.info("Request completed for dao layer to create product ");
         return this.model.map(save, ProductDto.class);
     }
 
     @Override
     public ProductDto updateProduct(ProductDto productDto, String productId) {
+
+        log.info("Request starting for dao layer to update product  with productId :{}", productId);
         Product prod = this.productRepo.findById(productId).orElseThrow(() -> new ResourceNotFoundException(" Product not found with given productId" + productId));
         Product map = this.model.map(productDto, Product.class);
 
@@ -74,43 +77,48 @@ public class ProductServiceImpl implements ProductServiceI {
         prod.setMaterialUsed(productDto.getMaterialUsed());
         prod.setImageName(productDto.getImageName());
         Product save = this.productRepo.save(prod);
+        log.info("Request completed for dao layer to update product  with productId :{}", productId);
         return this.model.map(save, ProductDto.class);
     }
 
     @Override
     public ProductDto getProductById(String productId) {
+        log.info("Request Started for dao layer to get product  with productId :{}", productId);
         Product prod = this.productRepo.findById(productId).orElseThrow(() -> new ResourceNotFoundException(" product not found with this productId " + productId));
+        log.info("Request completed for dao layer to get product  with productId :{}", productId);
         return this.model.map(prod, ProductDto.class);
 
     }
 
     @Override
     public PageableResponse<ProductDto> getAllProducts(Integer pageNumber, Integer pageSize, String sortBy, String sortDir) {
-
+        log.info("Request Started for dao layer to get All products ");
         Sort sort = (sortDir.equalsIgnoreCase("desc")) ? (Sort.by(sortBy).descending()) : (Sort.by(sortBy).ascending());
 
         Pageable pageable = PageRequest.of(pageNumber, pageSize, sort);
         Page<Product> page = this.productRepo.findAll(pageable);
 
         PageableResponse<ProductDto> pageableResponse = General.getPageableResponse(page, ProductDto.class);
+        log.info("Request completed for dao layer to get All products ");
         return pageableResponse;
     }
 
     @Override
     public PageableResponse<ProductDto> getAllLiveProducts(Integer pageNumber, Integer pageSize, String sortBy, String sortDir) {
+        log.info("Request Started for dao layer to get All live products ");
         Sort sort = (sortDir.equalsIgnoreCase("desc")) ? (Sort.by(sortBy).descending()) : (Sort.by(sortBy).ascending());
 
         Pageable pageable = PageRequest.of(pageNumber, pageSize, sort);
         Page<Product> page = this.productRepo.findByLiveTrue(pageable);
 
         PageableResponse<ProductDto> pageableResponse = General.getPageableResponse(page, ProductDto.class);
-
+        log.info("Request completed for dao layer to get All live products  ");
         return pageableResponse;
     }
 
     @Override
     public void deleteProduct(String productId) {
-
+        log.info("Request started for dao layer to delete product  with productId :{}", productId);
         Product prod = this.productRepo.findById(productId).orElseThrow(() -> new ResourceNotFoundException(" product not found with this productId " + productId));
 
 
@@ -131,11 +139,12 @@ public class ProductServiceImpl implements ProductServiceI {
 
         //delete product
         this.productRepo.delete(prod);
+        log.info("Request completed for dao layer to delete product  with productId :{}", productId);
     }
 
     @Override
     public PageableResponse<ProductDto> searchProductByTitle(String subtitle, Integer pageNumber, Integer pageSize, String sortBy, String sortDir) {
-
+        log.info("Request Started for dao layer to search products  with subtitle :{}", subtitle);
 
         Sort sort = (sortDir.equalsIgnoreCase("desc")) ? (Sort.by(sortBy).descending()) : (Sort.by(sortBy).ascending());
 
@@ -143,13 +152,13 @@ public class ProductServiceImpl implements ProductServiceI {
         Page<Product> page = this.productRepo.findByTitleContaining(subtitle, pageable);
 
         PageableResponse<ProductDto> pageableResponse = General.getPageableResponse(page, ProductDto.class);
-
+        log.info("Request completed for dao layer to search products  with subtitle :{}", subtitle);
         return pageableResponse;
     }
 
     @Override
     public ProductDto createProductWithCategory(ProductDto productDto, String categoryId) {
-
+        log.info("Request starting for dao layer to create product  with categoryId :{}", categoryId);
         Category category = this.categoryRepo.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.CATEGORY_ERROR));
 
         Product prod = this.model.map(productDto, Product.class);
@@ -161,18 +170,21 @@ public class ProductServiceImpl implements ProductServiceI {
 
         prod.setCategory(category);
         Product save = this.productRepo.save(prod);
+        log.info("Request completed for dao layer to  create product with categoryId :{}", categoryId);
         return this.model.map(save, ProductDto.class);
 
     }
 
     @Override
     public ProductDto updateProductWithCategory(String productId, String categoryId) {
+        log.info("Request started for dao layer to  update product with categoryId :{}", categoryId);
         Category category = this.categoryRepo.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.CATEGORY_ERROR));
 
         Product prod = this.productRepo.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(" Product not found with given productId" + productId));
 
         prod.setCategory(category);
         Product save = this.productRepo.save(prod);
+        log.info("Request completed for dao layer to  update product with categoryId :{}", categoryId);
         return this.model.map(save, ProductDto.class);
     }
 }
