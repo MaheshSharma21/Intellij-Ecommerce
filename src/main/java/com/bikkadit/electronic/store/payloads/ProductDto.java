@@ -24,6 +24,8 @@ public class ProductDto {
     @NotNull(message = "product price is required ....")
     private Double price;
 
+
+
     @NotNull(message = " please enter how much product quantity you want ")
     private Integer quantity;
 
@@ -38,6 +40,7 @@ public class ProductDto {
     @Size(max = 10 ,message = " material name above 10 characters  is required  ")
     private String materialUsed;
 
+
     private Date addedDate;
 
     @NotBlank(message = " product live field is mandatory to fill ....")
@@ -45,6 +48,7 @@ public class ProductDto {
     private boolean live;
 
     private boolean stock = true;
+
 
     @NotNull(message = " enter some rela vent discount price")
     private Double discountPrice;

@@ -1,5 +1,6 @@
 package com.bikkadit.electronic.store.service.impl;
 
+
 import com.bikkadit.electronic.store.entities.Product;
 import com.bikkadit.electronic.store.exceptions.ResourceNotFoundException;
 import com.bikkadit.electronic.store.helper.General;
@@ -38,10 +39,11 @@ public class ProductServiceImpl implements ProductServiceI {
 
         Product save = this.productRepo.save(prod);
         return this.model.map(save, ProductDto.class);
-    }
+
 
     @Override
     public ProductDto updateProduct(ProductDto productDto, String productId) {
+
         Product prod = this.productRepo.findById(productId).orElseThrow(() -> new ResourceNotFoundException(" Product not found with given productId" + productId));
         Product map = this.model.map(productDto, Product.class);
 
@@ -57,17 +59,23 @@ public class ProductServiceImpl implements ProductServiceI {
 
         Product save = this.productRepo.save(prod);
         return this.model.map(save, ProductDto.class);
+
+       
+
     }
 
     @Override
     public ProductDto getProductById(String productId) {
+
         Product prod = this.productRepo.findById(productId).orElseThrow(() -> new ResourceNotFoundException(" product not found with this productId " + productId));
         return this.model.map(prod, ProductDto.class);
+
 
     }
 
     @Override
     public PageableResponse<ProductDto> getAllProducts(Integer pageNumber, Integer pageSize, String sortBy, String sortDir) {
+
 
         Sort sort = (sortDir.equalsIgnoreCase("desc")) ? (Sort.by(sortBy).descending()) : (Sort.by(sortBy).ascending());
 
@@ -110,4 +118,9 @@ public class ProductServiceImpl implements ProductServiceI {
 
             return pageableResponse;
         }
+
+    }
+
+   
+
 }
