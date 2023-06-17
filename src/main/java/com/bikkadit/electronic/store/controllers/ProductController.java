@@ -5,7 +5,7 @@ import com.bikkadit.electronic.store.helper.ApiResponse;
 import com.bikkadit.electronic.store.helper.AppConstant;
 import com.bikkadit.electronic.store.helper.ImageResponse;
 import com.bikkadit.electronic.store.helper.PageableResponse;
-import com.bikkadit.electronic.store.payloads.CategoryDto;
+
 import com.bikkadit.electronic.store.payloads.ProductDto;
 import com.bikkadit.electronic.store.service.FileServiceI;
 import com.bikkadit.electronic.store.service.ProductServiceI;
@@ -21,8 +21,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
-import com.bikkadit.electronic.store.payloads.ProductDto;
-import org.springframework.http.ResponseEntity;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
@@ -46,6 +45,12 @@ public class ProductController {
     private String uploadProductImagePath;
 
 
+    /**
+     * @author Mahesh Sharma
+     * @apiNote  this api is to create product
+     * @param productDto
+     * @return
+     */
     @PostMapping("product")
     public ResponseEntity<ProductDto> createProduct(@Valid @RequestBody ProductDto productDto) {
         ProductDto product = this.productServiceI.createProduct(productDto);
@@ -53,6 +58,13 @@ public class ProductController {
 
     }
 
+    /**
+     * @auhtor Mahesh Sharma
+     * @apiNote  This api is used to update product
+     * @param productDto
+     * @param productId
+     * @return
+     */
     @PutMapping("product/{productId}")
     public ResponseEntity<ProductDto> updateProduct(@Valid @RequestBody ProductDto productDto, @PathVariable String productId) {
         ProductDto product = this.productServiceI.updateProduct(productDto, productId);
@@ -60,6 +72,12 @@ public class ProductController {
 
     }
 
+    /**
+     * @author Mahesh Sharma
+     * @apiNote  This api is for getting product by productId
+     * @param productId
+     * @return
+     */
     @GetMapping("product/{productId}")
     public ResponseEntity<ProductDto> getProductById(@PathVariable String productId) {
         ProductDto product = this.productServiceI.getProductById(productId);
@@ -67,6 +85,12 @@ public class ProductController {
 
     }
 
+    /**
+     * @author Mahesh Sharma
+     * @apiNote This api is to delete product by productId
+     * @param productId
+     * @return
+     */
     @DeleteMapping("/product/{productId}")
     public ResponseEntity<ApiResponse> deleteProduct(@PathVariable String productId) {
         this.productServiceI.deleteProduct(productId);
@@ -75,6 +99,15 @@ public class ProductController {
 
     }
 
+    /**
+     * @author Mahesh Sharma
+     * @apiNote This api is to get all products
+     * @param pageNumber
+     * @param pageSize
+     * @param sortBy
+     * @param sortDir
+     * @return
+     */
     @GetMapping("/products")
     public ResponseEntity<PageableResponse<ProductDto>> getAllProducts(
             @RequestParam(value = AppConstant.PAGE_NUMBER, defaultValue = AppConstant.PAGE_NUMBER_DEFAULT_VALUE, required = false) int pageNumber,
@@ -88,6 +121,15 @@ public class ProductController {
 
     }
 
+    /**
+     * @author Mahesh Sharma
+     * @apiNote This api is used to get all live products
+     * @param pageNumber
+     * @param pageSize
+     * @param sortBy
+     * @param sortDir
+     * @return
+     */
     @GetMapping("/products/live")
     public ResponseEntity<PageableResponse<ProductDto>> getAllLiveProducts(
             @RequestParam(value = AppConstant.PAGE_NUMBER, defaultValue = AppConstant.PAGE_NUMBER_DEFAULT_VALUE, required = false) int pageNumber,
@@ -99,6 +141,17 @@ public class ProductController {
         return new ResponseEntity<>(products, HttpStatus.OK);
 
     }
+
+    /**
+     * @author Mahesh Sharma
+     * @apiNote This api is used to search products by title
+     * @param subTitle
+     * @param pageNumber
+     * @param pageSize
+     * @param sortBy
+     * @param sortDir
+     * @return
+     */
 
     @GetMapping("/product/search/{subtitle}")
     public ResponseEntity<PageableResponse<ProductDto>> searchProductByTitle(
@@ -114,9 +167,17 @@ public class ProductController {
     }
 
 
+    /**
+     * @author Mahesh Sharma
+     * @apiNote This api is for uploading productImage
+     * @param file
+     * @param productId
+     * @return
+     * @throws IOException
+     */
 
     @PatchMapping("/product/image/{productId}")
-    public ResponseEntity<ImageResponse> uploadCoverImage(@RequestParam("ProductImage") MultipartFile file, @PathVariable String productId) throws IOException {
+    public ResponseEntity<ImageResponse> uploadProductImage(@RequestParam("ProductImage") MultipartFile file, @PathVariable String productId) throws IOException {
         log.info(" Request Starting for fileService layer to upload ProductImage with productId :{}", productId);
         String ImageName = fileServiceI.uploadProductImage(file, uploadProductImagePath);
 
@@ -130,6 +191,13 @@ public class ProductController {
     }
 
 
+    /**
+     * @author Mahesh Sharma
+     * @apiNote  This api is used to serve productImage
+     * @param productId
+     * @param response
+     * @throws IOException
+     */
     @GetMapping("product/image/{productId}")
     public void serverImage(@PathVariable String productId, HttpServletResponse response) throws IOException {
         log.info(" Request Starting for fileService layer to serve ProductImage with productId :{}", productId);
@@ -143,6 +211,13 @@ public class ProductController {
     }
 
 
+    /**
+     * @author Mahesh Sharma
+     * @apiNote This api is to create product with category id
+     * @param productDto
+     * @param categoryId
+     * @return
+     */
     @PostMapping("/category/{categoryId}/product")
     public ResponseEntity<ProductDto> createProductWithCategoryId(@Valid  @RequestBody ProductDto productDto,@PathVariable String categoryId) {
         ProductDto product = this.productServiceI.createProductWithCategory(productDto, categoryId);
@@ -150,6 +225,13 @@ public class ProductController {
 
     }
 
+    /**
+     * @author Mahesh Sharma
+     * @apiNote This api is used to update product with categoryId
+     * @param categoryId
+     * @param productId
+     * @return
+     */
     @PatchMapping("/category/{categoryId}/product/{productId}")
     public ResponseEntity<ProductDto> updateProductWithCategoryId( @PathVariable String categoryId,@PathVariable String productId) {
         ProductDto productDto = this.productServiceI.updateProductWithCategory(categoryId, categoryId);
