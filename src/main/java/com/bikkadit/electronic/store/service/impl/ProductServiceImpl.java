@@ -48,4 +48,14 @@ public class ProductServiceImpl implements ProductServiceI {
     public PageableResponse<ProductDto> searchProductByTitle(String subtitle, Integer pageNumber, Integer pageSize, String sortBy, String sortDir) {
         return null;
     }
+
+    @Override
+    public ProductDto createProductWithCategory(ProductDto productDto, String categoryId) {
+        return null;
+    }
+
+    @Override
+    public ProductDto updateProductWithCategory(ProductDto productDto, String categoryId) {
+        return null;
+    }
 }
