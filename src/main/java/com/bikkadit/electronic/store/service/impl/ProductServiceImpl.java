@@ -7,16 +7,24 @@ import com.bikkadit.electronic.store.helper.PageableResponse;
 import com.bikkadit.electronic.store.payloads.ProductDto;
 import com.bikkadit.electronic.store.repositories.ProductRepository;
 import com.bikkadit.electronic.store.service.ProductServiceI;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.UUID;
 
+@Slf4j
 @Service
 public class ProductServiceImpl implements ProductServiceI {
 
@@ -26,6 +34,9 @@ public class ProductServiceImpl implements ProductServiceI {
 
     @Autowired
     private ModelMapper model;
+
+    @Value("${product.image.path}")
+    private String uploadProductImagePath;
 
     @Override
     public ProductDto createProduct(ProductDto productDto) {
@@ -94,6 +105,24 @@ prod.setImageName(productDto.getImageName());
         public void deleteProduct(String productId) {
 
             Product prod = this.productRepo.findById(productId).orElseThrow(() -> new ResourceNotFoundException(" product not found with this productId " + productId));
+
+
+            //delete product productImage
+
+            //full path
+            String fullPath = uploadProductImagePath + prod.getImageName();
+
+            try {
+                Path path = Paths.get(fullPath);
+                Files.delete(path);
+            } catch (NoSuchFileException ex) {
+                log.error("product Image not found in folder :{}", ex.getMessage());
+            } catch (IOException ex) {
+                log.error("unable to found  product Image :{}", ex.getMessage());
+
+            }
+
+            //delete product
             this.productRepo.delete(prod);
         }
 
