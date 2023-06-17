@@ -99,6 +99,7 @@ public class UserServiceImpl implements UserServiceI {
         user.setImageName(userDto.getImageName());
         user.setCreatedBy(userDto.getCreatedBy());
         user.setUpdatedBy(userDto.getUpdatedBy());
+        System.out.println("user");
 
         User user1 = this.userRepo.save(user);
         log.info("Request completed  to update the user by userId : {}", userId);
