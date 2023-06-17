@@ -1,8 +1,8 @@
 package com.bikkadit.electronic.store.payloads;
 
-import com.bikkadit.electronic.store.entities.Category;
+
 import lombok.*;
-import org.springframework.beans.factory.annotation.Autowired;
+
 
 
 import javax.validation.constraints.*;

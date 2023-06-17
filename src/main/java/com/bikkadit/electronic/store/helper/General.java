@@ -12,10 +12,10 @@ public class General {
 
     public static <E, U> PageableResponse<U> getPageableResponse(Page<E> page, Class<U> type) {
 
-        //code reuseability
+        //code ReUseAbility
         //this class is for general purpose for every response of type like user,category,cart
         //E means entity type object and V means Dto type object
-        //Class<U> means target type mtlb  pageableResponse object kis type ka hoga
+        //Class<U> means target type MtLb  pageableResponse object kis type ka Ho Ga
 
 
         List<E> content = page.getContent();

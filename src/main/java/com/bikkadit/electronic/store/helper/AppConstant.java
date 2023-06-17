@@ -17,6 +17,7 @@ public class AppConstant {
     public static final String SORT_BY_DEFAULT_VALUE = "email";
     public static final String SORT_DIR_DEFAULT_VALUE = "desc";
 
+
     public static final String USER_IMAGE ="userImage";
 
     //CATEGORY MODULE CONSTANTS

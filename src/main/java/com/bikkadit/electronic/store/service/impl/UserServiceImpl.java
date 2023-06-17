@@ -75,7 +75,7 @@ public class UserServiceImpl implements UserServiceI {
         log.info("Request Starting  to get All users");
 
         // Sort sort = Sort.by(sortBy);
-        Sort sort = (sortDir.equalsIgnoreCase(AppConstant.SORT_DIRECTION)) ? (Sort.by(sortBy).descending()) : (Sort.by(sortBy).ascending());
+        Sort sort = (sortDir.equalsIgnoreCase(AppConstant.SORT_DIR_DEFAULT_VALUE)) ? (Sort.by(sortBy).descending()) : (Sort.by(sortBy).ascending());
 
         Pageable of = PageRequest.of(pageNumber, pageSize, sort);
         Page<User> page = this.userRepo.findAll(of);
