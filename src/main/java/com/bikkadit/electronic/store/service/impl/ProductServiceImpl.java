@@ -175,16 +175,17 @@ public class ProductServiceImpl implements ProductServiceI {
 
     }
 
+    //not working
     @Override
     public ProductDto updateProductWithCategory(String productId, String categoryId) {
-        log.info("Request started for dao layer to  update product with categoryId :{}", categoryId);
-        Category category = this.categoryRepo.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.CATEGORY_ERROR));
+        log.info("Request started for dao layer to  update product with categoryId :{}", categoryId + " and with productId :{}");
+                Category category = this.categoryRepo.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.CATEGORY_ERROR));
 
         Product prod = this.productRepo.findById(productId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.PRODUCT_ERROR+ productId));
 
         prod.setCategory(category);
         Product save = this.productRepo.save(prod);
-        log.info("Request completed for dao layer to  update product with categoryId :{}", categoryId);
+        log.info("Request completed for dao layer to  update product with categoryId :{}", categoryId + " and with productId :{}");
         return this.model.map(save, ProductDto.class);
     }
 }

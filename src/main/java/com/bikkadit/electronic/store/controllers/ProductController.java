@@ -251,7 +251,7 @@ public class ProductController {
     @PatchMapping("/category/{categoryId}/product/{productId}")
     public ResponseEntity<ProductDto> updateProductWithCategoryId(@PathVariable String categoryId, @PathVariable String productId) {
         log.info("Request started for service layer to update product with categoryId :{}", categoryId + " and with productId :{}" + productId);
-        ProductDto productDto = this.productServiceI.updateProductWithCategory(categoryId, categoryId);
+        ProductDto productDto = this.productServiceI.updateProductWithCategory(categoryId, productId);
         log.info("Request completed for service layer to update product with categoryId :{}", categoryId + " and with productId :{}" + productId);
         return new ResponseEntity<>(productDto, HttpStatus.OK);
 
