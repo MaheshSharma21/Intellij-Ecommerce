@@ -189,13 +189,5 @@ public class ProductServiceImpl implements ProductServiceI {
         return this.model.map(save, ProductDto.class);
     }
 
-    @Override
-    public ProductDto createProductWithCategory(ProductDto productDto, String categoryId) {
-        return null;
-    }
 
-    @Override
-    public ProductDto updateProductWithCategory(ProductDto productDto, String categoryId) {
-        return null;
-    }
 }

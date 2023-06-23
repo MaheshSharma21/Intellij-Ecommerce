@@ -31,10 +31,6 @@ public interface ProductServiceI {
     ProductDto updateProductWithCategory(String productId ,String categoryId);
 
 
-     //create Product with categoryId
-     ProductDto createProductWithCategory(ProductDto productDto ,String categoryId);
 
-     // assian category id to existing Product
-     ProductDto updateProductWithCategory(ProductDto productDto ,String categoryId);
 
 }
