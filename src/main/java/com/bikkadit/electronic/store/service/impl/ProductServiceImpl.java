@@ -188,4 +188,6 @@ public class ProductServiceImpl implements ProductServiceI {
         log.info("Request completed for dao layer to  update product with categoryId :{}", categoryId + " and with productId :{}");
         return this.model.map(save, ProductDto.class);
     }
+
+
 }
