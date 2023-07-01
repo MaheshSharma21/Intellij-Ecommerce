@@ -9,7 +9,6 @@ public interface UserServiceI {
 
     UserDto saveUser(UserDto userDto);
 
-
     UserDto getUserById(String userId);
 
     PageableResponse<UserDto> getAllUsers(Integer pageNumber, Integer pageSize, String sortBy, String sortDir);

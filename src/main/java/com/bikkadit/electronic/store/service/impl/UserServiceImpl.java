@@ -1,7 +1,6 @@
 package com.bikkadit.electronic.store.service.impl;
 
 import com.bikkadit.electronic.store.entities.User;
-
 import com.bikkadit.electronic.store.exceptions.ResourceNotFoundException;
 import com.bikkadit.electronic.store.helper.AppConstant;
 import com.bikkadit.electronic.store.helper.General;
@@ -19,7 +18,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
@@ -32,8 +30,6 @@ import java.util.stream.Collectors;
 @Slf4j
 @Service
 public class UserServiceImpl implements UserServiceI {
-
-
     @Autowired
     private UserRepository userRepo;
 
@@ -153,3 +149,5 @@ public class UserServiceImpl implements UserServiceI {
 
 
 }
+
+
