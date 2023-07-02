@@ -40,7 +40,7 @@ public class ProductDto {
     private String colour;
 
     @NotBlank(message = "  please enter valid Material used for product  ")
-    @Size(max = 20 ,message = " material name above 10 characters  is required  ")
+   // @Size(max = 20 ,message = " material name above 10 characters  is required  ")
     private String materialUsed;
 
 
