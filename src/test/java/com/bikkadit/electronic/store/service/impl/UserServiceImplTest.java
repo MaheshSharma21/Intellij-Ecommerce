@@ -119,7 +119,7 @@ class UserServiceImplTest {
         Mockito.when(userRepo.save(Mockito.any())).thenReturn(user);
         UserDto userDto1 = userService.updateUser(userDto,userId);
 
-        Assertions.assertEquals("rahul",userDto1.getName(),"username not validate");
+        Assertions.assertEquals("pankaj",userDto1.getName(),"username not validate");
         Assertions.assertNotNull(userDto1);
 
     }

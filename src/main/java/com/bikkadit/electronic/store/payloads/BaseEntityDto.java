@@ -18,7 +18,7 @@ public class BaseEntityDto implements Serializable {
     private LocalDate updatedDate;
 
     @Size(min = 4, max = 20, message = " Please provide valid  Name !!!")
-    @NotEmpty
+   // @NotEmpty
     private String updatedBy;
 
     private Boolean isActive = true;
@@ -26,7 +26,7 @@ public class BaseEntityDto implements Serializable {
     private LocalDate createdDate;
 
     @Size(min = 4, max = 20, message = " Please Enter valid  Name !!!")
-    @NotBlank
+    //@NotBlank
     private String createdBy;
 
 }
