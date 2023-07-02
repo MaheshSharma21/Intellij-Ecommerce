@@ -29,13 +29,13 @@ class ProductControllerTest {
     @Test
     void getAllLiveProductsTest() {
     }
-
     @Test
     void searchProductByTitleTest() {
     }
 
     @Test
-    void uploadProductImageTest() {
+    void uploadP
+roductImageTest() {
     }
 
     @Test
