@@ -34,8 +34,7 @@ class ProductControllerTest {
     }
 
     @Test
-    void uploadP
-roductImageTest() {
+    void uploadProductImageTest() {
     }
 
     @Test
