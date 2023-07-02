@@ -108,12 +108,12 @@ class UserServiceImplTest {
     void updateUser() {
         String userId ="abc";
         UserDto userDto =UserDto.builder()
-                .about(" updated testing for updateUser method")
-                .name("rahul")
+                .about(" updated testing for updateProduct method")
+                .name("pankaj")
                 .email("maheshsharma@gmail.com")
                 .gender("male")
-                .password("ms@123")
-                .imageName("mnm.png").build();
+                .password("pk@123")
+                .imageName("pks.png").build();
 
         Mockito.when(userRepo.findById(Mockito.anyString())).thenReturn(Optional.of(user));
         Mockito.when(userRepo.save(Mockito.any())).thenReturn(user);
