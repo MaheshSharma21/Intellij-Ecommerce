@@ -58,7 +58,7 @@ class UserControllerTest {
     }
 
     @Test
-    void saveUser() throws Exception {
+    void saveUserTest() throws Exception {
         UserDto userdto = this.mapper.map(user, UserDto.class);
         Mockito.when(userServiceI.saveUser(Mockito.any())).thenReturn(userdto);
 
@@ -88,7 +88,7 @@ class UserControllerTest {
     }
 
     @Test
-    void getUserById() throws Exception {
+    void getUserByIdTest() throws Exception {
         String userId ="avc";
         UserDto userDto = this.mapper.map(user, UserDto.class);
         Mockito.when(userServiceI.getUserById(Mockito.anyString())).thenReturn(userDto);
@@ -104,7 +104,7 @@ class UserControllerTest {
     }
 
     @Test
-    void getAllUsers() throws Exception {
+    void getAllUsersTest() throws Exception {
         UserDto user1 = UserDto.builder()
                 .about("testing for getAll controller method")
                 .name("vikas")
@@ -152,7 +152,7 @@ class UserControllerTest {
     }
 
     @Test
-    void updateUser() throws Exception {
+    void updateUserTest() throws Exception {
 
         String userId ="abc";
 
@@ -173,7 +173,7 @@ class UserControllerTest {
 
 
     @Test
-    void deleteUser() {
+    void deleteUserTest() {
 
 //        String userid ="avc";
 //        UserDto userDto = this.mapper.map(user, UserDto.class);
@@ -188,7 +188,7 @@ class UserControllerTest {
    }
 
     @Test
-    void getUserByEmail() throws Exception {
+    void getUserByEmailTest() throws Exception {
         String emailId ="maheshsharma@gmail.com";
         UserDto userDto = this.mapper.map(user, UserDto.class);
         Mockito.when(userServiceI.getUserByEmail(Mockito.anyString())).thenReturn(userDto);
@@ -207,7 +207,7 @@ class UserControllerTest {
 
 
     @Test
-    void searchUser() throws Exception {
+    void searchUserTest() throws Exception {
 
         String keyword ="image";
         UserDto user1 = UserDto.builder()
@@ -240,10 +240,10 @@ class UserControllerTest {
     }
 
     @Test
-    void uploadImage() {
+    void uploadImageTest() {
     }
 
     @Test
-    void serverImage() {
+    void serverImageTest() {
     }
 }
