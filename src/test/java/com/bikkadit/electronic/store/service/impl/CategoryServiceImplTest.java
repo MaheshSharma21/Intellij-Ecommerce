@@ -29,7 +29,7 @@ class CategoryServiceImplTest {
     @MockBean
     private CategoryRepository categoryRepo;
 
-    @InjectMocks
+
     @Autowired
     private CategoryServiceImpl categoryService;
 

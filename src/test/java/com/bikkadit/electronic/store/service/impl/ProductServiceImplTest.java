@@ -37,6 +37,7 @@ class ProductServiceImplTest {
     private CategoryRepository categoryRepo;
 
     @Autowired
+
     private ProductServiceImpl productServiceI;
 
     @Autowired

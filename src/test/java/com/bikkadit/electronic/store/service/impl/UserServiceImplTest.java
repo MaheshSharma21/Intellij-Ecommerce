@@ -27,6 +27,7 @@ class UserServiceImplTest {
     @MockBean
     private UserRepository userRepo;
 
+  
     @Autowired
     private UserServiceImpl userService;
 
