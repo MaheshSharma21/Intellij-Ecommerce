@@ -37,7 +37,7 @@ class ProductServiceImplTest {
     private CategoryRepository categoryRepo;
 
     @Autowired
-    @InjectMocks
+
     private ProductServiceImpl productServiceI;
 
     @Autowired
