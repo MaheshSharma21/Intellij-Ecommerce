@@ -155,7 +155,7 @@ public class ProductController {
     }
 
     /**
-     * @param subTitle
+     * @param subtitle
      * @param pageNumber
      * @param pageSize
      * @param sortBy
@@ -167,16 +167,16 @@ public class ProductController {
 
     @GetMapping("/product/search/{subtitle}")
     public ResponseEntity<PageableResponse<ProductDto>> searchProductByTitle(
-            @PathVariable String subTitle,
+            @PathVariable String subtitle,
             @RequestParam(value = AppConstant.PAGE_NUMBER, defaultValue = AppConstant.PAGE_NUMBER_DEFAULT_VALUE, required = false) int pageNumber,
             @RequestParam(value = AppConstant.PAGE_SIZE, defaultValue = AppConstant.PAGE_SIZE_DEFAULT_VALUE, required = false) int pageSize,
             @RequestParam(value = AppConstant.SORT_BY, defaultValue = AppConstant.SORT_BY_DEFAULT_VALUE_CATEGORY, required = false) String sortBy,
             @RequestParam(value = AppConstant.SORT_DIR, defaultValue = AppConstant.SORT_DIR_DEFAULT_VALUE, required = false) String sortDir
     ) {
-        log.info("Request starting for service layer to search product with subTitle :{}", subTitle);
-        PageableResponse<ProductDto> response = this.productServiceI.searchProductByTitle(subTitle, pageNumber, pageSize, sortBy, sortDir);
-        log.info("Request completed for service layer to search product with subTitle :{}", subTitle);
-        return new ResponseEntity<>(response, HttpStatus.OK);
+        log.info("Request starting for service layer to search product with subTitle :{}", subtitle);
+        PageableResponse<ProductDto> response = this.productServiceI.searchProductByTitle(subtitle, pageNumber, pageSize, sortBy, sortDir);
+        log.info("Request completed for service layer to search product with subTitle :{}", subtitle);
+        return new ResponseEntity<>(response, HttpStatus.FOUND);
 
     }
 
