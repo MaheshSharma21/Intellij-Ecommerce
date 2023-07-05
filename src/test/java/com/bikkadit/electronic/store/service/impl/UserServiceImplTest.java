@@ -4,10 +4,10 @@ import com.bikkadit.electronic.store.entities.User;
 import com.bikkadit.electronic.store.helper.PageableResponse;
 import com.bikkadit.electronic.store.payloads.UserDto;
 import com.bikkadit.electronic.store.repositories.UserRepository;
+import com.bikkadit.electronic.store.service.UserServiceI;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
 import org.mockito.Mockito;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,9 +27,8 @@ class UserServiceImplTest {
     @MockBean
     private UserRepository userRepo;
 
-  
     @Autowired
-    private UserServiceImpl userService;
+    private UserServiceI userService;
 
     @Autowired
     private ModelMapper mapper;
@@ -37,7 +36,7 @@ class UserServiceImplTest {
     User user;
 
     @BeforeEach
-    void init (){
+    void init() {
         user = User.builder()
                 .about("testing for userCreate method")
                 .name("Mahesh")
@@ -48,6 +47,7 @@ class UserServiceImplTest {
                 .imageName("xyz.png").build();
 
     }
+
     @Test
     void saveUser() {
 
@@ -57,26 +57,26 @@ class UserServiceImplTest {
         UserDto userDto = userService.saveUser(this.mapper.map(user, UserDto.class));
         //matching using assertion
         Assertions.assertNotNull(userDto);
-          Assertions.assertEquals("Mahesh",userDto.getName(),"UserName not matched ");
+        Assertions.assertEquals("Mahesh", userDto.getName(), "UserName not matched ");
 
     }
 
     @Test
     void getUserById() {
 
-        String userId="xyz";
-
+        String userId = "xyz";
+        //stubbing
         Mockito.when(userRepo.findById(Mockito.anyString())).thenReturn(Optional.of(user));
-
+        //actual method calling
         UserDto userdto = userService.getUserById(userId);
-
+        //matching using assertion
         Assertions.assertNotNull(user);
-        Assertions.assertEquals(user.getGender(),userdto.getGender(),"Gender not matched ");
+        Assertions.assertEquals(user.getGender(), userdto.getGender(), "Gender not matched ");
     }
 
     @Test
     void getAllUsers() {
-        User user1= User.builder()
+        User user1 = User.builder()
                 .about("testing for getAllUser method")
                 .name("rohan")
                 .email("rohan@gmail.com")
@@ -85,7 +85,7 @@ class UserServiceImplTest {
                 .State("delhi")
                 .imageName("abc.png").build();
 
-        User user2=User.builder()
+        User user2 = User.builder()
                 .about("testing for getAllUser method")
                 .name("sohan")
                 .email("sohan@gmail.com")
@@ -97,17 +97,20 @@ class UserServiceImplTest {
         List<User> list = Arrays.asList(user, user1, user2);
 
         Page<User> page = new PageImpl<>(list);
-         Mockito.when(userRepo.findAll((Pageable) Mockito.any())).thenReturn(page);
-        PageableResponse<UserDto> allUsers = userService.getAllUsers(1, 2, "state", "desc");
-        Assertions.assertEquals(3,allUsers.getContent().size(),"Size not validate");
 
+        //stubbing
+        Mockito.when(userRepo.findAll((Pageable) Mockito.any())).thenReturn(page);
+        //actual method calling
+        PageableResponse<UserDto> allUsers = userService.getAllUsers(1, 2, "state", "desc");
+        //matching using assertion
+        Assertions.assertEquals(3, allUsers.getContent().size(), "Size not validate");
 
     }
 
     @Test
     void updateUser() {
-        String userId ="abc";
-        UserDto userDto =UserDto.builder()
+        String userId = "abc";
+        UserDto userDto = UserDto.builder()
                 .about(" updated testing for updateProduct method")
                 .name("pankaj")
                 .email("maheshsharma@gmail.com")
@@ -115,34 +118,39 @@ class UserServiceImplTest {
                 .password("pk@123")
                 .imageName("pks.png").build();
 
+        //stubbing
         Mockito.when(userRepo.findById(Mockito.anyString())).thenReturn(Optional.of(user));
         Mockito.when(userRepo.save(Mockito.any())).thenReturn(user);
-        UserDto userDto1 = userService.updateUser(userDto,userId);
-
-        Assertions.assertEquals("pankaj",userDto1.getName(),"username not validate");
+        //actual method calling
+        UserDto userDto1 = userService.updateUser(userDto, userId);
+        //matching using assertion
+        Assertions.assertEquals("pankaj", userDto1.getName(), "username not validate");
         Assertions.assertNotNull(userDto1);
 
     }
 
     @Test
     void deleteUser() {
-        
-        String userId="xyz";
+
+        String userId = "xyz";
+        //stubbing
         Mockito.when(userRepo.findById(Mockito.anyString())).thenReturn(Optional.of(user));
-
+        //actual method calling
         userService.deleteUser(userId);
-
-        Mockito.verify(userRepo,Mockito.times(1)).delete(user);
+        //verifying result
+        Mockito.verify(userRepo, Mockito.times(1)).delete(user);
     }
 
     @Test
     void getUserByEmail() {
 
-        String email ="maheshsharma@gmail.com";
+        String email = "maheshsharma@gmail.com";
+        //stubbing
         Mockito.when(userRepo.findByEmail(email)).thenReturn(Optional.of(user));
-
+        //actual method calling
         UserDto userdto = userService.getUserByEmail(email);
-        Assertions.assertEquals(user.getEmail(),userdto.getEmail(),"Email not matched ");
+        //matching using assertion
+        Assertions.assertEquals(user.getEmail(), userdto.getEmail(), "Email not matched ");
     }
 
     @Test
@@ -167,11 +175,13 @@ class UserServiceImplTest {
                 .imageName("jason.png").build();
 
 
-        String keyword ="jason";
-        Mockito.when(userRepo.findByNameContaining(keyword)).thenReturn(Arrays.asList(user,user1,user2));
-
-        List<UserDto> userDto= userService.searchUser(keyword);
-        Assertions.assertEquals(3,userDto.size(),"size not matched");
+        String keyword = "jason";
+        //stubbing
+        Mockito.when(userRepo.findByNameContaining(keyword)).thenReturn(Arrays.asList(user, user1, user2));
+        //actual method calling
+        List<UserDto> userDto = userService.searchUser(keyword);
+        //matching using assertion
+        Assertions.assertEquals(3, userDto.size(), "size not matched");
     }
 }
 
