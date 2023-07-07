@@ -149,7 +149,7 @@ class ProductServiceImplTest {
                 .weight(100)
                 .stock(true).build();
 
-        Product product4 = product.builder()
+        Product product4 = Product.builder()
                 .title(" Mobile phones ")
                 .description(" Mobile phones above 1 lac with blue background ")
                 .live(false)
