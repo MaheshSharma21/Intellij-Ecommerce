@@ -34,7 +34,7 @@ class UserControllerTest {
     //controller testing by using mockmvc framework
 
     @MockBean
-    private UserServiceImpl userServiceI;
+    private UserServiceI userServiceI;
 
     @Autowired
     private ModelMapper mapper ;
