@@ -92,7 +92,7 @@ class CategoryControllerTest {
         CategoryDto categoryDto = CategoryDto.builder()
                 .title("sd card related category")
                 .description("SD card available for every smart")
-                .coverImage("abc.png").build();
+                .coverImage("bnf.png").build();
 
         Mockito.when(categoryServiceI.updateCategory(Mockito.any(),Mockito.anyString())).thenReturn(categoryDto);
 
