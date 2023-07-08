@@ -177,7 +177,7 @@ class UserControllerTest {
 
 //        String userid ="avc";
 //        UserDto userDto = this.mapper.map(user, UserDto.class);
-//        Mockito.when(userServiceI.deleteUser(Mockito.anyString())).th
+//        Mockito.when(userServiceI.deleteUser(Mockito.anyString())).thenReturn(Boolean b);
 //
 //        this.mockMvc.perform(
 //                        MockMvcRequestBuilders.get("/api/user"+userid)
