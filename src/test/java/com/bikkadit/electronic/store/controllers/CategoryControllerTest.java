@@ -186,12 +186,4 @@ class CategoryControllerTest {
                 .andDo(print())
                 .andExpect(status().isOk());
     }
-
-    @Test
-    void uploadCoverImage() {
-    }
-
-    @Test
-    void serverImage() {
-    }
 }
