@@ -72,8 +72,6 @@ class UserControllerTest {
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.name").exists());
 
-
-
     }
 
     //extra method for conversion
@@ -174,17 +172,6 @@ class UserControllerTest {
 
     @Test
     void deleteUserTest() {
-
-//        String userid ="avc";
-//        UserDto userDto = this.mapper.map(user, UserDto.class);
-//        Mockito.when(userServiceI.deleteUser(Mockito.anyString())).thenReturn(Boolean b);
-//
-//        this.mockMvc.perform(
-//                        MockMvcRequestBuilders.get("/api/user"+userid)
-//                                .contentType(MediaType.APPLICATION_JSON)
-//                                .accept(MediaType.APPLICATION_JSON))
-//                .andDo(print())
-//                .andExpect(status().isOk());
    }
 
     @Test
@@ -237,13 +224,5 @@ class UserControllerTest {
                 .andExpect(status().isFound());
 
 
-    }
-
-    @Test
-    void uploadImageTest() {
-    }
-
-    @Test
-    void serverImageTest() {
     }
 }
