@@ -290,13 +290,6 @@ class ProductControllerTest {
                 .andExpect(status().isFound());
     }
 
-    @Test
-    void uploadProductImageTest() {
-    }
-
-    @Test
-    void serverImageTest() {
-    }
 
     @Test
     void createProductWithCategoryIdTest() throws Exception {
