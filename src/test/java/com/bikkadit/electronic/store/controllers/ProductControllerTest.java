@@ -135,7 +135,18 @@ class ProductControllerTest {
     }
 
     @Test
-    void deleteProductTest() {
+    void deleteProductTest() throws Exception {
+        String productId = "anc";
+        //Mocking
+        Mockito.doNothing().when(productServiceI).deleteProduct(Mockito.anyString());
+        // perform request for url
+        this.mockMvc.perform(
+                        MockMvcRequestBuilders.delete("/api/product/" + productId))
+                .andDo(print())
+                //expectations
+                .andExpect(status().isOk());
+        //verify the result
+        Mockito.verify(productServiceI, Mockito.times(1)).deleteProduct(productId);
     }
 
     @Test
