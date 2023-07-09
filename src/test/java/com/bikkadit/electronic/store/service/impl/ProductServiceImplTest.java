@@ -86,7 +86,7 @@ class ProductServiceImplTest {
                 .weight(200)
                 .stock(true).build();
 
-        String productId = "abcd";
+        String productId = "bmw";
         //Stubbing
         Mockito.when(productRepo.findById(Mockito.anyString())).thenReturn(Optional.of(product));
         Mockito.when(productRepo.save(Mockito.any())).thenReturn(product);
@@ -100,9 +100,8 @@ class ProductServiceImplTest {
     @Test
     void getProductById() {
 
-        String productId = "abcds";
+        String productId = "xya";
         ProductDto productdto = this.mapper.map(product, ProductDto.class);
-
         //Stubbing
         Mockito.when(productRepo.findById(Mockito.anyString())).thenReturn(Optional.of(product));
         //Actual Method calling
