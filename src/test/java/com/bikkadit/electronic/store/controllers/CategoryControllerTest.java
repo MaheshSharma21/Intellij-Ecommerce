@@ -108,7 +108,18 @@ class CategoryControllerTest {
     }
 
     @Test
-    void deleteCategory() {
+    void deleteCategory() throws Exception {
+        String categoryId = "abc";
+        //Mocking
+        Mockito.doNothing().when(categoryServiceI).deleteCategory(Mockito.anyString());
+        // perform request for url
+        this.mockmvc.perform(
+                        MockMvcRequestBuilders.delete("/api/category/" +categoryId))
+                .andDo(print())
+                //expectations
+                .andExpect(status().isOk());
+        //verify the result
+        Mockito.verify(categoryServiceI, Mockito.times(1)).deleteCategory(categoryId);
     }
 
     @Test
