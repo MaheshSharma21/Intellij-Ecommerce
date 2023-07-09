@@ -134,9 +134,19 @@ class ProductControllerTest {
 
     }
 
-    @Test
-    void deleteProductTest() {
-    }
+//    @Test
+//    void deleteProductTest() {
+//        String productId ="klm";
+//
+//        Mockito.when(productServiceI.deleteProduct(Mockito.anyString())).thenReturn();
+//        this.mockMvc.perform(
+//                        MockMvcRequestBuilders.get("/api/product/"+productId)
+//                                .contentType(MediaType.APPLICATION_JSON)
+//                                .accept(MediaType.APPLICATION_JSON))
+//                .andDo(print())
+//                .andExpect(status().isOk())
+//                .andExpect(jsonPath("$.colour").exists());
+//    }
 
     @Test
     void getAllProductsTest() throws Exception {
@@ -290,13 +300,7 @@ class ProductControllerTest {
                 .andExpect(status().isFound());
     }
 
-    @Test
-    void uploadProductImageTest() {
-    }
 
-    @Test
-    void serverImageTest() {
-    }
 
     @Test
     void createProductWithCategoryIdTest() throws Exception {
@@ -316,7 +320,4 @@ class ProductControllerTest {
                 .andExpect(jsonPath("$.weight").exists());
     }
 
-    @Test
-    void updateProductWithCategoryIdTest() {
     }
-}

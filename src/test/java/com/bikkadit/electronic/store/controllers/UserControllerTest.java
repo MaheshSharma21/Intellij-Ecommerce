@@ -37,7 +37,7 @@ class UserControllerTest {
     private UserServiceI userServiceI;
 
     @Autowired
-    private ModelMapper mapper ;
+    private ModelMapper mapper;
 
     @Autowired
     private MockMvc mockMvc;
@@ -60,15 +60,16 @@ class UserControllerTest {
     @Test
     void saveUserTest() throws Exception {
         UserDto userdto = this.mapper.map(user, UserDto.class);
+        //Mocking
         Mockito.when(userServiceI.saveUser(Mockito.any())).thenReturn(userdto);
-
-        //request for url
+        // perform request for url
         this.mockMvc.perform(
-                MockMvcRequestBuilders.post("/api/user")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(convertObjectToJsonString(user))
-                        .accept(MediaType.APPLICATION_JSON))
+                        MockMvcRequestBuilders.post("/api/user")
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content(convertObjectToJsonString(user))
+                                .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
+                //expectations
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.name").exists());
 
@@ -78,7 +79,8 @@ class UserControllerTest {
     private String convertObjectToJsonString(Object user) {
         try {
             return new ObjectMapper().writeValueAsString(user);
-        }catch(Exception e){
+        } catch (Exception e) {
+            //Exception Handle
             e.printStackTrace();
             return null;
         }
@@ -87,15 +89,17 @@ class UserControllerTest {
 
     @Test
     void getUserByIdTest() throws Exception {
-        String userId ="avc";
+        String userId = "avc";
         UserDto userDto = this.mapper.map(user, UserDto.class);
+        //Mocking
         Mockito.when(userServiceI.getUserById(Mockito.anyString())).thenReturn(userDto);
-
+        // perform request for url
         this.mockMvc.perform(
-                MockMvcRequestBuilders.get("/api/user/"+userId)
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .accept(MediaType.APPLICATION_JSON))
+                        MockMvcRequestBuilders.get("/api/user/" + userId)
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
+                //expectations
                 .andExpect(status().isFound())
                 .andExpect(jsonPath("$.name").exists());
 
@@ -111,7 +115,7 @@ class UserControllerTest {
                 .password("ms@123")
                 .imageName("xyz.png").build();
 
-       UserDto user2 = UserDto.builder()
+        UserDto user2 = UserDto.builder()
                 .about("testing for getAll controller method")
                 .name("sohan")
                 .email("sohan@gmail.com")
@@ -132,18 +136,20 @@ class UserControllerTest {
         pageableResponse.setLastPage(false);
         pageableResponse.setTotalElements(2000);
         pageableResponse.setPageNumber(50);
-        pageableResponse.setContent(Arrays.asList(user1,user2,user3));
+        pageableResponse.setContent(Arrays.asList(user1, user2, user3));
         pageableResponse.setTotalPages(200);
         pageableResponse.setPageSize(20);
 
-        Mockito.when(userServiceI.getAllUsers(Mockito.anyInt(),Mockito.anyInt(),Mockito.anyString(),Mockito.anyString())).thenReturn(pageableResponse);
+        //Mocking
+        Mockito.when(userServiceI.getAllUsers(Mockito.anyInt(), Mockito.anyInt(), Mockito.anyString(), Mockito.anyString())).thenReturn(pageableResponse);
 
-        //request for url
+        // perform request for url
         this.mockMvc.perform(
                         MockMvcRequestBuilders.get("/api/users")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
+                //expectations
                 .andExpect(status().isOk());
 
 
@@ -152,18 +158,20 @@ class UserControllerTest {
     @Test
     void updateUserTest() throws Exception {
 
-        String userId ="abc";
+        String userId = "abc";
 
         UserDto userdto = this.mapper.map(user, UserDto.class);
-        Mockito.when(userServiceI.updateUser(Mockito.any(),Mockito.anyString())).thenReturn(userdto);
+        //Mocking
+        Mockito.when(userServiceI.updateUser(Mockito.any(), Mockito.anyString())).thenReturn(userdto);
 
-        //request for url
+        // perform request for url
         this.mockMvc.perform(
-                        MockMvcRequestBuilders.put("/api/user/"+userId)
+                        MockMvcRequestBuilders.put("/api/user/" + userId)
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(convertObjectToJsonString(user))
                                 .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
+                //expectations
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.name").exists());
 
@@ -171,32 +179,42 @@ class UserControllerTest {
 
 
     @Test
-    void deleteUserTest() {
-   }
+    void deleteUserTest() throws Exception {
+        String userId = "avc";
+        //Mocking
+        Mockito.doNothing().when(userServiceI).deleteUser(Mockito.anyString());
+        // perform request for url
+        this.mockMvc.perform(
+                        MockMvcRequestBuilders.delete("/api/user/" + userId))
+                .andDo(print())
+                //expectations
+                .andExpect(status().isOk());
+        //verify the result
+        Mockito.verify(userServiceI, Mockito.times(1)).deleteUser(userId);
+    }
 
     @Test
     void getUserByEmailTest() throws Exception {
-        String emailId ="maheshsharma@gmail.com";
+        String emailId = "maheshsharma@gmail.com";
         UserDto userDto = this.mapper.map(user, UserDto.class);
+        //Mocking
         Mockito.when(userServiceI.getUserByEmail(Mockito.anyString())).thenReturn(userDto);
-
+        // perform request for url
         this.mockMvc.perform(
-                        MockMvcRequestBuilders.get("/api/user/email/"+emailId)
+                        MockMvcRequestBuilders.get("/api/user/email/" + emailId)
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
+                //expectations
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.name").exists());
     }
-
-
-
 
 
     @Test
     void searchUserTest() throws Exception {
 
-        String keyword ="image";
+        String keyword = "image";
         UserDto user1 = UserDto.builder()
                 .about("testing for getAll controller method")
                 .name("vikas")
@@ -212,15 +230,16 @@ class UserControllerTest {
                 .gender("male")
                 .password("ms@123")
                 .imageName("abc.png").build();
+        //Mocking
+        Mockito.when(userServiceI.searchUser(Mockito.anyString())).thenReturn(Arrays.asList(user1, user2));
 
-        Mockito.when(userServiceI.searchUser(Mockito.anyString())).thenReturn(Arrays.asList(user1,user2));
-
-        //request for url
+        // perform request for url
         this.mockMvc.perform(
-                        MockMvcRequestBuilders.get("/api/user/search/"+keyword)
+                        MockMvcRequestBuilders.get("/api/user/search/" + keyword)
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
+                //expectations
                 .andExpect(status().isFound());
 
 
