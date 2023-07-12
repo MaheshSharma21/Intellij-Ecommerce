@@ -15,7 +15,9 @@ public class CartItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int cartItemId;
 
+    //mapping product
     @JoinColumn(name = "product_Id")
+    @OneToOne
     private Product product;
 
     @Column(name = "product_quantity")
@@ -24,4 +26,7 @@ public class CartItem {
     @Column(name = "product_totalPrize")
     private int totalPrize;
 
+    //mapping cart
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Cart cart ;
 }
