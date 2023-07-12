@@ -20,6 +20,7 @@ public class Cart {
     private String cartId;
 
     @JoinColumn(name = "user_Id")
+    @OneToOne
     private User user;
 
     //mapping cart Item
