@@ -248,7 +248,7 @@ public class ProductController {
      * @author Mahesh Sharma
      * @apiNote This api is used to update product with categoryId
      */
-    @GetMapping("/category/{categoryId}/product/{productId}")
+    @PutMapping("/category/{categoryId}/product/{productId}")
     public ResponseEntity<ProductDto> updateProductWithCategoryId(@PathVariable String categoryId, @PathVariable String productId) {
         log.info("Request started for service layer to update product with categoryId :{}", categoryId + " and with productId :{}" + productId);
         ProductDto productDto = this.productServiceI.updateProductWithCategory(categoryId, productId);
