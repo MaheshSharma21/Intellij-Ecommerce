@@ -56,6 +56,16 @@ class UserControllerTest {
                 .build();
 
     }
+    //extra method for conversion
+    private String convertObjectToJsonString(Object user) {
+        try {
+            return new ObjectMapper().writeValueAsString(user);
+        }catch(Exception e){
+            e.printStackTrace();
+
+        }
+        return null;
+    }
 
     @Test
     void saveUserTest() throws Exception {
@@ -76,16 +86,7 @@ class UserControllerTest {
 
     }
 
-    //extra method for conversion
-    private String convertObjectToJsonString(Object user) {
-        try {
-            return new ObjectMapper().writeValueAsString(user);
-        }catch(Exception e){
-            e.printStackTrace();
-            return null;
-        }
 
-    }
 
     @Test
     void getUserByIdTest() throws Exception {
