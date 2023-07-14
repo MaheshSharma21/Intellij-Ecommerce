@@ -1,0 +1,12 @@
+package com.bikkadit.electronic.store.service;
+
+import com.bikkadit.electronic.store.payloads.CartDto;
+
+public interface CartServiceI {
+
+    //add items to cart
+    // case 1 : cart for user is not available then we will create the cart and then add items to cart
+    //case 2 : cart available then we will add items to cart
+
+    CartDto addItemsToCart(String userId);
+}
