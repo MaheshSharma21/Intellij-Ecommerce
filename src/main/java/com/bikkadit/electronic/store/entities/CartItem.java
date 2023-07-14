@@ -13,7 +13,7 @@ import javax.persistence.*;
 public class CartItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int cartItemId;
+    private Integer cartItemId;
 
     //mapping product
     @JoinColumn(name = "product_Id")
