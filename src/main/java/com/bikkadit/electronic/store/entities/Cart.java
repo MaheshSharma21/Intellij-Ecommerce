@@ -15,7 +15,7 @@ import java.util.List;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Cart {
+public class Cart extends  BaseEntity{
     @Id
     private String cartId;
 
