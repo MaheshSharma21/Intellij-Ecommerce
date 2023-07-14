@@ -283,9 +283,10 @@ class ProductServiceImplTest {
 
         ProductDto productdto = this.mapper.map(product, ProductDto.class);
         //Actual Method calling
-        productServiceI.createProductWithCategory(productdto, categoryId);
+        ProductDto  productDto1= productServiceI.createProductWithCategory(productdto, categoryId);
+        System.out.println(productDto1.getTitle());
         //Assertion
-        Assertions.assertEquals(product.getDiscountPrice(), productdto.getDiscountPrice(), " test case failed due to inEquality in validation");
+        Assertions.assertEquals(product.getDiscountPrice(), productDto1.getDiscountPrice(), " test case failed due to inEquality in validation");
     }
 
     @Test
