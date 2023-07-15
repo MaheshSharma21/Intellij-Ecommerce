@@ -4,9 +4,11 @@ import com.bikkadit.electronic.store.entities.Cart;
 import com.bikkadit.electronic.store.entities.CartItem;
 import com.bikkadit.electronic.store.entities.Product;
 import com.bikkadit.electronic.store.entities.User;
+import com.bikkadit.electronic.store.exceptions.BadRequestApiException;
 import com.bikkadit.electronic.store.exceptions.ResourceNotFoundException;
 import com.bikkadit.electronic.store.payloads.AddItemToCartRequest;
 import com.bikkadit.electronic.store.payloads.CartDto;
+import com.bikkadit.electronic.store.repositories.CartItemRepository;
 import com.bikkadit.electronic.store.repositories.CartRepository;
 import com.bikkadit.electronic.store.repositories.ProductRepository;
 import com.bikkadit.electronic.store.repositories.UserRepository;
@@ -36,11 +38,18 @@ public class CartServiceImpl implements CartServiceI {
     @Autowired
     private ModelMapper mapper;
 
+    @Autowired
+    private CartItemRepository cartItemRepo;
+
     @Override
     public CartDto addItemsToCart(String userId, AddItemToCartRequest request) {
 
         int quantity = request.getQuantity();
         String productId = request.getProductId();
+
+        if (quantity <= 0) {
+            throw new BadRequestApiException(" Requested quantity is not valid !!");
+        }
 
         //fetch the product
         Product product = productRepo.findById(productId).orElseThrow(() -> new ResourceNotFoundException("Product not found with this Id" + productId));
@@ -48,7 +57,7 @@ public class CartServiceImpl implements CartServiceI {
         //fetch the User
         User user = userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException(" User not found with this userId" + userId));
 
-       Cart cart = null;
+        Cart cart = null;
 
         try {
             cart = cartRepo.findByUser(user).get();
@@ -94,10 +103,28 @@ public class CartServiceImpl implements CartServiceI {
     @Override
     public void removeItemFromCart(String userId, Integer cartItemId) {
 
+        //here we can apply condition to check cart is present or not for a particular user
+        CartItem cartItem = cartItemRepo.findById(cartItemId).orElseThrow(() -> new ResourceNotFoundException(" CartItem not found with this cartItemId" + cartItemId));
+        cartItemRepo.delete(cartItem);
     }
 
     @Override
     public void clearCart(String userId) {
 
+        //fetch the User
+        User user = userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException(" User not found with this userId" + userId));
+        Cart cart = cartRepo.findByUser(user).orElseThrow(() -> new ResourceNotFoundException(" cart of user not found "));
+
+        cart.getCartItem().clear();
+        cartRepo.save(cart);
+    }
+
+    @Override
+    public CartDto getCartByUser(String userId) {
+        //fetch the User
+        User user = userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException(" User not found with this userId" + userId));
+        Cart cart = cartRepo.findByUser(user).orElseThrow(() -> new ResourceNotFoundException(" cart of user not found "));
+
+        return mapper.map(cart, CartDto.class);
     }
 }
