@@ -45,6 +45,6 @@ public class AppConstant {
     public static final String QUANTITY =" Requested quantity is not valid !!";
     public static final String CART_ITEM=" CartItem not found with this cartItemId";
     public static final String USER_CART =" cart of user not found ";
-    public static final String FILE_UPLOAD ="File uploaded ";
-    public static final String FILE_UPLOAD ="File uploaded ";
+    public static final String ITEM_REMOVE =" item removed successfully ";
+    public static final String CART_BLANK =" Now cart is blank ";
 }

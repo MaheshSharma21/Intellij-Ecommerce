@@ -1,6 +1,7 @@
 package com.bikkadit.electronic.store.controllers;
 
 import com.bikkadit.electronic.store.helper.ApiResponse;
+import com.bikkadit.electronic.store.helper.AppConstant;
 import com.bikkadit.electronic.store.payloads.AddItemToCartRequest;
 import com.bikkadit.electronic.store.payloads.CartDto;
 import com.bikkadit.electronic.store.service.CartServiceI;
@@ -17,8 +18,6 @@ public class CartController {
 
     @Autowired
     private CartServiceI cartServiceI;
-
-    //add cart items to cart
 
     /**
      * @param request
@@ -46,7 +45,7 @@ public class CartController {
     public ResponseEntity<ApiResponse> removeItemFromCart(@PathVariable String userId, @PathVariable Integer itemId) {
         log.info("Request started for service layer to remove items from specific user cart with userId : {}",userId + " and with itemId : {}"+itemId);
         cartServiceI.removeItemFromCart(userId, itemId);
-        ApiResponse response = ApiResponse.builder().message(" item removed successfully ").success(true).build();
+        ApiResponse response = ApiResponse.builder().message(AppConstant.ITEM_REMOVE).success(true).build();
         log.info("Request Completed for service layer to remove items from specific user cart with userId : {}",userId + " and with itemId : {}"+itemId);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
@@ -61,7 +60,7 @@ public class CartController {
     public ResponseEntity<ApiResponse> clearCart( @PathVariable String userId ){
         log.info("Request started for service layer to clear specific user cart with userId : {}",userId);
         cartServiceI.clearCart(userId );
-        ApiResponse response = ApiResponse.builder().message("  Now cart is blank ").success(true).build();
+        ApiResponse response = ApiResponse.builder().message(AppConstant.CART_BLANK).success(true).build();
         log.info("Request completed for service layer to clear specific user cart with userId : {}",userId);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
