@@ -74,7 +74,7 @@ public class CartController {
      */
     @PostMapping("/cart/{userId}")
     public ResponseEntity<CartDto> getCart(@PathVariable String userId) {
-        log.info("Request started for service layer to get K specific user cart with userId : {}",userId);
+        log.info("Request startedbb for service layer to get K specific user cart with userId : {}",userId);
         CartDto cartDto = cartServiceI.getCartByUser(userId);
         log.info("Request completed for service layer to get K specific user cart with userId : {}",userId);
         return new ResponseEntity<>(cartDto, HttpStatus.OK);
