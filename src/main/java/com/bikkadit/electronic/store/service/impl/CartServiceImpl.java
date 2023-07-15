@@ -6,6 +6,7 @@ import com.bikkadit.electronic.store.entities.Product;
 import com.bikkadit.electronic.store.entities.User;
 import com.bikkadit.electronic.store.exceptions.BadRequestApiException;
 import com.bikkadit.electronic.store.exceptions.ResourceNotFoundException;
+import com.bikkadit.electronic.store.helper.AppConstant;
 import com.bikkadit.electronic.store.payloads.AddItemToCartRequest;
 import com.bikkadit.electronic.store.payloads.CartDto;
 import com.bikkadit.electronic.store.repositories.CartItemRepository;
@@ -52,16 +53,16 @@ public class CartServiceImpl implements CartServiceI {
         String productId = request.getProductId();
 
         if (quantity <= 0) {
-            throw new BadRequestApiException(" Requested quantity is not valid !!");
+            throw new BadRequestApiException(AppConstant.QUANTITY);
         }
 
         log.info("Request started for dao layer to get product using productId : {}",productId);
         //fetch the product
-        Product product = productRepo.findById(productId).orElseThrow(() -> new ResourceNotFoundException("Product not found with this Id" + productId));
+        Product product = productRepo.findById(productId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.PRODUCT_ERROR));
 
         log.info("Request started for dao layer to get user using userId : {}",userId);
         //fetch the User
-        User user = userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException(" User not found with this userId" + userId));
+        User user = userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.EXCEPTION_MSG));
 
         Cart cart = null;
 
@@ -111,7 +112,7 @@ public class CartServiceImpl implements CartServiceI {
     public void removeItemFromCart(String userId, Integer cartItemId) {
         log.info("Request started for dao layer to remove items from cart in specific user cart with userId : {}",userId);
         //here we can apply condition to check cart is present or not for a particular user
-        CartItem cartItem = cartItemRepo.findById(cartItemId).orElseThrow(() -> new ResourceNotFoundException(" CartItem not found with this cartItemId" + cartItemId));
+        CartItem cartItem = cartItemRepo.findById(cartItemId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.CART_ITEM));
         cartItemRepo.delete(cartItem);
         log.info("Request completed for dao layer to remove items from cart in specific user cart with userId : {}",userId);
     }
@@ -120,8 +121,8 @@ public class CartServiceImpl implements CartServiceI {
     public void clearCart(String userId) {
         log.info("Request started for dao layer to clear  cart of specific user cart with userId : {}",userId);
         //fetch the User
-        User user = userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException(" User not found with this userId" + userId));
-        Cart cart = cartRepo.findByUser(user).orElseThrow(() -> new ResourceNotFoundException(" cart of user not found "));
+        User user = userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.EXCEPTION_MSG));
+        Cart cart = cartRepo.findByUser(user).orElseThrow(() -> new ResourceNotFoundException(AppConstant.USER_CART));
 
         cart.getCartItem().clear();
         cartRepo.save(cart);
@@ -132,8 +133,8 @@ public class CartServiceImpl implements CartServiceI {
     public CartDto getCartByUser(String userId) {
         log.info("Request started for dao layer to get cart of specific user  with userId : {}",userId);
         //fetch the User
-        User user = userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException(" User not found with this userId" + userId));
-        Cart cart = cartRepo.findByUser(user).orElseThrow(() -> new ResourceNotFoundException(" cart of user not found "));
+        User user = userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.EXCEPTION_MSG));
+        Cart cart = cartRepo.findByUser(user).orElseThrow(() -> new ResourceNotFoundException(AppConstant.USER_CART));
         log.info("Request completed for dao layer to clear  cart of specific user  with userId : {}",userId);
         return mapper.map(cart,CartDto.class);
     }
