@@ -19,23 +19,42 @@ public class CartController {
     private CartServiceI cartServiceI;
 
     //add cart items to cart
+
+    /**
+     * @param request
+     * @param userId
+     * @return
+     * @apiNote This api is used to Add items to  cart
+     * @author Mahesh Sharma
+     */
     @PostMapping("/{userId}")
-    public ResponseEntity<CartDto> addItemsToCart(@RequestBody AddItemToCartRequest request , @PathVariable String userId){
-        log.info("Request starting for service layer to add items to cart in specific user cart with userId : {}",userId);
+    public ResponseEntity<CartDto> addItemsToCart(@RequestBody AddItemToCartRequest request, @PathVariable String userId) {
         CartDto cartDto = cartServiceI.addItemsToCart(userId, request);
         log.info("Request completed for service layer to add items to cart in specific user cart with userId : {}",userId);
         return new ResponseEntity<>(cartDto, HttpStatus.CREATED);
     }
 
+    /**
+     * @param userId
+     * @param itemId
+     * @return
+     * @apiNote This api is used to remove items from  cart
+     * @author Mahesh Sharma
+     */
     @DeleteMapping("/{userId}/items/{itemId}")
-    public ResponseEntity<ApiResponse> removeItemFromCart( @PathVariable String userId , @PathVariable Integer itemId ){
-        log.info("Request starting for service layer to remove items from specific user cart with userId : {}",userId + " and with itemId : {}"+itemId);
-         cartServiceI.removeItemFromCart(userId ,itemId);
+    public ResponseEntity<ApiResponse> removeItemFromCart(@PathVariable String userId, @PathVariable Integer itemId) {
+        cartServiceI.removeItemFromCart(userId, itemId);
         ApiResponse response = ApiResponse.builder().message(" item removed successfully ").success(true).build();
         log.info("Request Completed for service layer to remove items from specific user cart with userId : {}",userId + " and with itemId : {}"+itemId);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
+    /**
+     * @param userId
+     * @return
+     * @apiNote This api is used to clear  cart
+     * @author Mahesh Sharma
+     */
     @DeleteMapping("/{userId}")
     public ResponseEntity<ApiResponse> clearCart( @PathVariable String userId ){
         log.info("Request started for service layer to clear specific user cart with userId : {}",userId);
@@ -45,17 +64,21 @@ public class CartController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
+
     @PostMapping("/{userId}")
     public ResponseEntity<CartDto> getCart( @PathVariable String userId ){
         log.info("Request started for service layer to get specific user cart with userId : {}",userId);
+
+    /**
+     * @param userId
+     * @return
+     * @apiNote This api is used to get user specific  cart
+     * @author Mahesh Sharma
+     */
+    @PostMapping("/cart/{userId}")
+    public ResponseEntity<CartDto> getCart(@PathVariable String userId) {
         CartDto cartDto = cartServiceI.getCartByUser(userId);
         log.info("Request completed for service layer to get  specific user cart with userId : {}",userId);
         return new ResponseEntity<>(cartDto, HttpStatus.OK);
     }
-
-
-
-
-
-
 }

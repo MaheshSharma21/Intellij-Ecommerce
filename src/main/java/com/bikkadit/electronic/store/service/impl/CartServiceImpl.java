@@ -16,6 +16,8 @@ import com.bikkadit.electronic.store.service.CartServiceI;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
+
+public class CartServiceImpl implements CartServiceI {
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
@@ -40,6 +42,7 @@ public class CartServiceImpl implements CartServiceI {
 
     @Autowired
     private CartItemRepository cartItemRepo;
+
 
     @Override
     public CartDto addItemsToCart(String userId, AddItemToCartRequest request) {
