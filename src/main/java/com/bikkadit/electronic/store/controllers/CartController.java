@@ -64,11 +64,6 @@ public class CartController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-
-    @PostMapping("/{userId}")
-    public ResponseEntity<CartDto> getCart( @PathVariable String userId ){
-        log.info("Request started for service layer to get specific user cart with userId : {}",userId);
-
     /**
      * @param userId
      * @return
@@ -78,7 +73,7 @@ public class CartController {
     @PostMapping("/cart/{userId}")
     public ResponseEntity<CartDto> getCart(@PathVariable String userId) {
         CartDto cartDto = cartServiceI.getCartByUser(userId);
-        log.info("Request completed for service layer to get  specific user cart with userId : {}",userId);
+        log.info("Request completed for service layer to get K specific user cart with userId : {}",userId);
         return new ResponseEntity<>(cartDto, HttpStatus.OK);
     }
 }
