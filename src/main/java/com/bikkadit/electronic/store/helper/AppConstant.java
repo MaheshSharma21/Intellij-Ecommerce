@@ -40,4 +40,11 @@ public class AppConstant {
 
     public static final String SORT_BY_DEFAULT_VALUE_PRODUCT = "title";
 
+
+    //cart constants
+    public static final String QUANTITY =" Requested quantity is not valid !!";
+    public static final String CART_ITEM=" CartItem not found with this cartItemId";
+    public static final String USER_CART =" cart of user not found ";
+    public static final String FILE_UPLOAD ="File uploaded ";
+    public static final String FILE_UPLOAD ="File uploaded ";
 }
