@@ -29,6 +29,7 @@ public class CartController {
      */
     @PostMapping("/{userId}")
     public ResponseEntity<CartDto> addItemsToCart(@RequestBody AddItemToCartRequest request, @PathVariable String userId) {
+        log.info("Request started for service layer to add items to cart in specific user cart with userId : {}",userId);
         CartDto cartDto = cartServiceI.addItemsToCart(userId, request);
         log.info("Request completed for service layer to add items to cart in specific user cart with userId : {}",userId);
         return new ResponseEntity<>(cartDto, HttpStatus.CREATED);
@@ -43,6 +44,7 @@ public class CartController {
      */
     @DeleteMapping("/{userId}/items/{itemId}")
     public ResponseEntity<ApiResponse> removeItemFromCart(@PathVariable String userId, @PathVariable Integer itemId) {
+        log.info("Request started for service layer to remove items from specific user cart with userId : {}",userId + " and with itemId : {}"+itemId);
         cartServiceI.removeItemFromCart(userId, itemId);
         ApiResponse response = ApiResponse.builder().message(" item removed successfully ").success(true).build();
         log.info("Request Completed for service layer to remove items from specific user cart with userId : {}",userId + " and with itemId : {}"+itemId);
@@ -72,6 +74,7 @@ public class CartController {
      */
     @PostMapping("/cart/{userId}")
     public ResponseEntity<CartDto> getCart(@PathVariable String userId) {
+        log.info("Request started for service layer to get K specific user cart with userId : {}",userId);
         CartDto cartDto = cartServiceI.getCartByUser(userId);
         log.info("Request completed for service layer to get K specific user cart with userId : {}",userId);
         return new ResponseEntity<>(cartDto, HttpStatus.OK);
