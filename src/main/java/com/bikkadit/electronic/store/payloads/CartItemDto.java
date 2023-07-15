@@ -20,6 +20,6 @@ public class CartItemDto {
 
     private int quantity;
 
-    private int totalPrize;
+    private Double totalPrize;
 
 }
