@@ -43,7 +43,7 @@ public class CartController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    @PostMapping("/{userId}")
+    @PostMapping("/cart/{userId}")
     public ResponseEntity<CartDto> getCart( @PathVariable String userId ){
         CartDto cartDto = cartServiceI.getCartByUser(userId);
         return new ResponseEntity<>(cartDto, HttpStatus.OK);
