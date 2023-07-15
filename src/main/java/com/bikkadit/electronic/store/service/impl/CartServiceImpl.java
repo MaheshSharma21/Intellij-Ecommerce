@@ -7,7 +7,7 @@ import com.bikkadit.electronic.store.repositories.UserRepository;
 import com.bikkadit.electronic.store.service.CartServiceI;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class CartServiceImpl extends CartServiceI {
+public class CartServiceImpl implements CartServiceI {
     @Autowired
     private UserRepository userRepo;
 
@@ -15,7 +15,7 @@ public class CartServiceImpl extends CartServiceI {
     private ProductRepository productRepo;
 
     @Autowired
-    private cartRepository cartRepo;
+    private CartRepository cartRepo;
 
     @Override
     public CartDto addItemsToCart(String userId, AddItemToCartRequest request) {
