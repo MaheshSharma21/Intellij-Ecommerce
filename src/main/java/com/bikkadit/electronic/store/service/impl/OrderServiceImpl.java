@@ -12,8 +12,7 @@ import com.bikkadit.electronic.store.repositories.CartRepository;
 import com.bikkadit.electronic.store.repositories.OrderRepository;
 import com.bikkadit.electronic.store.repositories.UserRepository;
 import com.bikkadit.electronic.store.service.OrderServiceI;
-import lombok.Getter;
-import lombok.experimental.Helper;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -28,6 +27,7 @@ import java.util.UUID;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
 @Service
+@Slf4j
 public class OrderServiceImpl implements OrderServiceI {
    @Autowired
     private UserRepository userRepo;
@@ -41,21 +41,19 @@ public class OrderServiceImpl implements OrderServiceI {
 
     @Override
     public OrderDto createOrder(CreateOrderRequest orderDto) {
-
+        log.info("Request Starting  to create order ");
         String userId = orderDto.getUserId();
         String cartId = orderDto.getCartId();
-
         //user fetch
+        log.info("Request Starting  to find the user  with userId : {}", userId);
         User user = userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.EXCEPTION_MSG));
-
         //cart fetch
+        log.info(" Request Starting  to find the cart with cartId : {}", cartId);
         Cart cart = cartRepo.findById(cartId).orElseThrow(() -> new ResourceNotFoundException(" cart not found with cartId"));
-
         List<CartItem> cartItem = cart.getCartItem();
         if(cartItem.size()<=0){
             throw new BadRequestApiException(" invalid number of items present iun cart ...");
         }
-
         //other checks
         Order order = Order.builder()
                 .billingName(orderDto.getBillingName())
@@ -67,7 +65,6 @@ public class OrderServiceImpl implements OrderServiceI {
                 .orderId(UUID.randomUUID().toString())
                 .paymentStatus(orderDto.getPaymentStatus())
                 .user(user).build();
-
 
         //order Items ,amount
         AtomicReference<Integer> atomicReference = new AtomicReference<Integer>(0);
@@ -85,37 +82,39 @@ public class OrderServiceImpl implements OrderServiceI {
         order.setItems(orderItems);
         order.setOrderAmount(atomicReference.get());
 
-
         cart.getCartItem().clear();
         cartRepo.save(cart);
         Order save = orderRepo.save(order);
+        log.info("Request completed  to create the order ");
         return mapper.map(save,OrderDto.class);
     }
 
     @Override
     public void removeOrder(String orderId) {
-
+        log.info(" Request Starting  to remove the order with orderId : {}", orderId);
         Order order = orderRepo.findById(orderId).orElseThrow(() -> new ResourceNotFoundException(" Order not is not found for this orderId "));
     orderRepo.delete(order);
-
+        log.info(" Request completed  to remove the order with orderId : {}", orderId);
     }
 
     @Override
     public List<OrderDto> getAllOrdersOfUser(String userId) {
+        log.info("Request Starting  to get All Orders of  user  with userId : {}", userId);
         //user fetch
         User user = userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.EXCEPTION_MSG));
-
         List<Order> orders = orderRepo.findByUser(user);
         List<OrderDto> orderList = orders.stream().map((order) -> mapper.map(order, OrderDto.class)).collect(Collectors.toList());
-
+        log.info("Request completed  to get All Orders of  user  with userId : {}", userId);
         return orderList;
     }
 
     @Override
     public PageableResponse<OrderDto> getAllOrders(int pageNumber, int pageSize, String sortBy, String sortDir) {
+        log.info("Request Starting  to get All Orders ");
         Sort sort = (sortDir.equalsIgnoreCase("desc")) ? (Sort.by(sortBy).descending()) : (Sort.by(sortBy).ascending());
         Pageable pageable =PageRequest.of(pageNumber,pageSize,sort);
         Page<Order> page = orderRepo.findAll(pageable);
+        log.info("Request completed  to get All Orders ");
         return General.getPageableResponse(page,OrderDto.class);
     }
 }
