@@ -9,7 +9,7 @@ import java.util.List;
 public interface OrderServiceI {
 
     //create order
-    OrderDto createOrder(OrderDto orderdto , String userId);
+    OrderDto createOrder(OrderDto orderdto , String userId , String cartId);
 
     //remove order
     void removeOrder(String orderId);
@@ -20,5 +20,5 @@ public interface OrderServiceI {
     //get All orders
     PageableResponse<OrderDto> getAllOrders(int pageNumber , int pageSize, String sortBy ,String sortDir);
 
-    //update order
+    //update order method assignment
 }
