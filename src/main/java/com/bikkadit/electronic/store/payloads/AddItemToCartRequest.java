@@ -2,6 +2,8 @@ package com.bikkadit.electronic.store.payloads;
 
 import lombok.*;
 
+import javax.validation.constraints.NotBlank;
+
 @Setter
 @Getter
 @AllArgsConstructor
@@ -10,6 +12,7 @@ import lombok.*;
 public class AddItemToCartRequest {
 
     private String productId;
+    @NotBlank(message = "cartItem Quantity is mandatory ....")
     private int quantity;
 
 }
