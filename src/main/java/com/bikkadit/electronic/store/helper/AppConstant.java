@@ -44,13 +44,15 @@ public class AppConstant {
     //cart constants
     public static final String QUANTITY =" Requested quantity is not valid !!";
     public static final String CART_ITEM=" CartItem not found with this cartItemId";
+    public static final String CART_NOT_FOUND = "cart not found with cartId";
     public static final String USER_CART =" cart of user not found ";
     public static final String ITEM_REMOVE =" item removed successfully ";
     public static final String CART_BLANK =" Now cart is blank ";
+    public static final String CART_INVALID_ITEMS ="invalid number of items present in cart ...";
 
     //Order constants
     public static final String ORDER_REMOVE=" order  removed  successfully ";
     public static final String SORT_BY_DEFAULT_VALUE_ORDER = "orderedDate";
-    public static final String CART_BLANK =" Now cart is blank ";
+    public static final String ORDER_NOT_FOUND=" Order not is not found for this orderId ";
 
 }

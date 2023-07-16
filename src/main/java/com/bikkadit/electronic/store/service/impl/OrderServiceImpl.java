@@ -49,10 +49,10 @@ public class OrderServiceImpl implements OrderServiceI {
         User user = userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.EXCEPTION_MSG));
         //cart fetch
         log.info(" Request Starting  to find the cart with cartId : {}", cartId);
-        Cart cart = cartRepo.findById(cartId).orElseThrow(() -> new ResourceNotFoundException(" cart not found with cartId"));
+        Cart cart = cartRepo.findById(cartId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.CART_NOT_FOUND));
         List<CartItem> cartItem = cart.getCartItem();
         if(cartItem.size()<=0){
-            throw new BadRequestApiException(" invalid number of items present iun cart ...");
+            throw new BadRequestApiException(AppConstant.CART_INVALID_ITEMS);
         }
         //other checks
         Order order = Order.builder()
@@ -92,7 +92,7 @@ public class OrderServiceImpl implements OrderServiceI {
     @Override
     public void removeOrder(String orderId) {
         log.info(" Request Starting  to remove the order with orderId : {}", orderId);
-        Order order = orderRepo.findById(orderId).orElseThrow(() -> new ResourceNotFoundException(" Order not is not found for this orderId "));
+        Order order = orderRepo.findById(orderId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.ORDER_NOT_FOUND));
     orderRepo.delete(order);
         log.info(" Request completed  to remove the order with orderId : {}", orderId);
     }
