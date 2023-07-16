@@ -1,6 +1,7 @@
 package com.bikkadit.electronic.store.service;
 
 import com.bikkadit.electronic.store.helper.PageableResponse;
+import com.bikkadit.electronic.store.payloads.CreateOrderRequest;
 import com.bikkadit.electronic.store.payloads.OrderDto;
 import org.springframework.data.domain.Sort;
 
@@ -9,7 +10,7 @@ import java.util.List;
 public interface OrderServiceI {
 
     //create order
-    OrderDto createOrder(OrderDto orderdto , String userId , String cartId);
+    OrderDto createOrder(CreateOrderRequest createOrderRequest);
 
     //remove order
     void removeOrder(String orderId);

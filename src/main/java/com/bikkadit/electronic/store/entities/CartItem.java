@@ -24,7 +24,7 @@ public class CartItem  extends BaseEntity{
     private int quantity;
 
     @Column(name = "product_totalPrize")
-    private Double totalPrize;
+    private int totalPrize;
 
     //mapping cart
     @ManyToOne(fetch = FetchType.LAZY)

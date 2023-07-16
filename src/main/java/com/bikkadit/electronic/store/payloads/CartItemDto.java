@@ -23,6 +23,6 @@ public class CartItemDto extends BaseEntityDto {
     @NotBlank(message = " cart item quantity must be filled !!!  ")
     private int quantity;
 
-    private Double totalPrize;
+    private int totalPrize;
 
 }
