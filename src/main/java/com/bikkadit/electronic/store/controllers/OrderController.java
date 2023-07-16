@@ -5,6 +5,7 @@ import com.bikkadit.electronic.store.helper.AppConstant;
 import com.bikkadit.electronic.store.helper.PageableResponse;
 import com.bikkadit.electronic.store.payloads.CreateOrderRequest;
 import com.bikkadit.electronic.store.payloads.OrderDto;
+import com.bikkadit.electronic.store.payloads.ProductDto;
 import com.bikkadit.electronic.store.service.OrderServiceI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -21,6 +22,13 @@ public class OrderController {
     @Autowired
     private OrderServiceI orderServiceI;
 
+
+    /**
+     * @author Mahesh Sharma
+     * @apiNote This api is used to create order
+     * @param orderDto
+     * @return
+     */
     @PostMapping("order")
     public ResponseEntity<OrderDto> createOrder(@Valid @RequestBody CreateOrderRequest orderDto) {
         OrderDto order = this.orderServiceI.createOrder(orderDto);
@@ -28,6 +36,13 @@ public class OrderController {
 
     }
 
+
+    /**
+     * @author Mahesh Sharma
+     * @apiNote This api is used to remove Order
+     * @param orderId
+     * @return
+     */
     @DeleteMapping("/order/{orderId}")
     public ResponseEntity<ApiResponse> removeOrder(@PathVariable String orderId) {
         this.orderServiceI.removeOrder(orderId);
@@ -36,6 +51,12 @@ public class OrderController {
 
     }
 
+    /**
+     * @author Mahesh Sharma
+     * @apiNote This api is used to getAllOrdersOfUser
+     * @param userId
+     * @return
+     */
     @GetMapping("/order/{userId}")
     public ResponseEntity<List<OrderDto>> getAllOrdersOfUser(@PathVariable String userId) {
         List<OrderDto> allOrdersOfUser = this.orderServiceI.getAllOrdersOfUser(userId);
@@ -43,6 +64,15 @@ public class OrderController {
 
     }
 
+    /**
+     * @author Mahesh Sharma
+     * @apiNote This api is used to getAllOrders
+     * @param pageNumber
+     * @param pageSize
+     * @param sortBy
+     * @param sortDir
+     * @return
+     */
     @GetMapping("orders")
     public ResponseEntity<PageableResponse<OrderDto>> getAllOrders(
             @RequestParam(value = AppConstant.PAGE_NUMBER, defaultValue = AppConstant.PAGE_NUMBER_DEFAULT_VALUE, required = false) int pageNumber,
