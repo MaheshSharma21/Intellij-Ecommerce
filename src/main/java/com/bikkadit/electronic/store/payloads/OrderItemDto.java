@@ -22,6 +22,6 @@ public class OrderItemDto extends BaseEntityDto {
     private int quantity;
 
     private int totalPrize;
-
+K
     private Product product;
 }
