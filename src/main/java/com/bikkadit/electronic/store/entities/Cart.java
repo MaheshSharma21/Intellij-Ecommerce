@@ -24,8 +24,10 @@ public class Cart extends  BaseEntity{
     private User user;
 
     //mapping cart Item
+    //use OrphanRemoval =true if we want to delete all cartItems from cart or to clear cartK
     @OneToMany(mappedBy = "cart",fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     private List<CartItem> cartItem = new ArrayList<>();
+
 
 
 }
