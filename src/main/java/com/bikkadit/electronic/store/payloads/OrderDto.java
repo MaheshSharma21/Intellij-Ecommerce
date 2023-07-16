@@ -14,11 +14,11 @@ import java.util.List;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderDto extends  BaseEntityDto{
+public class OrderDto extends BaseEntityDto {
 
     private String orderId;
-    private String orderStatus="PENDING";
-    private String paymentStatus="NOTPAID";
+    private String orderStatus = "PENDING";
+    private String paymentStatus = "NOTPAID";
     private int orderAmount;
     private String billingAddress;
     private String billingPhone;
