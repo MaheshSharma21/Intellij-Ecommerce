@@ -47,4 +47,10 @@ public class AppConstant {
     public static final String USER_CART =" cart of user not found ";
     public static final String ITEM_REMOVE =" item removed successfully ";
     public static final String CART_BLANK =" Now cart is blank ";
+
+    //Order constants
+    public static final String ORDER_REMOVE=" order  removed  successfully ";
+    public static final String SORT_BY_DEFAULT_VALUE_ORDER = "orderedDate";
+    public static final String CART_BLANK =" Now cart is blank ";
+
 }
