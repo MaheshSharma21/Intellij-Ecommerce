@@ -4,6 +4,8 @@ package com.bikkadit.electronic.store.entities;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Setter
 @Getter
@@ -35,5 +37,8 @@ public class User extends BaseEntity {
 
     @Transient
     private String State;
+
+    @OneToMany(mappedBy = "user",fetch = FetchType.LAZY,cascade = CascadeType.REMOVE)
+    private List<Order> orders = new ArrayList<>();
 
 }
