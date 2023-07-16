@@ -11,6 +11,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/api")
 @Slf4j
@@ -27,7 +29,7 @@ public class CartController {
      * @author Mahesh Sharma
      */
     @PostMapping("/{userId}")
-    public ResponseEntity<CartDto> addItemsToCart(@RequestBody AddItemToCartRequest request, @PathVariable String userId) {
+    public ResponseEntity<CartDto> addItemsToCart(@Valid  @RequestBody AddItemToCartRequest request, @PathVariable String userId) {
         log.info("Request started for service layer to add items to cart in specific user cart with userId : {}",userId);
         CartDto cartDto = cartServiceI.addItemsToCart(userId, request);
         log.info("Request completed for service layer to add items to cart in specific user cart with userId : {}",userId);
