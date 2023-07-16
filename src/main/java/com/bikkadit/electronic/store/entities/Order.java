@@ -1,11 +1,21 @@
 package com.bikkadit.electronic.store.entities;
 
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import java.util.Date;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+@Entity
+@Table(name="orders")
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Order extends BaseEntity {
 
     @Id
@@ -25,9 +35,12 @@ public class Order extends BaseEntity {
     private Date orderDate;
     private Date delieveryDate;
 
-
     @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="user_Id")
     private User user;
+
+    @OneToMany(mappedBy = "order",fetch = FetchType.EAGER,cascade = CascadeType.REMOVE)
+    private List<OrderItem> items = new ArrayList<>();
 
 }
 
