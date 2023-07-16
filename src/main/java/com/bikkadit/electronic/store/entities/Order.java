@@ -34,10 +34,12 @@ public class Order extends BaseEntity {
     private Date orderDate;
     private Date delieveryDate;
 
+    //user -order mapping
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_Id")
     private User user;
 
+    //order-orderItem mapping
     @OneToMany(mappedBy = "order", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     @JoinColumn(name = "order_OrderItems")
     private List<OrderItem> items = new ArrayList<>();
