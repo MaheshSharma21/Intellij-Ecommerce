@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderItemDto {
+public class OrderItemDto extends BaseEntityDto {
 
     private Integer orderItemId;
     private int quantity;

@@ -14,7 +14,7 @@ import java.util.List;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderDto {
+public class OrderDto extends  BaseEntityDto{
 
     private String orderId;
     private String orderStatus;
