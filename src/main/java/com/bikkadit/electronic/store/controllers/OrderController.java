@@ -22,7 +22,6 @@ public class OrderController {
     @Autowired
     private OrderServiceI orderServiceI;
 
-
     /**
      * @author Mahesh Sharma
      * @apiNote This api is used to create order
@@ -46,7 +45,7 @@ public class OrderController {
     @DeleteMapping("/order/{orderId}")
     public ResponseEntity<ApiResponse> removeOrder(@PathVariable String orderId) {
         this.orderServiceI.removeOrder(orderId);
-        ApiResponse response = ApiResponse.builder().message(" order is removed").success(true).Status(HttpStatus.OK).build();
+        ApiResponse response = ApiResponse.builder().message(AppConstant.ORDER_REMOVE).success(true).Status(HttpStatus.OK).build();
         return new ResponseEntity<>(response, HttpStatus.OK);
 
     }
@@ -77,7 +76,7 @@ public class OrderController {
     public ResponseEntity<PageableResponse<OrderDto>> getAllOrders(
             @RequestParam(value = AppConstant.PAGE_NUMBER, defaultValue = AppConstant.PAGE_NUMBER_DEFAULT_VALUE, required = false) int pageNumber,
             @RequestParam(value = AppConstant.PAGE_SIZE, defaultValue = AppConstant.PAGE_SIZE_DEFAULT_VALUE, required = false) int pageSize,
-            @RequestParam(value = AppConstant.SORT_BY, defaultValue = "......orderedDate", required = false) String sortBy,
+            @RequestParam(value = AppConstant.SORT_BY, defaultValue = AppConstant.SORT_BY_DEFAULT_VALUE_ORDER ,required = false) String sortBy,
             @RequestParam(value = AppConstant.SORT_DIR, defaultValue = AppConstant.SORT_DIR_DEFAULT_VALUE, required = false) String sortDir
     ) {
         PageableResponse<OrderDto> allOrders = this.orderServiceI.getAllOrders(pageNumber, pageSize, sortBy, sortDir);
