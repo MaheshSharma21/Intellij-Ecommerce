@@ -68,7 +68,7 @@ public class OrderServiceImpl implements OrderServiceI {
             OrderItem orderItm= OrderItem.builder()
                     .quantity(cartItems.getQuantity())
                     .product(cartItems.getProduct())
-                    .totalPrize(cartItems.getCartItemId()*cartItems.getProduct().getDiscountPrice())
+                    .totalPrize((int) (cartItems.getCartItemId()*cartItems.getProduct().getDiscountPrice()))
                     .order(order)
                     .build();
             atomicReference.set(atomicReference.get()+orderItm.getTotalPrize());
@@ -77,11 +77,10 @@ public class OrderServiceImpl implements OrderServiceI {
         order.setItems(orderItems);
         order.setOrderAmount(atomicReference.get());
 
-        //
+
         cart.getCartItem().clear();
         cartRepo.save(cart);
         Order save = orderRepo.save(order);
-
         return mapper.map(save,OrderDto.class);
     }
 
