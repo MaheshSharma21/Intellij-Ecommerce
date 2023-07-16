@@ -7,6 +7,7 @@ import com.bikkadit.electronic.store.payloads.CreateOrderRequest;
 import com.bikkadit.electronic.store.payloads.OrderDto;
 import com.bikkadit.electronic.store.payloads.ProductDto;
 import com.bikkadit.electronic.store.service.OrderServiceI;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
+@Slf4j
 public class OrderController {
 
     @Autowired
@@ -31,7 +33,9 @@ public class OrderController {
      */
     @PostMapping("order")
     public ResponseEntity<OrderDto> createOrder(@Valid @RequestBody CreateOrderRequest orderDto) {
+        log.info("Request starting for service layer to create order");
         OrderDto order = this.orderServiceI.createOrder(orderDto);
+        log.info("Request completed for service layer to create order");
         return new ResponseEntity<>(order, HttpStatus.CREATED);
 
     }
@@ -45,8 +49,10 @@ public class OrderController {
      */
     @DeleteMapping("/order/{orderId}")
     public ResponseEntity<ApiResponse> removeOrder(@PathVariable String orderId) {
+        log.info("Request starting for service layer to remove Order with orderId :{}", orderId);
         this.orderServiceI.removeOrder(orderId);
         ApiResponse response = ApiResponse.builder().message(" order is removed").success(true).Status(HttpStatus.OK).build();
+        log.info("Request completed for service layer to  remove order with orderId :{}", orderId);
         return new ResponseEntity<>(response, HttpStatus.OK);
 
     }
@@ -59,7 +65,9 @@ public class OrderController {
      */
     @GetMapping("/order/{userId}")
     public ResponseEntity<List<OrderDto>> getAllOrdersOfUser(@PathVariable String userId) {
+        log.info("Request starting for service layer to get All Orders Of User  with userId :{}", userId);
         List<OrderDto> allOrdersOfUser = this.orderServiceI.getAllOrdersOfUser(userId);
+        log.info("Request completed for service layer to  get All Orders Of User with userId :{}", userId);
         return new ResponseEntity<>(allOrdersOfUser, HttpStatus.OK);
 
     }
@@ -80,7 +88,9 @@ public class OrderController {
             @RequestParam(value = AppConstant.SORT_BY, defaultValue = "......orderedDate", required = false) String sortBy,
             @RequestParam(value = AppConstant.SORT_DIR, defaultValue = AppConstant.SORT_DIR_DEFAULT_VALUE, required = false) String sortDir
     ) {
+        log.info("Request starting for service layer to  get All Orders  ");
         PageableResponse<OrderDto> allOrders = this.orderServiceI.getAllOrders(pageNumber, pageSize, sortBy, sortDir);
+        log.info("Request completed for service layer to  get All Orders ");
         return new ResponseEntity<>(allOrders, HttpStatus.OK);
     }
 }
