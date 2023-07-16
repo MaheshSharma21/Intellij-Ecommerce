@@ -19,7 +19,10 @@ public class OrderItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer orderItemId;
 
+    @Column(name="orderItem_quantity")
     private int  quantity;
+
+    @Column(name="orderItem_totalPrize")
     private int totalPrize;
 
     //order -orderItem mapping
