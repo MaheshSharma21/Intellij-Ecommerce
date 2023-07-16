@@ -5,6 +5,7 @@ import com.bikkadit.electronic.store.exceptions.BadRequestApiException;
 import com.bikkadit.electronic.store.exceptions.ResourceNotFoundException;
 import com.bikkadit.electronic.store.helper.AppConstant;
 import com.bikkadit.electronic.store.helper.PageableResponse;
+import com.bikkadit.electronic.store.payloads.CreateOrderRequest;
 import com.bikkadit.electronic.store.payloads.OrderDto;
 import com.bikkadit.electronic.store.repositories.CartRepository;
 import com.bikkadit.electronic.store.repositories.OrderRepository;
@@ -31,7 +32,10 @@ public class OrderServiceImpl implements OrderServiceI {
    private ModelMapper mapper;
 
     @Override
-    public OrderDto createOrder(OrderDto orderdto, String userId ,String cartId) {
+    public OrderDto createOrder(CreateOrderRequest orderDto) {
+
+        String userId = orderDto.getUserId();
+        String cartId = orderDto.getCartId();
 
         //user fetch
         User user = userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.EXCEPTION_MSG));
@@ -46,30 +50,28 @@ public class OrderServiceImpl implements OrderServiceI {
 
         //other checks
         Order order = Order.builder()
-                .billingName(orderdto.getBillingName())
-                .billingAddress(orderdto.getBillingAddress())
-                .billingPhone(orderdto.getBillingPhone())
+                .billingName(orderDto.getBillingName())
+                .billingAddress(orderDto.getBillingAddress())
+                .billingPhone(orderDto.getBillingPhone())
                 .orderDate(new Date())
-                .delieveryDate(orderdto.getDelieveryDate())
-                .orderStatus(orderdto.getOrderStatus())
+                .delieveryDate(null)
+                .orderStatus(orderDto.getOrderStatus())
                 .orderId(UUID.randomUUID().toString())
-                .paymentStatus(orderdto.getPaymentStatus())
+                .paymentStatus(orderDto.getPaymentStatus())
                 .user(user).build();
 
 
         //order Items ,amount
         AtomicReference<Integer> atomicReference = new AtomicReference<Integer>(0);
-        List<OrderItem> collect = cartItem.stream().map(cartItems -> {
-
+        List<OrderItem> orderItems = cartItem.stream().map(cartItems -> {
             //CartItem -> OrderItem
-
-            OrderItem orderItems= OrderItem.builder()
+            OrderItem orderItm= OrderItem.builder()
                     .quantity(cartItems.getQuantity())
                     .product(cartItems.getProduct())
-                    .totalPrize(cartItems.getQuantity() * cartItems.getProduct().getDiscountPrice())
+                    .totalPrize(cartItems.getCartItemId()*cartItems.getProduct().getDiscountPrice())
                     .order(order)
                     .build();
-            atomicReference.set(atomicReference.get()+orderItem.getTotalPrize());
+            atomicReference.set(atomicReference.get()+orderItm.getTotalPrize());
             return new OrderItem();
         }).collect(Collectors.toList());
         order.setItems(orderItems);
