@@ -16,7 +16,7 @@ public interface OrderServiceI {
     void removeOrder(String orderId);
 
     //get All orders of specific user
-    List<OrderDto> getAllOrders(String orderId);
+    List<OrderDto> getAllOrdersOfUser(String userId);
 
     //get All orders
     PageableResponse<OrderDto> getAllOrders(int pageNumber , int pageSize, String sortBy ,String sortDir);
