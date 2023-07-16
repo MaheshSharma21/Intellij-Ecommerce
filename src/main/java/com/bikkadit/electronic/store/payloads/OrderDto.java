@@ -17,12 +17,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrderDto extends BaseEntityDto {
-
-
     private String orderId;
-
     private String orderStatus = "PENDING";
-
     private String paymentStatus = "NOTPAID";
 
     private int orderAmount;
