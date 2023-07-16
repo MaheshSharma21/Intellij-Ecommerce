@@ -4,6 +4,7 @@ import com.bikkadit.electronic.store.entities.*;
 import com.bikkadit.electronic.store.exceptions.BadRequestApiException;
 import com.bikkadit.electronic.store.exceptions.ResourceNotFoundException;
 import com.bikkadit.electronic.store.helper.AppConstant;
+import com.bikkadit.electronic.store.helper.General;
 import com.bikkadit.electronic.store.helper.PageableResponse;
 import com.bikkadit.electronic.store.payloads.CreateOrderRequest;
 import com.bikkadit.electronic.store.payloads.OrderDto;
@@ -11,8 +12,14 @@ import com.bikkadit.electronic.store.repositories.CartRepository;
 import com.bikkadit.electronic.store.repositories.OrderRepository;
 import com.bikkadit.electronic.store.repositories.UserRepository;
 import com.bikkadit.electronic.store.service.OrderServiceI;
+import lombok.Getter;
+import lombok.experimental.Helper;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 
 import java.util.Date;
 import java.util.List;
@@ -87,15 +94,27 @@ public class OrderServiceImpl implements OrderServiceI {
     @Override
     public void removeOrder(String orderId) {
 
+        Order order = orderRepo.findById(orderId).orElseThrow(() -> new ResourceNotFoundException(" Order not is not found for this orderId "));
+    orderRepo.delete(order);
+
     }
 
     @Override
-    public List<OrderDto> getAllOrders(String orderId) {
-        return null;
+    public List<OrderDto> getAllOrdersOfUser(String userId) {
+        //user fetch
+        User user = userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.EXCEPTION_MSG));
+
+        List<Order> orders = orderRepo.findByUser(user);
+        List<OrderDto> orderList = orders.stream().map((order) -> mapper.map(order, OrderDto.class)).collect(Collectors.toList());
+
+        return orderList;
     }
 
     @Override
     public PageableResponse<OrderDto> getAllOrders(int pageNumber, int pageSize, String sortBy, String sortDir) {
-        return null;
+        Sort sort = (sortDir.equalsIgnoreCase("desc")) ? (Sort.by(sortBy).descending()) : (Sort.by(sortBy).ascending());
+        Pageable pageable =PageRequest.of(pageNumber,pageSize,sort);
+        Page<Order> page = orderRepo.findAll(pageable);
+        return General.getPageableResponse(page,OrderDto.class);
     }
 }
