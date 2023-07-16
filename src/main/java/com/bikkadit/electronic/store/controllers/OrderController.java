@@ -5,7 +5,6 @@ import com.bikkadit.electronic.store.helper.AppConstant;
 import com.bikkadit.electronic.store.helper.PageableResponse;
 import com.bikkadit.electronic.store.payloads.CreateOrderRequest;
 import com.bikkadit.electronic.store.payloads.OrderDto;
-import com.bikkadit.electronic.store.payloads.ProductDto;
 import com.bikkadit.electronic.store.service.OrderServiceI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
