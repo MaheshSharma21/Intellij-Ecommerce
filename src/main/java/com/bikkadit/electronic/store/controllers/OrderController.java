@@ -30,7 +30,7 @@ public class OrderController {
      * @param orderDto
      * @return
      */
-    @PostMapping("order")
+    @PostMapping("/order")
     public ResponseEntity<OrderDto> createOrder(@Valid @RequestBody CreateOrderRequest orderDto) {
         log.info("Request starting for service layer to create order");
         OrderDto order = this.orderServiceI.createOrder(orderDto);
@@ -80,7 +80,8 @@ public class OrderController {
      * @param sortDir
      * @return
      */
-    @GetMapping("orders")
+
+    @GetMapping("/orders")
     public ResponseEntity<PageableResponse<OrderDto>> getAllOrders(
             @RequestParam(value = AppConstant.PAGE_NUMBER, defaultValue = AppConstant.PAGE_NUMBER_DEFAULT_VALUE, required = false) int pageNumber,
             @RequestParam(value = AppConstant.PAGE_SIZE, defaultValue = AppConstant.PAGE_SIZE_DEFAULT_VALUE, required = false) int pageSize,

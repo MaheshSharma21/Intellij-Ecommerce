@@ -28,7 +28,7 @@ public class CartController {
      * @apiNote This api is used to Add items to  cart
      * @author Mahesh Sharma
      */
-    @PostMapping("/{userId}")
+    @PostMapping("/cart/{userId}")
     public ResponseEntity<CartDto> addItemsToCart(@Valid  @RequestBody AddItemToCartRequest request, @PathVariable String userId) {
         log.info("Request started for service layer to add items to cart in specific user cart with userId : {}",userId);
         CartDto cartDto = cartServiceI.addItemsToCart(userId, request);
@@ -58,7 +58,7 @@ public class CartController {
      * @apiNote This api is used to clear  cart
      * @author Mahesh Sharma
      */
-    @DeleteMapping("/{userId}")
+    @DeleteMapping("/cart/{userId}")
     public ResponseEntity<ApiResponse> clearCart( @PathVariable String userId ){
         log.info("Request started for service layer to clear specific user cart with userId : {}",userId);
         cartServiceI.clearCart(userId );
