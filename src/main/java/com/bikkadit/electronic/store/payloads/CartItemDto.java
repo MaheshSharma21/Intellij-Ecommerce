@@ -16,13 +16,12 @@ import javax.validation.constraints.NotNull;
 public class CartItemDto extends BaseEntityDto {
 
 
-    private int cartItemId;
+    private Integer cartItemId;
 
     private ProductDto product;
 
-    @NotBlank(message = " cart item quantity must be filled !!!  ")
-    private int quantity;
+    private Integer quantity;
 
-    private int totalPrize;
+    private Integer totalPrize;
 
 }

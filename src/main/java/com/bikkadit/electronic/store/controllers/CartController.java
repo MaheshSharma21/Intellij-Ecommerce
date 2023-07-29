@@ -28,7 +28,7 @@ public class CartController {
      * @apiNote This api is used to Add items to  cart
      * @author Mahesh Sharma
      */
-    @PostMapping("/cart/{userId}")
+    @PostMapping("/cart/add/{userId}")
     public ResponseEntity<CartDto> addItemsToCart(@Valid  @RequestBody AddItemToCartRequest request, @PathVariable String userId) {
         log.info("Request started for service layer to add items to cart in specific user cart with userId : {}",userId);
         CartDto cartDto = cartServiceI.addItemsToCart(userId, request);
@@ -47,7 +47,7 @@ public class CartController {
     public ResponseEntity<ApiResponse> removeItemFromCart(@PathVariable String userId, @PathVariable Integer itemId) {
         log.info("Request started for service layer to remove items from specific user cart with userId : {}",userId + " and with itemId : {}"+itemId);
         cartServiceI.removeItemFromCart(userId, itemId);
-        ApiResponse response = ApiResponse.builder().message(AppConstant.ITEM_REMOVE).success(true).build();
+        ApiResponse response = ApiResponse.builder().message(AppConstant.ITEM_REMOVE).Status(HttpStatus.OK).success(true).build();
         log.info("Request Completed for service layer to remove items from specific user cart with userId : {}",userId + " and with itemId : {}"+itemId);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
@@ -73,7 +73,7 @@ public class CartController {
      * @apiNote This api is used to get user specific  cart
      * @author Mahesh Sharma
      */
-    @PostMapping("/cart/{userId}")
+    @GetMapping("/cart/{userId}")
     public ResponseEntity<CartDto> getCart(@PathVariable String userId) {
         log.info("Request started for service layer to get K specific user cart with userId : {}",userId);
         CartDto cartDto = cartServiceI.getCartByUser(userId);

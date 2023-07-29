@@ -12,7 +12,7 @@ import javax.validation.constraints.NotBlank;
 public class AddItemToCartRequest {
 
     private String productId;
-    @NotBlank(message = "cartItem Quantity is mandatory ....")
+   // @NotBlank(message = "cartItem Quantity is mandatory ....")
     private int quantity;
 
 }

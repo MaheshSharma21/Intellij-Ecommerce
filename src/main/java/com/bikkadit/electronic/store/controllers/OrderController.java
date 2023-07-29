@@ -93,4 +93,19 @@ public class OrderController {
         log.info("Request completed for service layer to  get All Orders ");
         return new ResponseEntity<>(allOrders, HttpStatus.OK);
     }
+
+    /**
+     *  @author Mahesh Sharma
+     *  @apiNote This api is used to update order
+     * @param orderId
+     * @param orderDto
+     * @return
+     */
+    @PutMapping("/order/{orderId}")
+    public ResponseEntity<OrderDto> updateOrder(@PathVariable String orderId ,@RequestBody OrderDto orderDto){
+        log.info("Request initialized for updating  order info for orderId  :{}",orderId);
+        OrderDto orderDto1 = orderServiceI.updateOrder(orderId, orderDto);
+        log.info("Request completed for updating  order info for orderId  :{}",orderId);
+        return new ResponseEntity<>(orderDto1,HttpStatus.OK);
+    }
 }

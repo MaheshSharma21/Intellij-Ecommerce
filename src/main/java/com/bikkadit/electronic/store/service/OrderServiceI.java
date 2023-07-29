@@ -21,4 +21,5 @@ public interface OrderServiceI {
     PageableResponse<OrderDto> getAllOrders(int pageNumber , int pageSize, String sortBy ,String sortDir);
 
     //update order method assignment
+    OrderDto updateOrder(String orderId,OrderDto orderDto);
 }

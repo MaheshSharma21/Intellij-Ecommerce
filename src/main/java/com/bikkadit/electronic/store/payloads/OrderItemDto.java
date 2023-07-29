@@ -18,7 +18,7 @@ public class OrderItemDto extends BaseEntityDto {
 
     private Integer orderItemId;
 
-    @NotBlank(message = " orderItem quantity is required .....")
+  //  @NotBlank(message = " orderItem quantity is required .....")
     private int quantity;
 
     private int totalPrize;

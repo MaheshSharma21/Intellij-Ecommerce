@@ -41,7 +41,6 @@ public class Order extends BaseEntity {
 
     //order-orderItem mapping
     @OneToMany(mappedBy = "order", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
-    @JoinColumn(name = "order_OrderItems")
     private List<OrderItem> items = new ArrayList<>();
 
 }

@@ -29,7 +29,8 @@ public class OrderDto extends BaseEntityDto {
     @NotBlank(message = "Billing Name is required !!")
     private String billingName;
 
-    private Date orderDate;
+    private Date orderDate=new Date();
+
 
     private Date delieveryDate;
 

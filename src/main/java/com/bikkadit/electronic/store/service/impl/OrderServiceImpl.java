@@ -67,6 +67,7 @@ public class OrderServiceImpl implements OrderServiceI {
                 .user(user).build();
 
         //order Items ,amount
+        // Convert CartItems to OrderItems
         AtomicReference<Integer> atomicReference = new AtomicReference<Integer>(0);
         List<OrderItem> orderItems = cartItem.stream().map(cartItems -> {
             //CartItem -> OrderItem
@@ -116,5 +117,17 @@ public class OrderServiceImpl implements OrderServiceI {
         Page<Order> page = orderRepo.findAll(pageable);
         log.info("Request completed  to get All Orders ");
         return General.getPageableResponse(page,OrderDto.class);
+    }
+
+    @Override
+    public OrderDto updateOrder(String orderId, OrderDto orderDto) {
+        log.info("Dao request for updating order info ith orderId :{}",orderId);
+        Order order = orderRepo.findById(orderId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.ORDER_NOT_FOUND));
+        order.setDelieveryDate(new Date());
+        order.setOrderStatus(orderDto.getOrderStatus());
+        order.setPaymentStatus(orderDto.getPaymentStatus());
+        Order order1 = orderRepo.save(order);
+        log.info("Dao request completed for updating order info ith orderId :{}",orderId);
+        return mapper.map(order1,OrderDto.class);
     }
 }
