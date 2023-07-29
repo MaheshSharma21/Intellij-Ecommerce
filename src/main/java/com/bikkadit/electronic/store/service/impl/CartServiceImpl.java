@@ -84,7 +84,7 @@ public class CartServiceImpl implements CartServiceI {
 
                 //item already present in cart
                 item.setQuantity(quantity);
-                item.setTotalPrize(quantity * product.getPrice());
+                item.setTotalPrize((int) (quantity * product.getPrice()));
                 updated.set(true);
             }
             return item;
@@ -97,7 +97,7 @@ public class CartServiceImpl implements CartServiceI {
             CartItem cartItems = CartItem.builder()
                     .quantity(quantity)
                     .cart(cart)
-                    .totalPrize(quantity * product.getPrice())
+                    .totalPrize((int) (quantity * product.getPrice()))
                     .product(product).build();
 
             cart.getCartItem().add(cartItems);
