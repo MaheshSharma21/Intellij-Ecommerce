@@ -4,19 +4,24 @@ import com.bikkadit.electronic.store.entities.Cart;
 import com.bikkadit.electronic.store.entities.CartItem;
 import com.bikkadit.electronic.store.entities.Product;
 import com.bikkadit.electronic.store.entities.User;
+import com.bikkadit.electronic.store.payloads.AddItemToCartRequest;
+import com.bikkadit.electronic.store.payloads.CartDto;
 import com.bikkadit.electronic.store.repositories.CartItemRepository;
 import com.bikkadit.electronic.store.repositories.CartRepository;
 import com.bikkadit.electronic.store.repositories.ProductRepository;
 import com.bikkadit.electronic.store.repositories.UserRepository;
 import com.bikkadit.electronic.store.service.CartServiceI;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -102,6 +107,22 @@ class CartServiceImplTest {
 
     @Test
     void addItemsToCart() {
+        String productId = "12345";
+        String userId = "user123";
+
+        AddItemToCartRequest request=new AddItemToCartRequest();
+        request.setProductId(productId);
+        request.setQuantity(10);
+
+        Mockito.when(userRepository.findById(userId)).thenReturn(Optional.of(user));
+        Mockito.when(productRepository.findById(productId)).thenReturn(Optional.of(product));
+
+        Mockito.when(cartRepository.save(Mockito.any())).thenReturn(cart);
+
+        CartDto cartDto = cartService.addItemsToCart(userId, request);
+        Assertions.assertNotNull(cartDto);
+        System.out.println(cartDto.getUser().getEmail());
+        Assertions.assertEquals(cartDto.getUser().getName(),cart.getUser().getName());
     }
 
     @Test
