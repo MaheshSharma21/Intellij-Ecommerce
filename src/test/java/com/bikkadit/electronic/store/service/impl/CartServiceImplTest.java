@@ -127,13 +127,38 @@ class CartServiceImplTest {
 
     @Test
     void removeItemFromCart() {
+        String userId = "172user";
+        Integer cartItemId=54;
+
+        Mockito.when(cartItemRepository.findById(cartItemId)).thenReturn(Optional.of(cartItem1));
+        cartService.removeItemFromCart(userId,cartItemId);
+        Mockito.verify(cartItemRepository,Mockito.times(1)).delete(cartItem1);
+        Assertions.assertThrows(RuntimeException.class,() -> cartService.removeItemFromCart("xyz",5));
     }
 
     @Test
     void clearCart() {
+
+        String userId = "xyz";
+        Mockito.when(userRepository.findById(userId)).thenReturn(Optional.of(user));
+        Mockito.when(cartRepository.findByUser(Mockito.any())).thenReturn(Optional.of(cart));
+        cartRepository.delete(cart);
+//        cartService.clearCart(userId);
+        Mockito.when(cartRepository.save(cart)).thenReturn(cart);
+        Assertions.assertThrows(RuntimeException.class,() -> cartService.clearCart("abc"));
     }
 
     @Test
     void getCartByUser() {
+        String userId = "123";
+        Mockito.when(userRepository.findById(userId)).thenReturn(Optional.of(user));
+        Mockito.when(cartRepository.findByUser(Mockito.any())).thenReturn(Optional.of(cart));
+
+        CartDto cartByUSer = cartService.getCartByUser(userId);
+        System.out.println(cartByUSer.getUser().getName());
+        System.out.println(cartByUSer);
+        Assertions.assertNotNull(cartByUSer);
+        Assertions.assertEquals(cart.getUser().getName(),cartByUSer.getUser().getName());
+        Assertions.assertThrows(RuntimeException.class,() -> cartService.getCartByUser("abc"));
     }
 }
