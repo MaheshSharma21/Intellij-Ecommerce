@@ -39,13 +39,13 @@ class CartControllerTest {
     private MockMvc mockMvc;
 
     CartDto cartDto;
+    CartItemDto cartItemDto,  cartItemDto1;
+    ProductDto productDto,productDto1;
 
     @BeforeEach
     void setUp() {
 
-         CartDto cartDto;
-         CartItemDto cartItemDto,  cartItemDto1;
-         ProductDto productDto,productDto1;
+
 
         userDto = UserDto.builder()
                 .name("Mahesh")
@@ -120,24 +120,42 @@ class CartControllerTest {
         Mockito.when(cartService.addItemsToCart(Mockito.anyString(),Mockito.any())).thenReturn(cartDto);
         //actual request for url
         this.mockMvc.perform(
-                        MockMvcRequestBuilders.post("/cart/" + userId)
+                        MockMvcRequestBuilders.post("/cart/add/" + userId)
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(convertObjectToJsonString(cartDto))
                                 .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
-                .andExpect(status().isOk())
+                .andExpect(status().isCreated())
                 .andExpect(jsonPath(("$.user")).exists());
     }
 
     @Test
     void removeItemFromCart() {
+        String userId= "12345";
+        Integer cartItemId=11;
+        cartService.removeItemFromCart(userId,cartItemId);
+        Mockito.verify(cartService,Mockito.times(1)).removeItemFromCart(userId, cartItemId);
     }
 
     @Test
     void clearCart() {
+        String userId="abc";
+        cartService.clearCart(userId);
+        Mockito.verify(cartService,Mockito.times(1)).clearCart(userId);
     }
 
     @Test
-    void getCart() {
+    void getCart() throws Exception {
+        String userId="abc";
+        Mockito.when(cartService.getCartByUser(Mockito.anyString())).thenReturn(cartDto);
+        //actual request for url
+        this.mockMvc.perform(
+                        MockMvcRequestBuilders.get("/cart/"+userId)
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content(convertObjectToJsonString(cartDto))
+                                .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.user").exists());
     }
 }
