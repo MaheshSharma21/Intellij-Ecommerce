@@ -2,10 +2,7 @@ package com.bikkadit.electronic.store.payloads;
 
 import com.bikkadit.electronic.store.entities.CartItem;
 import com.bikkadit.electronic.store.entities.User;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.JoinColumn;
 import java.util.ArrayList;
@@ -15,6 +12,7 @@ import java.util.List;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class CartDto extends BaseEntityDto {
 
     private String cartId;
